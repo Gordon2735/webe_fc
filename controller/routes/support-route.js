@@ -1,7 +1,9 @@
 import express from 'express';
+
 const router = express.Router();
 
 //% /SUPPORT page Route
+let user;
 const support = router
 	.get('/', (req, res) => {
 		res.set('Content-Type', 'text/html');

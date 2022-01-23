@@ -47,5 +47,6 @@
 <!--?       12. npm i cors dotenv body-parser          -->
 <!--?       13. npm i eslint-plugin-html -D            -->
 <!--?       14. npm i eslint-config-prettier -G        -->
+<!--?       14. npm i -G eslint-plugin-jest            -->
 <!--?       15. npm i jsdom -D                         -->
 <!--? :::::::::::::::::::::::::::::::::::::::::::::::: -->

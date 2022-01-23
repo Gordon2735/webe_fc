@@ -1,7 +1,9 @@
 import express from 'express';
+
 const router = express.Router();
 
 //% /Your Question and Answers page Route
+let user;
 const q_n_a = router
 	.get('/', (req, res) => {
 		res.set('Content-Type', 'text/html');

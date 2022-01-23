@@ -1,7 +1,9 @@
 import express from 'express';
+
 const router = express.Router();
 
 //% /Getting Started page Route
+let user;
 const get_start = router
 	.get('/', (req, res) => {
 		res.set('Content-Type', 'text/html');

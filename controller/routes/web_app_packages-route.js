@@ -1,7 +1,9 @@
 import express from 'express';
+
 const router = express.Router();
 
 //% /web_app_packages page Route
+let user;
 const web_app_packages = router
 	.get('/', (req, res) => {
 		res.set('Content-Type', 'text/html');

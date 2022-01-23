@@ -1,7 +1,9 @@
 import express from 'express';
+
 const router = express.Router();
 
 //% /Contacts Login-Page page Route
+let user;
 const contacts = router
 	.get('/', (req, res) => {
 		res.set('Content-Type', 'text/html');

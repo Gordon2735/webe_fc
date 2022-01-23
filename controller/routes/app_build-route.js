@@ -2,6 +2,7 @@ import express from 'express';
 const router = express.Router();
 
 //% /App_Build page Route
+let user;
 const app_build = router
 	.get('/', (req, res) => {
 		res.set('Content-Type', 'text/html');

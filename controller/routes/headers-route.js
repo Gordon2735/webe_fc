@@ -1,4 +1,5 @@
 import express from 'express';
+
 const router = express.Router();
 
 const headers = router.get('/headers', (req, res) => {

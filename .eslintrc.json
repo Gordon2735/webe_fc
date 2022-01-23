@@ -1,15 +1,23 @@
 {
-  "env": {
-    "node": true,
-    "browser": true,
-    "es2021": true
-  },
-  "extends": "eslint:recommended",
-  "parserOptions": {
-    "ecmaVersion": 13,
-    "sourceType": "module"
-  },
-  "rules": {
-    "plugins": ["html", "handlebars"]
-  }
+	"env": {
+		"node": true,
+		"browser": true,
+		"jest": true,
+		"es2021": true
+	},
+	"extends": "eslint:recommended",
+	"parserOptions": {
+		"ecmaVersion": 13,
+		"sourceType": "module"
+	},
+
+	"plugins": ["jest", "eslint-plugin-html"],
+	"settings": {
+		"html/html-extensions": [".html", ".handlebars", ".hbs"]
+	},
+	"rules": {
+		"jest/valid-describe-callback": "warn",
+		"jest/valid-expect-in-promise": "warn",
+		"jest/valid-expect": "warn"
+	}
 }
