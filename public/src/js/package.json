@@ -1,0 +1,11 @@
+{
+  "name": "webe_functional_programming",
+  "version": "1.0.0",
+  "description": "Development and Practice for leveraging Functional Programming Paradigm techniques as well as tilizing the NPM Scripting power for development task, testing, uglification and minification, bundling, and dependancy managment for a Node.js Server-Side Application that utilizes templating for HTML generation coupled with noSQL database modeling through MongoDB integration and mongoose's flexible versatility. Node.js with Express harnessing the templating uniqueness of express-handlebars.",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Gordon R Mullen Jr",
+  "license": "MIT"
+}
