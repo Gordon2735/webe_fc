@@ -22,7 +22,6 @@ const init = () => {
 		type: 'module',
 		content: 'text/javascript',
 	}); // going to import the CSS module from inside component's JS module
-	head.appendChild(script);
 
 	const webeHeader = document.createElement('webe-header');
 	setAttributes(webeHeader, {
@@ -30,7 +29,15 @@ const init = () => {
 		class: 'webe-header',
 		alt: 'Header Web Component',
 	});
+
+	// Append the 'generated' HTML to the DOM
+	head.appendChild(script);
 	body.appendChild(webeHeader);
 };
 
 document.addEventListener('DOMContentLoaded', init);
+//%  Initialize and Integrate an 'entrance-point' between the front-end
+//% (HTML-JavaScript-CSS) "init" application and the back-end
+//% (Node.js-Express_Handlebars-MongoDB ) "Server.js" application
+//% by loading DOM Tree and Component Elements into the 'server-side'
+//% Handlebars middleware's "Layout Template" main.handlebars.

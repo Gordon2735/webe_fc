@@ -18,19 +18,18 @@ html {
 }
 
 #body .header {
-	margin: 0 0 1rem 0;
-	padding: 0.5rem;
+	margin: 0 0 0 0;
 	display: flex;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 	flex-grow: 1;
 	flex-direction: row;
-	max-width: 100vw;
-	max-height: 45vh;
+	background: #f8c6ed;
+	max-width: auto;
+	max-height: auto;
 	min-height: 18vh;
 	border-top: 0.7rem solid #eb912a;
 	border-bottom: 0.7rem solid #eb912a;
 	justify-content: left;
-	align-content: flex-start;
 	align-items: center;
 	overflow: hidden;
 	object-fit: contain;
@@ -39,8 +38,11 @@ html {
 .header .logo-container {
 	margin-right: 1rem;
 	display: flex;
+	order: 1;
 	left: 0;
 	position: relative;
+	align-content: flex-start;
+	opacity: normal;
 	width: 13vw;
 	min-width: 10vw;
 	height: 10vw;
@@ -51,109 +53,148 @@ html {
 	max-width: 100%;
 	height: auto;
 	aspect-ratio: 19 / 12;
+	opacity: normal;
 }
 
 .header #h1-container {
-	margin: 0 0 0.5rem 0;
-	padding: 0.5rem;
+	margin: 0.21rem auto 0.21 auto;
+	padding: 0.2rem;
 	position: relative;
 	display: flex;
-	flex-direction: column;
-	max-width: 100vw;
+	order: 2;
+	max-width: auto;
 	height: auto;
-	max-height: 11vh;
 	background-color: cadetblue;
-	flex-wrap: nowrap;
-	flex-grow: 4;
-	align-items: center;
+	flex-wrap: wrap;
+	flex-grow: 1;
+	justify-content: center;
+	align-items: flex-start;
+	text-align: center;
+	opacity: normal;
 }
 
 #h1-container .h1-hoot {
-	display: flex;
 	position: relative;
 	font-family: 'Chango', cursive;
-	font-size: 4.5vw;
+	font-size: 5.5vw;
 	text-shadow: #5c5c5c 3px 6px 5px;
 	text-align: center;
 	color: #eb912a;
+	letter-spacing: 0.7;
+	opacity: normal;
 }
 
 .h1-hoot .h1-hoot-sup {
 	margin-top: 0.822rem;
 	font-size: 0.8vw;
-	/* color: #ffffff; */
-	/* text-shadow: none; */
 	justify-content: end;
+	opacity: normal;
+}
+
+#header .divider {
+	margin: 0.2rem 6vw 1rem 6vw;
+	background: #eb912a;
+	display: flex;
+	position: relative;
+	order: 3;
+	width: auto;
+	height: 6vh;
+	min-height: 5vh;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	z-index: 3;
+	opacity: normal;
+}
+
+.divider .p-divider {
+	margin: 1rem;
+	padding: 0.5rem;
+	font-family: 'Days One', cursive;
+	font-size: 1.5vw;
+	color: #ffffff;
+	text-shadow: #5c5c5c 3px 6px 5px;
+	opacity: normal;
 }
 
 #header .title-container {
+	margin: 0 50vw 0 30vw;
 	background-color: gold;
-	margin: 0;
-	padding: 0.4rem;
+	display: flex;
 	position: relative;
-	justify-content: baseline;
+	order: 4;
+	flex-direction: column;
+	max-width: auto;
+	height: auto;
+	justify-content: center;
 	text-align: center;
+	opacity: normal;
 }
 
 .title-container .h1-header {
-	margin: 0;
-	padding: 0 0 0 0;
-	position: relative;
+	max-width: auto;
+	height: 3vh;
 	font-family: 'Days One', sans-serif;
 	font-size: 2.2vw;
 	text-shadow: #5c5c5c 3px 6px 4px;
 	color: #b3b3b3;
 	letter-spacing: 0.8rem;
+	opacity: normal;
 }
 
 .h1-header .h1-header-sup {
 	font-size: 0.3vw;
 	color: #eb912a;
 	text-shadow: #5c5c5c 3px 3px 2px;
+	opacity: normal;
 }
 
 #body .hoot-container {
 	margin: 0 0 0 1rem;
-	display: flex;
-	flex-wrap: nowrap;
-	flex-grow: 1;
 	width: 100vw;
 	max-height: 19vh;
 	min-height: 17vh;
 	justify-content: left;
 	overflow: hidden;
+	opacity: normal;
 }
 
 .hoot-container .h2-home {
 	color: #b3b3b3;
 	font-family: 'Days One', sans-serif;
 	font-size: 3vh;
+	opacity: normal;
 }
 
 .hoot-container .h2-home:hover {
 	color: #eb912a;
+	opacity: normal;
 }
 
 .hoot-container .h3-home {
 	color: #b3b3b3;
 	font-family: 'Days One', sans-serif;
 	font-size: 1.8vh;
+	opacity: normal;
 }
 
 .hoot-container .h3-home .h3-home-sup {
-	font-size: 0.5vw;
+	font-size: 0.3vw;
 	color: #eb912a;
+	opacity: normal;
 }
 
 .hoot-container .h3-home .h3-home-sup:hover {
-	font-size: 2.2vw;
+	font-size: 2.05vw;
 	color: #7fff00;
+	opacity: normal;
 }
 
 .hoot-container .h4-primary {
 	color: #b3b3b3;
 	font-family: 'Days One', sans-serif;
 	font-size: 1.8vh;
+	opacity: normal;
 }
 
 .h4-primary .h6-support {

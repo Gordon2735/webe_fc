@@ -1,0 +1,25 @@
+Initialize and Integrate an 'entrance-point' between the front-end
+(HTML-JavaScript-CSS) "init" application and the back-end
+(Node.js-Express_Handlebars-MongoDB ) "Server.js" application
+by loading DOM Tree and Component Elements into the 'server-side'
+Handlebars middleware's "Layout Template" main.handlebars.
+Now, with the initialization and integration of our back-end & front-end
+software applications, the iterable "FUN BEGINS" at "Hoot Webelistics®":
+This robust Web-Application (SINGULAR), defines a new-world of Internet
+interrelationality and Interactions, by establishing smartly the wonderful
+and powerful new-world of Web-Technology. Traversing this new-world seamlessly,
+our Application's integrated software communicates and interacts cohesively
+has 'ONE-UNIT'; by collectively having had the inadequate functionality, bugs,
+and every 'COUNTER-INTUITIVE' element of the application's architecture
+systematically and methodically eliminated.
+Building applications with the Industry's Standard "Best-Practices".
+These practices are then coupled intuitively with a "TDD"/"TEST DRIVEN DEVELOPMENT" Process:
+HOOT Webelistics is building and testing from design, exclusively having
+the software code engineered and written within a test; irrevocably the Application's
+code originates in a test before its implementation into the Core Application, proving
+its testability even before its functionality. HOOT Webelistics' Application's Development
+is professionally engineered from its Genesis of Primary-Investgative-Research
+before the conclusion of being a Refactored-Distilled-Maturation: thereby manifesting
+itself has a 'THOUROUGHLY TESTED', "Production-Ready-Software-Application"!
+To be sure,  having reached this stage of development, the Application's maintenence,
+and life-cyle productiveness, will prove to be a "SUSTAINABLE" and "EFFICIENT" Internet Tool.

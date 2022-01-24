@@ -19,5 +19,9 @@
 		"jest/valid-describe-callback": "warn",
 		"jest/valid-expect-in-promise": "warn",
 		"jest/valid-expect": "warn"
-	}
+	},
+	"ignorePatterns": [
+		"utils/qa/lighthouse/*.js",
+		"utils/qa/lighthouse/*.js, *.md, *pdf"
+	]
 }
