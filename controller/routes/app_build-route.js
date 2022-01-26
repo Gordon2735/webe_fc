@@ -1,10 +1,11 @@
 import express from 'express';
 const router = express.Router();
+router.use(express.static('../../views'));
 
 //% /App_Build page Route
 let user;
 const app_build = router
-	.get('/', (req, res) => {
+	.get('/app_build', (req, res) => {
 		res.set('Content-Type', 'text/html');
 		res.render('app_build');
 	})

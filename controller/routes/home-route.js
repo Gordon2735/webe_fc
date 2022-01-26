@@ -1,6 +1,8 @@
 import express from 'express';
 
+// const app = express();
 const router = express.Router();
+router.use(express.static('../../views'));
 
 //%  /Home page Route
 let user;

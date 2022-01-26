@@ -1,11 +1,12 @@
 import express from 'express';
 
 const router = express.Router();
+router.use(express.static('../../views'));
 
 //% /Getting Started page Route
 let user;
 const get_start = router
-	.get('/', (req, res) => {
+	.get('/get_start', (req, res) => {
 		res.set('Content-Type', 'text/html');
 		res.render('get_start');
 	})

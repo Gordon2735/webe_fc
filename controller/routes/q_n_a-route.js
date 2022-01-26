@@ -1,11 +1,12 @@
 import express from 'express';
 
 const router = express.Router();
+router.use(express.static('../../views'));
 
 //% /Your Question and Answers page Route
 let user;
 const q_n_a = router
-	.get('/', (req, res) => {
+	.get('/q_n_a', (req, res) => {
 		res.set('Content-Type', 'text/html');
 		res.render('q_n_a');
 	})

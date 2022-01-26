@@ -1,6 +1,7 @@
 import express from 'express';
 
 const router = express.Router();
+router.use(express.static('../../views'));
 
 const headers = router.get('/headers', (req, res) => {
 	res.set('Content-Type', 'text/html');

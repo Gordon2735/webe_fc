@@ -10,9 +10,9 @@ const init = () => {
 	const body = document.querySelector('body');
 
 	// Set Multiple Attributes
-	const setAttributes = (el, attrs) => {
-		for (let key in attrs) {
-			el.setAttribute(key, attrs[key]);
+	const setAttributes = (element, attributes) => {
+		for (let key in attributes) {
+			element.setAttribute(key, attributes[key]);
 		}
 	};
 	// generate script tag to bring in the webe-header component module into the DOM

@@ -1,11 +1,12 @@
 import express from 'express';
 
 const router = express.Router();
+router.use(express.static('../../views'));
 
 //% /SUPPORT page Route
 let user;
 const support = router
-	.get('/', (req, res) => {
+	.get('/support', (req, res) => {
 		res.set('Content-Type', 'text/html');
 		res.render('support');
 	})

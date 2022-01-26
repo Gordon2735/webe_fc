@@ -35,16 +35,22 @@ const handlebars = create({
 		},
 	},
 });
-app.engine('handlebars', handlebars.engine);
-app.set('view engine', 'handlebars');
 app.set('views', './views');
+app.set('view engine', 'handlebars');
+app.engine('handlebars', handlebars.engine);
 // app.enable('view cache');
 
+// handlebars.registerPartials(__dirname + 'views/partials/');
+// handlebars.registerPartial(
+// 	'seo_head',
+// 	fs.readFileSync(__dirname + 'views/partials/seo_head.handlebars', 'utf8')
+// );
+app.use(express.static(__dirname + 'controller/'));
+app.use('/', router);
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.static('public'));
 app.use(favicon(path.join(__dirname, 'public/src/img', 'favicon.ico')));
-app.use('/', router);
 
 router.use((req, res, next) => {
 	if (!res.locals.partials) res.locals.partials = {};

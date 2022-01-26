@@ -1,10 +1,13 @@
 import express from 'express';
+
+// const app = express();
 const router = express.Router();
+router.use(express.static('../../views'));
 
 //%  /About page Route
 let user;
 const about = router
-	.get('/', (req, res) => {
+	.get('/about', (req, res) => {
 		res.set('Content-Type', 'text/html');
 		res.render('about');
 	})
