@@ -344,6 +344,16 @@ class Responsive extends HTMLElement {
 		super();
 
 		this.attachShadow({ mode: 'open' });
+
+		const setAttributes = (element, attributes) => {
+			for (const key in attributes) {
+				element.setAttribute(key, attributes[key]);
+			}
+		};
+		const head = document.querySelector('head');
+		// const link = document.createElement('link');
+		setAttributes(head, {});
+
 		this.shadowRoot.appendChild(template.content.cloneNode(true));
 	}
 	connectedCallback() {

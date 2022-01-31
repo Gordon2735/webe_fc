@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+
+:root {
+	--webe-header-clr-primary: hsl(0, 0%, 13%);
+	--webe-header-clr: hsl(32, 83%, 54%);
+	--webe-header-clr-trim: hsl(30, 4%, 11%);
+	--webe-HOOT-clr: hsl(32, 83%, 54%);
+	--webe-title-clr: hsl(0, 0%, 70%);
+	--webe-HOOT-fs: 'Chango', cursive;
+	--webe-title-fs: 'Days One', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.webe-header-body {
+	margin: 0;
+	padding: 0;
+	background: var(--webe-header-clr);
+}
+
+.webe-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#header {
+	width: 100vw;
+	height: auto;
+	background-color: var(--webe-header-clr-primary);
+	display: grid;
+	grid-template-columns: minmax(15vw, 20vw) 1fr 0.2fr 1fr 1fr;
+	grid-auto-rows: minmax(50px, auto);
+	grid-gap: 1em;
+	justify-items: stretch;
+	align-items: stretch;
+	border-top: 2vh solid hsl(32, 83%, 54%);
+	border-bottom: 2vh solid hsl(32, 83%, 54%);
+	z-index: 1;
+}
+
+#header > div {
+	background: hsl(0, 0%, 13%);
+	padding: 1em;
+}
+
+#header > div:nth-child(odd) {
+	background: var(--webe-header-clr-trim);
+}
+
+#header > .box1 {
+	/*align-self:start;*/
+	grid-column: minmax(75px, auto) 1/3;
+	grid-row: 1/3;
+}
+
+.box1 > .logo {
+	display: relative;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-width: 50%;
+	height: auto;
+	aspect-ratio: 1.25 / 1;
+}
+
+#header > .box2 {
+	grid-column: 2/3;
+	grid-row: 1/3;
+}
+
+.box2 > .hoot-title {
+	margin-left: 9vw;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	font-family: 'Chango', cursive;
+	font-size: 7vw;
+	letter-spacing: 0.8vw;
+	color: hsl(32, 83%, 54%);
+	text-shadow: hsl(0, 0%, 70%) 2px 3px 6px;
+	z-index: 2;
+}
+
+#header > .box5 {
+	grid-column: 5/6;
+	grid-row: 3/2;
+	justify-content: baseline;
+	text-align: left;
+}
+
+.box5 > .webe-title {
+	/* margin-right: 9vw; */
+	/* display: flex; */
+	font-family: 'Days One', sans-serif;
+	font-size: 2vw;
+	color: hsl(0, 0%, 70%);
+	text-shadow: hsl(32, 91%, 65%) 1px 1px 21px;
+	z-index: 2;
+}
+
+.ham-button {
+	position: absolute;
+	top: 0.75rem;
+	right: 1rem;
+	display: none;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 30px;
+	height: 21px;
+}
+
+.ham-button > .bar {
+	height: 3px;
+	width: 100%;
+	background-color: var(--webe-title-clr);
+	border-radius: 10px;
+}

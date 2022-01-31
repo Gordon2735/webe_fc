@@ -18,17 +18,13 @@ const init = () => {
 	// generate script tag to bring in the webe-header component module into the DOM
 	const script = document.createElement('script');
 	setAttributes(script, {
-		src: '/public/components/webe-header/webe-header.js',
+		src: '../components/webe-header/webe-header.js',
 		type: 'module',
 		content: 'text/javascript',
+		crossorigin: 'anonymous',
 	}); // going to import the CSS module from inside component's JS module
 
 	const webeHeader = document.createElement('webe-header');
-	setAttributes(webeHeader, {
-		id: 'webe-header',
-		class: 'webe-header',
-		alt: 'Header Web Component',
-	});
 
 	// Append the 'generated' HTML to the DOM
 	head.appendChild(script);

@@ -6,7 +6,7 @@
 <!--  -->
 <!--todo :::: <<<< Backlog >>>> :::: -->
 
-<!--@   Description:  4-Day Implementation Study -- Terminates 2022.01.23:18:00:00  -->
+<!--info   Description:  4-Day Implementation Study -- Terminates 2022.01.23:18:00:00  -->
 
         Development and Practice for leveraging Functional Programming Paradigm techniques as well as utilizing the powerful NPM Scripting capabilities within the <<<< package.json >>>> "dependancy managment file for development task, testing, uglification and minification, bundling, and dependancy managment for a Node.js Server-Side Application that utilizes templating for HTML generation coupled with noSQL database modeling through MongoDB integration and mongoose's flexible versatility. Synthesize Node.js with Express to encorporate the templating distinctiveness of express-handlebars with its minimalist, and  enterprising templating engine.
 
@@ -32,7 +32,7 @@
         Web Components will naturally progress with the browser's evolution, and will be the foundation for the future of the application. This is counter-intuitive
         in the world of web development wherein in the process of time there are many issues with broken dependencies due to versioning and continuing forward compatibility. In a nutshell, you can not go wrong with Web Components. The proper combination of design configuration, event handling that's arrayed properly with state management, and finally a steadfastness in adherence to Test-Driven-Development(TDD) and coding 'Best Practices', the end product will be a robust, stable, and scalable application that's easily maintained. So, it's time to get excited and start coding! It just feels good to know that what you're doing, and the way you are doing it, is the right thing to do and that it is right right right!!!
 
-<!--? :::::::::::::::: NPM INSTALLS :::::::::::::::::  -->
+<!--npm :::::::::::::::: NPM INSTALLS :::::::::::::::  -->
 <!--?       1.  npm init                               -->
 <!--?       2.  npm i express                          -->
 <!--?       3.  npm i express-handlebars               -->
@@ -49,4 +49,4 @@
 <!--?       14. npm i eslint-config-prettier -G        -->
 <!--?       14. npm i -G eslint-plugin-jest            -->
 <!--?       15. npm i jsdom -D                         -->
-<!--? :::::::::::::::::::::::::::::::::::::::::::::::: -->
+<!--npm :::::::::::::::::::::::::::::::::::::::::::::: -->
