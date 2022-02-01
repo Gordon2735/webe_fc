@@ -1,6 +1,5 @@
 //info: Left-Side-Pullout-Navigation/Web-Component
 
-const body = document.querySelector('body');
 const style = document.createElement('style');
 const template = document.createElement('template');
 const RenderSection = `		
@@ -9,7 +8,7 @@ const RenderSection = `
 		<ul class="navbar-nav">
 		  <li class="logo">
 		  <a href="#" class="nav-link">
-			  <span class="link-text logo-text">Fireship</span>
+			  <span class="link-text logo-text">HOOT</span>
 			  <svg
 			  aria-hidden="true"
 			  focusable="false"
@@ -61,7 +60,7 @@ const RenderSection = `
 				></path>
 				</g>
 				</svg>
-				<span class="link-text">Cats</span>
+				<span class="link-text">Owls</span>
 				</a>
 				</li>
 				
@@ -343,7 +342,6 @@ const setAttributes = (element, attributes) => {
 		element.setAttribute(key, attributes[key]);
 	}
 };
-
 class Responsive extends HTMLElement {
 	constructor() {
 		super();

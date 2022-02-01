@@ -49,4 +49,5 @@
 <!--?       14. npm i eslint-config-prettier -G        -->
 <!--?       14. npm i -G eslint-plugin-jest            -->
 <!--?       15. npm i jsdom -D                         -->
+<!--?       16. npm i xstate -G                        -->
 <!--npm :::::::::::::::::::::::::::::::::::::::::::::: -->
