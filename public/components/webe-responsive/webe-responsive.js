@@ -1,7 +1,8 @@
 //info: Left-Side-Pullout-Navigation/Web-Component
 
+const body = document.querySelector('body');
+const style = document.createElement('style');
 const template = document.createElement('template');
-template.setAttribute('id', 'template');
 const RenderSection = `		
 		
 		<nav class="navbar">
@@ -337,30 +338,33 @@ const RenderSection = `
 		  </main>
 		  `;
 
-template.innerHTML = RenderSection;
+const setAttributes = (element, attributes) => {
+	for (const key in attributes) {
+		element.setAttribute(key, attributes[key]);
+	}
+};
 
 class Responsive extends HTMLElement {
 	constructor() {
 		super();
 
 		this.attachShadow({ mode: 'open' });
-
-		const setAttributes = (element, attributes) => {
-			for (const key in attributes) {
-				element.setAttribute(key, attributes[key]);
-			}
-		};
-		const head = document.querySelector('head');
-		// const link = document.createElement('link');
-		setAttributes(head, {});
-
-		this.shadowRoot.appendChild(template.content.cloneNode(true));
 	}
 	connectedCallback() {
 		console.info(
 			'%c webe-responsive has || *** FIRED *** || Web-Component: Responsive',
 			'background: #222222; color: #FF00FF;'
 		);
+
+		setAttributes(style, {
+			type: 'text/css',
+			rel: 'stylesheet',
+		});
+		style.innerHTML = `@import "../components/webe-responsive/webe-responsive.css";`;
+		this.shadowRoot.appendChild(style);
+
+		template.innerHTML = RenderSection;
+		this.shadowRoot.appendChild(template.content.cloneNode(true));
 
 		const themeMap = {
 			dark: 'light',
@@ -389,4 +393,4 @@ class Responsive extends HTMLElement {
 
 	disconnectedCallback() {}
 }
-document.customElements.define('webe-responsive', Responsive);
+window.customElements.define('webe-responsive', Responsive);

@@ -1,7 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+
+:root {
+	--webe-header-clr-primary: hsl(0, 0%, 13%);
+	--webe-header-clr: hsl(32, 83%, 54%);
+	--webe-header-clr-trim: hsl(30, 4%, 11%);
+	--webe-HOOT-clr: hsl(32, 83%, 54%);
+	--webe-title-clr: hsl(0, 0%, 70%);
+	--webe-HOOT-fs: 'Chango', cursive;
+	--webe-title-fs: 'Days One', sans-serif;
+}
 
 * {
 	margin: 0;
@@ -12,7 +20,14 @@
 html {
 	background: #222222;
 }
+html:focus-within {
+	scroll-behavior: smooth;
+}
 
 #body {
 	background: #222222;
+}
+
+#body > .webe-responsive {
+	margin-top: 35vw;
 }

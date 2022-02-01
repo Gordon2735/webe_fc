@@ -16,19 +16,47 @@ const init = () => {
 		}
 	};
 	// generate script tag to bring in the webe-header component module into the DOM
-	const script = document.createElement('script');
-	setAttributes(script, {
-		src: '../components/webe-header/webe-header.js',
-		type: 'module',
-		content: 'text/javascript',
-		crossorigin: 'anonymous',
-	}); // going to import the CSS module from inside component's JS module
 
-	const webeHeader = document.createElement('webe-header');
+	const webeHeaderScript = () => {
+		const script = document.createElement('script');
+		const webeHeader = document.createElement('webe-header');
+		setAttributes(script, {
+			src: '../components/webe-header/webe-header.js',
+			type: 'module',
+			content: 'text/javascript',
+			crossorigin: 'anonymous',
+		});
+		head.appendChild(script);
+		body.appendChild(webeHeader);
+		// going to import the CSS module from inside component's JS module
+		setAttributes(webeHeader, {
+			id: 'webe-header',
+			class: 'webe-header',
+			alt: 'Web-Component Header',
+		});
+	};
+
+	const webeResponsiveScript = () => {
+		const script = document.createElement('script');
+		const webeResponsive = document.createElement('webe-responsive');
+		setAttributes(script, {
+			src: '../components/webe-responsive/webe-responsive.js',
+			type: 'module',
+			content: 'text/javascript',
+			crossorigin: 'anonymous',
+		});
+		head.appendChild(script);
+		body.appendChild(webeResponsive);
+		// going to import the CSS module from inside component's JS module
+		setAttributes(webeResponsive, {
+			id: 'webe-responsive',
+			class: 'webe-responsive',
+		});
+	};
+	webeHeaderScript();
+	webeResponsiveScript();
 
 	// Append the 'generated' HTML to the DOM
-	head.appendChild(script);
-	body.appendChild(webeHeader);
 };
 
 document.addEventListener('DOMContentLoaded', init);

@@ -77,6 +77,14 @@ setAttributes(img, {
 	alt: 'HOOT Webelistics® LOGO',
 });
 
+const pinguin = document.createElement('img');
+setAttributes(pinguin, {
+	id: 'pinguin',
+	class: 'pinguin',
+	src: '../components/webe-header/img_webe-header/pinguin.png',
+	alt: 'HOOT Webelistics® Pinguin',
+});
+
 const hootTitle = document.createElement('h1');
 setAttributes(hootTitle, {
 	id: 'hoot-title',
@@ -86,10 +94,18 @@ hootTitle.innerHTML = 'HOOT';
 
 const jingleTop = document.createElement('h3');
 setAttributes(jingleTop, {
-	id: 'jingleTop',
-	class: 'jingleTop',
-	textContent: 'HOOT for a "Great" Application!!!',
+	id: 'jingle-top',
+	class: 'jingle-top',
 	alt: 'HOOT for a "Great" Application!!!',
+});
+jingleTop.innerHTML = 'HOOT for a "Great" Application!!!';
+
+const hootHeadTrans = document.createElement('img');
+setAttributes(hootHeadTrans, {
+	id: 'hoot-head-trans',
+	class: 'hoot-head-trans',
+	src: '../components/webe-header/img_webe-header/HEAD_ONLY_TRANS.png',
+	alt: 'Hoot Head Transparent Image',
 });
 
 const hamButton = document.createElement('a');
@@ -123,17 +139,18 @@ const RenderTags = () => {
 	header.appendChild(box1);
 	box1.appendChild(img);
 	header.appendChild(box2);
+	box2.appendChild(pinguin);
 	box2.appendChild(hootTitle);
+	box2.appendChild(webeTitle);
 	header.appendChild(box3);
+	box3.appendChild(hootHeadTrans);
 	box3.appendChild(jingleTop);
 	header.appendChild(box4);
-	box4.appendChild(hamButton);
 	box4.appendChild(hamButton);
 	hamButton.appendChild(span);
 	hamButton.appendChild(span);
 	hamButton.appendChild(span);
 	header.appendChild(box5);
-	box5.appendChild(webeTitle);
 	header.appendChild(box6);
 	box6.appendChild(topDown);
 };
