@@ -15,7 +15,7 @@
 		"hello-world": "echo \"HOOT Webelistics ~ Web Application Development\"",
 		"preroutineTest": "echo \"Pre-routine test\"",
 		"routineTest": "jest \"./bin/testAction.test.js\"",
-		"postroutineTest": "echo \"Post-routine test\"",
+		"postroutineTest": "echo \"Post-routine test\"\"LINT TEST PASSED\"",
 		"error": "echo \"This script failed\" && exit 1",
 		"cli": "npm run lint && npm run routineTest && npm run hello-world"
 	},

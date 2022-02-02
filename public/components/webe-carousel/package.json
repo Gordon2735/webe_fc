@@ -1,0 +1,11 @@
+{
+  "name": "webe-carousel",
+  "version": "1.0.0",
+  "description": "Web-Component of a carousel",
+  "main": "webe-carousel.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Gordon R Mullen Jr",
+  "license": "MIT"
+}

@@ -11,6 +11,7 @@ const machine = {
 					this.changeState('DRUNK');
 				} else {
 					console.log('\tThat quenched my thirst!');
+					console.log(second);
 				}
 			},
 		},
@@ -79,7 +80,7 @@ const machine = {
 	dispatch(actionName, ...payload) {
 		const actions = this.transitions[this.state];
 		const action = this.transitions[this.state][actionName];
-
+		console.log(actions);
 		if (action) {
 			action.apply(machine, ...payload);
 		} else {

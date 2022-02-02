@@ -1,0 +1,11 @@
+{
+  "name": "webe-header",
+  "version": "1.0.0",
+  "description": "Web-Component Webelistics Header component",
+  "main": "webe-header.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Gordon R Mullen Jr",
+  "license": "MIT"
+}

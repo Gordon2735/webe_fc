@@ -1,0 +1,11 @@
+{
+  "name": "webe-responsive",
+  "version": "1.0.0",
+  "description": "Web-Component of a responsive side-menu pullout",
+  "main": "webe-responsive.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Gordon R Mullen Jr",
+  "license": "MIT"
+}
