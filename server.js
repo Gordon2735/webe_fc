@@ -1,3 +1,5 @@
+'use strict';
+
 import dotenv from 'dotenv';
 import express from 'express';
 import { create } from 'express-handlebars';

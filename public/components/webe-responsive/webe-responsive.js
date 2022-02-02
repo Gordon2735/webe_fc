@@ -1,5 +1,7 @@
 //info: Left-Side-Pullout-Navigation/Web-Component
 
+'use strict';
+
 const style = document.createElement('style');
 const template = document.createElement('template');
 const RenderSection = `		

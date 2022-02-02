@@ -1,3 +1,5 @@
+'use strict';
+
 const mathOperations = {
 	sum: (x, y) => {
 		return x + y;

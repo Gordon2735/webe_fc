@@ -1,5 +1,7 @@
 //component :::: webe-header / Web-Component Logic :::: //
 
+'use strict';
+
 const setAttributes = (tag, attributes) => {
 	for (const key in attributes) {
 		tag.setAttribute(key, attributes[key]);

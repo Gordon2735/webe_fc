@@ -1,3 +1,5 @@
+'use strict';
+
 import { assign, createMachine, interpret } from 'xstate';
 import './styles.css';
 

@@ -1,3 +1,5 @@
+'use strict';
+
 const checkForCarousel = () => {
 	const carousel = document.querySelector('webe-carousel');
 	if (carousel) {

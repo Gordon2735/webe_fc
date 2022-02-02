@@ -1,3 +1,5 @@
+'use strict';
+
 import mathOperations from './functions/calculator';
 
 describe('Calculator tests', () => {

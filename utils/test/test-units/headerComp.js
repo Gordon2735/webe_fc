@@ -1,3 +1,5 @@
+'use strict';
+
 const checkForHeader = () => {
 	const header = document.querySelector('webe-header');
 	if (header) {

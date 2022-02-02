@@ -1,3 +1,5 @@
+'use strict';
+
 import dateFormat from './test-units/logDateTest';
 
 test('Returns the current year from the date of the log file', () => {

@@ -1,3 +1,5 @@
+'use strict';
+
 import { format } from 'date-fns';
 import fs from 'fs';
 import fsPromises from 'fs/promises';

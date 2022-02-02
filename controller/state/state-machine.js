@@ -1,3 +1,5 @@
+'use strict';
+
 //finite state machine
 const machine = {
 	state: 'SOBER',

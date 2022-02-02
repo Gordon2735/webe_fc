@@ -1,3 +1,5 @@
+'use strict';
+
 import { format } from 'date-fns';
 
 const dateFormat = () => {

@@ -1,3 +1,5 @@
+'use strict';
+
 const setAttributes = (tag, attributes) => {
 	for (let key in attributes) {
 		tag.setAttribute(key, attributes[key]);

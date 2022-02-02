@@ -1,3 +1,5 @@
+'use strict';
+
 import express from 'express';
 import home from './routes/home-route.js';
 import headers from './routes/headers-route.js';
