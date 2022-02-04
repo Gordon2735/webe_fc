@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+
+:root {
+	--webe-header-clr-primary: hsl(0, 0%, 13%);
+	--webe-header-clr: hsl(32, 83%, 54%);
+	--webe-header-clr-trim: hsl(30, 4%, 11%);
+	--webe-HOOT-clr: hsl(32, 83%, 54%);
+	--webe-title-clr: hsl(0, 0%, 70%);
+	--webe-HOOT-fs: 'Chango', cursive;
+	--webe-title-fs: 'Days One', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 3vw;
+}
+
+html {
+	background: #222222;
+}
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin-bottom: 2vh;
+	padding: 3vh 2vw 3vh 2vw;
+}
+
+.webe-footer {
+	margin: 1vh auto 1vh auto;
+	position: relative;
+	bottom: 0;
+}
+
+.footer {
+	margin: 1vh auto 1vh auto;
+	bottom: 1vh;
+	position: static;
+	display: flex;
+	flex-direction: row;
+	width: 35%;
+	height: 14vh;
+	justify-content: center;
+	align-items: center;
+	background: hsl(32, 83%, 54%);
+	font-family: 'Days One', sans-serif;
+	font-size: 1.1vw;
+	z-index: 4;
+}
+
+.hootWebelistic {
+	margin-bottom: 1vh;
+	display: flex;
+	font-family: 'Days One', sans-serif;
+	font-size: 0.3vw;
+	color: hsl(32, 46%, 79%);
+	text-align: center;
+}

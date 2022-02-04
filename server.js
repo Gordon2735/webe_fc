@@ -64,7 +64,7 @@ app.listen(PORT, () => {
 });
 //| ::::::::::::::::::::::::::::::::::::::
 const openChrome = async () => {
-	//& :::: Reason the why that HOST & PORT are strings? Look into it!!
+	//design :::: Reason the why that HOST & PORT are strings? Look into it!!
 	await open(`${HOST}${PORT}`, {
 		app: { name: open.apps.chrome },
 	}).catch((error, code) => {

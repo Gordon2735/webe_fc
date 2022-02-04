@@ -20,18 +20,25 @@
 html {
 	background: #222222;
 }
-/* html:focus-within {
+html:focus-within {
 	scroll-behavior: smooth;
-} */
+}
 
 #body {
+	width: 100vw;
+	max-height: 55vh;
 	background: #222222;
 }
 
 body > .webe-responsive {
-	margin-top: 55vw;
 }
 
 body > .webe-carousel {
-	margin-top: 75vw;
 }
+
+/* .hoot-container {
+	font-family: 'Days One', sans-serif;
+	font-size: 1.5rem;
+	color: hsl(32, 83%, 54%);
+	text-shadow: hsl(32, 93%, 70%) 2px 2px 4px;
+} */

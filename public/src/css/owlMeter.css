@@ -1,0 +1,114 @@
+/** Config */
+
+:root {
+	--sk-size: 40px;
+	--sk-color: #333;
+}
+
+/* Utility class for centering */
+.meter-container {
+	margin: auto;
+}
+
+/*  hootMeter
+
+      <div class="hoot-meter">
+        <div class="hoot-meter-owl0"></div>
+        <div class="hoot-meter-owl1"></div>
+        <div class="hoot-meter-owl2"></div>
+        <div class="hoot-meter-owl3'"></div>
+        <div class="hoot-meter-owl4"></div>
+        <div class="hoot-meter-owl5"></div>
+      </div>
+ */
+
+.hoot-meter {
+	margin: 0 auto 0 auto;
+	/* justify-content: center;
+	justify-items: center; */
+	width: 15vw;
+	height: 5vh;
+	position: relative;
+	animation: sk-chase 2.5s infinite linear both;
+	color: hsl(32, 83%, 54%);
+}
+
+.hoot-meter-owl {
+	width: 15vw;
+	height: 5vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+	animation: sk-chase-dot 2s infinite ease-in-out both;
+}
+
+.hoot-meter-owl:before {
+	content: '';
+	display: block;
+	width: 6vw;
+	height: 1vh;
+	background: #b3b3b3;
+	background-color: hsl(32, 95%, 62%);
+	filter: drop-shadow(14px 15px 15px rgb(3, 3, 3));
+	/* filter: blur(1px); */
+}
+
+.hoot-meter-owl:nth-child(1) {
+	animation-delay: -1.1s;
+}
+.hoot-meter-owl:nth-child(2) {
+	animation-delay: -1s;
+}
+.hoot-meter-owl:nth-child(3) {
+	animation-delay: -0.9s;
+}
+.hoot-meter-owl:nth-child(4) {
+	animation-delay: -0.8s;
+}
+.hoot-meter-owl:nth-child(5) {
+	animation-delay: -0.7s;
+}
+.hoot-meter-owl:nth-child(6) {
+	animation-delay: -0.6s;
+}
+.hoot-meter-owl:nth-child(1):before {
+	animation-delay: -1.1s;
+}
+.hoot-meter-owl:nth-child(2):before {
+	animation-delay: -1s;
+}
+.hoot-meter-owl:nth-child(3):before {
+	animation-delay: -0.9s;
+}
+.hoot-meter-owl:nth-child(4):before {
+	animation-delay: -0.8s;
+}
+.hoot-meter-owl:nth-child(5):before {
+	animation-delay: -0.7s;
+}
+.hoot-meter-owl:nth-child(6):before {
+	animation-delay: -0.6s;
+}
+
+@keyframes hoot-meter {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes hoot-meter-owl {
+	60%,
+	80% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes hoot-meter-owl-before {
+	30% {
+		transform: scale(0.4);
+	}
+	80%,
+	0% {
+		transform: scale(1);
+	}
+}

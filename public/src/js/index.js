@@ -10,71 +10,104 @@ const init = () => {
 	const body = document.querySelector('body');
 
 	// Ability to "Set Multiple Attributes"
-	const setAttributes = (element, attributes) => {
+	const setAttributes = (tag, attributes) => {
 		for (let key in attributes) {
-			element.setAttribute(key, attributes[key]);
+			tag.setAttribute(key, attributes[key]);
 		}
 	};
 	// generate script tag to bring in the webe-header component module into the DOM
 
-	const webeHeaderScript = () => {
-		const script = document.createElement('script');
-		const webeHeader = document.createElement('webe-header');
-		setAttributes(script, {
-			src: '../components/webe-header/webe-header.js',
-			type: 'module',
-			content: 'text/javascript',
-			crossorigin: 'anonymous',
-		});
-		head.appendChild(script);
-		body.appendChild(webeHeader);
-		// going to import the CSS module from inside component's JS module
-		setAttributes(webeHeader, {
-			id: 'webe-header',
-			class: 'webe-header',
-			alt: 'Web-Component Header',
-		});
-	};
+	const RenderWebComponent = () => {
+		const webeHeaderScript = () => {
+			const script = document.createElement('script');
+			const webeHeader = document.createElement('webe-header');
+			setAttributes(script, {
+				src: '../components/webe-header/webe-header.js',
+				type: 'module',
+				content: 'text/javascript',
+				crossorigin: 'anonymous',
+			});
+			head.appendChild(script);
+			// going to import the CSS module from inside component's JS module
+			setAttributes(webeHeader, {
+				id: 'webe-header',
+				class: 'webe-header',
+				alt: 'Web-Component Header',
+			});
+			body.appendChild(webeHeader);
+		};
+		const webeResponsiveScript = () => {
+			const script = document.createElement('script');
+			setAttributes(script, {
+				src: '../components/webe-responsive/webe-responsive.js',
+				type: 'module',
+				content: 'text/javascript',
+				crossorigin: 'anonymous',
+			});
+			head.appendChild(script);
+			// going to import the CSS module from inside component's JS module
+			const webeResponsive = document.createElement('webe-responsive');
+			setAttributes(webeResponsive, {
+				id: 'webe-responsive',
+				class: 'webe-responsive',
+			});
+			body.appendChild(webeResponsive);
+		};
+		const webeCarouselScript = () => {
+			const script = document.createElement('script');
+			const webeCarousel = document.createElement('webe-carousel');
+			setAttributes(script, {
+				src: '../components/webe-carousel/webe-carousel.js',
+				type: 'module',
+				content: 'text/javascript',
+				crossorigin: 'anonymous',
+			});
+			head.appendChild(script);
+			// going to import the CSS module from inside component's JS module
+			setAttributes(webeCarousel, {
+				id: 'webe-carousel',
+				class: 'webe-carousel',
+			});
+			body.appendChild(webeCarousel);
+		};
 
-	const webeResponsiveScript = () => {
-		const script = document.createElement('script');
-		const webeResponsive = document.createElement('webe-responsive');
-		setAttributes(script, {
-			src: '../components/webe-responsive/webe-responsive.js',
-			type: 'module',
-			content: 'text/javascript',
-			crossorigin: 'anonymous',
-		});
-		head.appendChild(script);
-		body.appendChild(webeResponsive);
-		// going to import the CSS module from inside component's JS module
-		setAttributes(webeResponsive, {
-			id: 'webe-responsive',
-			class: 'webe-responsive',
-		});
-	};
+		const webeFooterScript = () => {
+			const script = document.createElement('script');
+			const webeFooter = document.createElement('webe-footer');
+			setAttributes(script, {
+				src: '../components/webe-footer/webe-footer.js',
+				type: 'module',
+				// content: 'text/javascript',
+				// crossorigin: 'anonymous',
+			});
+			head.appendChild(script);
+			// going to import the CSS module from inside component's JS module
+			setAttributes(webeFooter, {
+				id: 'webe-footer',
+				class: 'webe-footer',
+			});
+			body.appendChild(webeFooter);
+			const owlScript = () => {
+				const script = document.createElement('script');
+				setAttributes(script, {
+					src: '/src/js/owlMeter.js',
+					type: 'module',
+					content: 'text/javascript',
+					crossorigin: 'anonymous',
+				});
+				head.appendChild(script);
+			};
+			owlScript();
+		};
+		webeHeaderScript();
+		webeResponsiveScript();
 
-	const webeCarouselScript = () => {
-		const script = document.createElement('script');
-		const webeCarousel = document.createElement('webe-carousel');
-		setAttributes(script, {
-			src: '../components/webe-carousel/webe-carousel.js',
-			type: 'module',
-			content: 'text/javascript',
-			crossorigin: 'anonymous',
-		});
-		head.appendChild(script);
-		body.appendChild(webeCarousel);
-		// going to import the CSS module from inside component's JS module
-		setAttributes(webeCarousel, {
-			id: 'webe-carousel',
-			class: 'webe-carousel',
-		});
+		//- :::: Append the 'generated' HTML to the DOM :::: -//
+
+		webeCarouselScript();
+		webeFooterScript();
 	};
-	webeHeaderScript();
-	webeResponsiveScript();
-	webeCarouselScript();
-	//- :::: Append the 'generated' HTML to the DOM :::: -//
+	RenderWebComponent();
 };
 
 document.addEventListener('DOMContentLoaded', init);

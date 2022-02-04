@@ -352,7 +352,7 @@ class Responsive extends HTMLElement {
 	}
 	connectedCallback() {
 		console.info(
-			'%c webe-responsive has || *** FIRED *** || Web-Component: Responsive',
+			'%c This Web-Component has || * FIRED * || webe-responsive.js is connected',
 			'background: #222222; color: #FF00FF;'
 		);
 
@@ -366,29 +366,29 @@ class Responsive extends HTMLElement {
 		template.innerHTML = RenderSection;
 		this.shadowRoot.appendChild(template.content.cloneNode(true));
 
-		const themeMap = {
-			dark: 'light',
-			light: 'solar',
-			solar: 'dark',
-		};
-		let tmp;
-		const theme =
-			localStorage.getItem('theme') ||
-			((tmp = Object.keys(themeMap)[0]),
-			localStorage.setItem('theme', tmp),
-			tmp);
-		const bodyClass = document.body.classList;
-		bodyClass.add(theme);
+		// const themeMap = {
+		// 	dark: 'light',
+		// 	light: 'solar',
+		// 	solar: 'dark',
+		// };
+		// let tmp;
+		// const theme =
+		// 	localStorage.getItem('theme') ||
+		// 	((tmp = Object.keys(themeMap)[0]),
+		// 	localStorage.setItem('theme', tmp),
+		// 	tmp);
+		// const bodyClass = document.body.classList;
+		// bodyClass.add(theme);
 
-		function toggleTheme() {
-			const current = localStorage.getItem('theme');
-			const next = themeMap[current];
+		// function toggleTheme() {
+		// 	const current = localStorage.getItem('theme');
+		// 	const next = themeMap[current];
 
-			bodyClass.replace(current, next);
-			localStorage.setItem('theme', next);
-		}
+		// 	bodyClass.replace(current, next);
+		// 	localStorage.setItem('theme', next);
+		// }
 
-		document.getElementById('themeButton').onclick = toggleTheme;
+		// document.getElementById('themeButton').onclick = toggleTheme;
 	}
 
 	disconnectedCallback() {}

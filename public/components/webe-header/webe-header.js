@@ -15,11 +15,6 @@ setAttributes(template, {
 	alt: 'Web-Component Header',
 });
 
-const body = document.querySelector('body');
-setAttributes(body, {
-	class: 'webe-header-body',
-});
-
 const style = document.createElement('style');
 setAttributes(style, {
 	type: 'text/css',
@@ -75,7 +70,7 @@ const img = document.createElement('img');
 setAttributes(img, {
 	id: 'logo',
 	class: 'logo',
-	src: '../components/webe-header/img_webe-header/HOOT_HEAD.png',
+	src: '../components/webe-header/img_webe-header/logo.svg',
 	alt: 'HOOT Webelistics® LOGO',
 });
 
@@ -166,8 +161,8 @@ class WebeHeader extends HTMLElement {
 	}
 	connectedCallback() {
 		console.info(
-			'%c this Web Component has || * FIRED * || and webe-header.js is connected',
-			'background: #222222; color: #FF00FF'
+			'%c This Web Component has || * FIRED * || webe-header.js is connected',
+			'background: #222222; color: #EE82EE'
 		);
 		RenderTags();
 		style.innerHTML = `@import "../components/webe-header/webe-header.css";`;

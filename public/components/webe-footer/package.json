@@ -1,11 +1,15 @@
 {
-  "name": "webe-footer",
-  "version": "1.0.0",
-  "description": "Web-Comnponent Webelistics Footer component",
-  "main": "webe-footer.js",
-  "scripts": {
-    "test": "jest"
-  },
-  "author": "Gordon R Mullen Jr",
-  "license": "MIT"
+	"name": "webe-footer",
+	"version": "1.0.0",
+	"description": "Web-Comnponent Webelistics Footer component",
+	"main": "webe-footer.js",
+	"scripts": {
+		"test": "jest"
+	},
+	"author": "Gordon R Mullen Jr",
+	"license": "MIT",
+	"dependencies": {
+		"express": "^4.17.2",
+		"express-handlebars": "^6.0.2"
+	}
 }

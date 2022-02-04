@@ -71,6 +71,10 @@ class WebeCarousel extends HTMLElement {
 		};
 	}
 	connectedCallback() {
+		console.info(
+			'%c This Web Component has || * FIRED * || webe-carousel.js is connected',
+			'background: #222222; color: #FF8C00'
+		);
 		const style = document.createElement('style');
 		setAttributes(style, {
 			id: 'webe-carousel-style',
@@ -81,7 +85,6 @@ class WebeCarousel extends HTMLElement {
 		style.innerHTML = `@import "../components/webe-carousel/webe-carousel.css";`;
 		this.shadowRoot.appendChild(style);
 		this.shadowRoot.appendChild(RenderTemplate(this.data));
-		customElements.define('webe-carousel', WebeCarousel);
 	}
 	disconnectedCallback() {
 		this.shadowRoot.removeChild(this.shadowRoot.querySelector('style'));

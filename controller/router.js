@@ -16,14 +16,17 @@ import app_design from './routes/app_design-route.js';
 import support from './routes/support-route.js';
 import q_n_a from './routes/q_n_a-route.js';
 import helps from './routes/helps-route.js';
+import hoot_2022 from './routes/hoot_2022-route.js';
 import fourOfour from './routes/404-route.js';
 import fiveOO from './routes/500-route.js';
 
 // const app = express();
 const router = express.Router();
 router.use(express.static('./routes'));
+const routeExpress = router.use(express.static('./routes'));
 
 router.use('/', home);
+router.use('/', hoot_2022);
 router.use('/', about);
 router.use('/', contacts);
 router.use('/', app_build);
@@ -47,3 +50,4 @@ router.use('500', fiveOO);
 
 //
 export default router;
+export { routeExpress };
