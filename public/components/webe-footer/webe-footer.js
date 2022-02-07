@@ -26,13 +26,13 @@ const footer = document.createElement('footer');
 setAttributes(footer, {
 	id: 'footer',
 	class: 'footer',
-	alt: 'footer',
+	alt: 'footer information and links',
 });
 
 const hootWebelistic = document.createElement('a');
 setAttributes(hootWebelistic, {
-	id: 'hootWebelistic',
-	class: 'hootWebelistic',
+	id: 'hoot-webelistic',
+	class: 'hoot-webelistic',
 	href: '/',
 	alt: 'HOOT Webelistic Main-Page Link in Footer',
 });
@@ -68,7 +68,6 @@ setAttributes(hoot_2022a, {
 hoot_2022a.innerHTML = `HOOT Webelistic Main-Page Link in Footer`;
 
 const help = document.createElement('a');
-// const routerHelp = router.use(helps);
 setAttributes(help, {
 	id: 'help',
 	class: 'help',
@@ -78,7 +77,6 @@ setAttributes(help, {
 help.innerHTML = `Help`;
 
 const contact_us = document.createElement('a');
-// const routerContactUs = router.use(contacts);
 setAttributes(contact_us, {
 	id: 'contact_us',
 	class: 'contact_us',

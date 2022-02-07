@@ -87,7 +87,6 @@ const owlLoad = () => {
 		hootMeterOwl5,
 		hootMeterOwl6,
 	];
-
 	owlLings.forEach(owl => hootMeter.appendChild(owl));
 };
 owlLoad();

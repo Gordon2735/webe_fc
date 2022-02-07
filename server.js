@@ -42,11 +42,6 @@ app.set('view engine', 'handlebars');
 app.engine('handlebars', handlebars.engine);
 // app.enable('view cache');
 
-// handlebars.registerPartials(__dirname + 'views/partials/');
-// handlebars.registerPartial(
-// 	'seo_head',
-// 	fs.readFileSync(__dirname + 'views/partials/seo_head.handlebars', 'utf8')
-// );
 app.use(express.static(__dirname + 'controller/'));
 app.use('/', router);
 app.use(cors());
@@ -62,9 +57,8 @@ router.use((req, res, next) => {
 app.listen(PORT, () => {
 	console.info(`Nodemon Server listening on localhost ${HOST}${PORT}`);
 });
-//| ::::::::::::::::::::::::::::::::::::::
+
 const openChrome = async () => {
-	//design :::: Reason the why that HOST & PORT are strings? Look into it!!
 	await open(`${HOST}${PORT}`, {
 		app: { name: open.apps.chrome },
 	}).catch((error, code) => {
@@ -73,7 +67,7 @@ const openChrome = async () => {
 };
 openChrome();
 
-//% logEvent Logic
+// logEvent Logic
 class TrackEmitter extends EventEmitter {}
 const trackEmitter = new TrackEmitter();
 trackEmitter.on('log', message => {
@@ -83,7 +77,7 @@ setTimeout(() => {
 	trackEmitter.emit('log', 'Nodemon Server Log event emitted');
 }, 2500);
 
-//% Create a write stream (in append mode)(morgan)
+// Create a write stream (in append mode)(morgan)
 const accessLogStream = fs.createWriteStream(
 	path.join(__dirname, 'logs', 'access.log'),
 	{ flags: 'a' }
