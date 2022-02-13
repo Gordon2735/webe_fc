@@ -105,12 +105,12 @@ setAttributes(hootHeadTrans, {
 	alt: 'Hoot Head Transparent Image',
 });
 
-const hamButton = document.createElement('a');
-setAttributes(hamButton, {
+const hamNavButton = document.createElement('a');
+setAttributes(hamNavButton, {
 	href: '#',
-	id: 'hamburgerMenu-button',
-	class: 'hamburgerMenu-button',
-	alt: 'hamburger menu button container',
+	id: 'hamNavMenu-button',
+	class: 'hhamNavMenu-button',
+	alt: 'hamNavMenu menu button container',
 });
 const span = document.createElement('span');
 setAttributes(span, {
@@ -143,10 +143,10 @@ const RenderTags = () => {
 	box3.appendChild(hootHeadTrans);
 	box3.appendChild(jingleTop);
 	header.appendChild(box4);
-	box4.appendChild(hamButton);
-	hamButton.appendChild(span);
-	hamButton.appendChild(span);
-	hamButton.appendChild(span);
+	box4.appendChild(hamNavButton);
+	hamNavButton.appendChild(span);
+	hamNavButton.appendChild(span);
+	hamNavButton.appendChild(span);
 	header.appendChild(box5);
 	header.appendChild(box6);
 	box6.appendChild(topDown);

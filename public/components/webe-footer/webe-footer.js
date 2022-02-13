@@ -34,10 +34,10 @@ setAttributes(hootWebelistic, {
 	id: 'hoot-webelistic',
 	class: 'hoot-webelistic',
 	href: '/',
-	alt: 'HOOT Webelistic Main-Page Link in Footer',
+	alt: 'HOOT Webelistic',
 });
 
-hootWebelistic.innerHTML = `<strong>HOOT</strong> Webelistics<sup class="register">&#174;</sup>LLC, <strong>2022</strong> `;
+hootWebelistic.innerHTML = `HOOT Webelistics<sup class="register">&#174;</sup>LLC`;
 
 const about_us = document.createElement('a');
 setAttributes(about_us, {
@@ -65,7 +65,7 @@ setAttributes(hoot_2022a, {
 	href: '/hoot_2022',
 });
 
-hoot_2022a.innerHTML = `HOOT Webelistic Main-Page Link in Footer`;
+hoot_2022a.innerHTML = `HOOT Webelistic 2022`;
 
 const help = document.createElement('a');
 setAttributes(help, {

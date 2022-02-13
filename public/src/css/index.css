@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
 
-/* :root {
-	--webe-header-clr-primary: hsl(0, 0%, 13%);
+:root {
+	--webe-header-primary: hsl(0, 0%, 13%);
 	--webe-header-clr: hsl(32, 83%, 54%);
-	--webe-header-clr-trim: hsl(30, 4%, 11%);
+	--webe-header-trim: hsl(30, 4%, 11%);
 	--webe-HOOT-clr: hsl(32, 83%, 54%);
 	--webe-title-clr: hsl(0, 0%, 70%);
 	--webe-HOOT-fs: 'Chango', cursive;
 	--webe-title-fs: 'Days One', sans-serif;
-} */
+}
 
 * {
 	margin: 0;
@@ -18,22 +18,20 @@
 
 /** PLAN to have Light/Dark Mode  **/
 html {
-	background: #222222;
+	background: var(--webe-header-primary);
 }
 html:focus-within {
 	scroll-behavior: smooth;
 }
 
-#body {
-	width: 100vw;
-	max-height: 55vh;
-	background: #222222;
+.body {
+	background: var(--webe-header-primary);
 }
 
-body > .webe-responsive {
+.webe-responsive {
 }
 
-body > .webe-carousel {
+.webe-carousel {
 }
 
 /* .hoot-container {
@@ -42,3 +40,9 @@ body > .webe-carousel {
 	color: hsl(32, 83%, 54%);
 	text-shadow: hsl(32, 93%, 70%) 2px 2px 4px;
 } */
+
+.webe-footer {
+	margin: 1vh auto 1vh auto;
+	position: relative;
+	bottom: 0;
+}

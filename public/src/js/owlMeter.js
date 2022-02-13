@@ -25,14 +25,14 @@ const owlLoad = () => {
 	});
 	const styleText = `
         .meter-container { 
-            margin: -30vh auto 0vh auto;
+            margin: 20vh auto 0vh auto;
             position: relative;
             display: flex;
             jusify-content: center;
             // justify-items: center;
             width: 40vh;
             height: auto;
-            // background-color: hsl(32, 83%, 54%);
+            background-color: hsl(32, 83%, 54%);
         }`;
 	style.innerHTML = `${styleText}`;
 	body.appendChild(style);

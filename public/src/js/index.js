@@ -87,25 +87,23 @@ const init = () => {
 				class: 'webe-footer',
 			});
 			body.appendChild(webeFooter);
-			const owlScript = () => {
-				const script = document.createElement('script');
-				setAttributes(script, {
-					src: '/src/js/owlMeter.js',
-					type: 'module',
-					content: 'text/javascript',
-					crossorigin: 'anonymous',
-				});
-				head.appendChild(script);
-			};
-			owlScript();
 		};
+		const owlScript = () => {
+			const script = document.createElement('script');
+			setAttributes(script, {
+				src: '/src/js/owlMeter.js',
+				type: 'module',
+				content: 'text/javascript',
+				crossorigin: 'anonymous',
+			});
+			head.appendChild(script);
+		};
+		//- :::: Append the 'generated' HTML to the DOM :::: -//
 		webeHeaderScript();
 		webeResponsiveScript();
-
-		//- :::: Append the 'generated' HTML to the DOM :::: -//
-
-		webeCarouselScript();
 		webeFooterScript();
+		owlScript();
+		// webeCarouselScript();
 	};
 	RenderWebComponent();
 };
