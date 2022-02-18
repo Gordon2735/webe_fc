@@ -17,8 +17,8 @@ import support from './routes/support-route.js';
 import q_n_a from './routes/q_n_a-route.js';
 import helps from './routes/helps-route.js';
 import hoot_2022 from './routes/hoot_2022-route.js';
-import fourOfour from './routes/404-route.js';
-import fiveOO from './routes/500-route.js';
+// import fourOfour from './routes/404-route.js';
+// import fiveOO from './routes/500-route.js';
 
 // const app = express();
 const router = express.Router();
@@ -45,8 +45,9 @@ router.use((req, res, next) => {
 	if (!res.locals.partials) res.locals.partials = {};
 	next();
 });
-router.use('404', fourOfour);
-router.use('500', fiveOO);
+
+// router.use('404', fourOfour);
+// router.use('500', fiveOO);
 
 //
 export default router;

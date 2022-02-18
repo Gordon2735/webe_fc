@@ -49,6 +49,31 @@ app.use(morgan('dev'));
 app.use(express.static('public'));
 app.use(favicon(path.join(__dirname, 'public/src/img', 'favicon.ico')));
 
+app.use((req, res, next) => {
+	res.status(404).send(`<h1 style="
+	width: 100%;
+	height: 100%;
+	color: red;
+	text-align: center;
+	background-color: #222222;
+	"><br><br><br><br>
+	{404} SORRY, THIS PAGE WASN'T FOUND!!! {404}
+	</h1>`);
+	next();
+});
+app.use((req, res, next) => {
+	res.status(500).send(`<h1 style="
+	width: 100%;
+	height: 100%;
+	color: red;
+	text-align: center;
+	background-color: #222222;
+	"><br><br><br><br>
+	{500} SORRY, THERE WAS A SERVER ERROR!!! {500}
+	</h1></h1>`);
+	next();
+});
+
 router.use((req, res, next) => {
 	if (!res.locals.partials) res.locals.partials = {};
 	next();

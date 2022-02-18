@@ -14,69 +14,73 @@
 .footer {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
-	grid-template-rows: 2;
-	grid-gap: 1px;
+	grid-template-rows: 1 / 2;
+	/* grid-gap: 0.5px; */
+	bottom: -17vh;
 	margin: 1vh auto 1vh auto;
 	position: relative;
-	height: 45%;
-	justify-content: center;
-	align-items: center;
-	background: hsl(32, 83%, 54%);
+	max-width: calc(60% - 60px);
+	height: auto;
+	background-color: rgba(235, 144, 40, 0.09);
+	border-radius: 10px;
+	text-align: center;
 	font-family: 'Days One', sans-serif;
-	font-size: 0.8vw;
-	color: var(--webe-header-clr-primary);
+	font-size: 0.7vw;
+	color: var(--webe-title-clr);
 	z-index: 4;
 }
-.footer {
-	max-width: calc(50% - 80px);
-}
-/* Update: I changed the max-width from 500px to 580px. Thanks @fvsch */
-@media screen and (max-width: 580px) {
-	.footer {
-		max-width: 250px;
-	}
-}
-/* @media screen and (max-height: 800px) {
-	.footer {
-		max-height: 450px;
-	}
-} */
 
-.hoot-webelistic {
+.footer .hoot-webelistic {
 	grid-column: 1;
 	grid-row: 1;
-	padding: 1px;
+	margin: 1vw 0 1vw 0;
+	position: relative;
+	display: block;
+	color: var(--webe-title-clr);
 }
 
-.about_us {
+.hoot-webelistic .register {
+	font-size: 0.6vw;
+	text-decoration: skip-line;
+}
+
+.footer .about_us {
 	grid-column: 2;
-	/* grid-column: 1 / span 2; */
 	grid-row: 1;
-	padding: 1px;
+	margin: 1vw 0 1vw 0;
+	position: relative;
+	display: block;
+	color: var(--webe-title-clr);
 }
 
-.apps {
+.footer .apps {
 	grid-column: 3;
 	grid-row: 1;
-	padding: 1px;
+	margin: 1vw 0 1vw 0;
+	position: relative;
+	color: var(--webe-header-clr-primary);
 }
 
-.hoot_2022a {
+.footer .hoot_2022 {
 	grid-column: 4;
 	grid-row: 1;
-	padding: 1px;
+	margin: 1vw 0 1vw 0;
+	position: relative;
+	color: var(--webe-header-clr-primary);
 }
 
-.help {
+.footer .help {
 	grid-column: 5;
 	grid-row: 1;
+	margin: 1vw 0 1vw 0;
+	position: relative;
 	color: var(--webe-header-clr-primary);
-	padding: 1px;
 }
 
-.contact_us {
+.footer .contact_us {
 	grid-column: 6;
 	grid-row: 1;
-	padding: 1px;
+	margin: 1vw 0 1vw 0;
+	position: relative;
 	color: var(--webe-header-clr-primary);
 }

@@ -53,23 +53,23 @@ const init = () => {
 			});
 			body.appendChild(webeResponsive);
 		};
-		const webeCarouselScript = () => {
-			const script = document.createElement('script');
-			const webeCarousel = document.createElement('webe-carousel');
-			setAttributes(script, {
-				src: '../components/webe-carousel/webe-carousel.js',
-				type: 'module',
-				content: 'text/javascript',
-				crossorigin: 'anonymous',
-			});
-			head.appendChild(script);
-			// going to import the CSS module from inside component's JS module
-			setAttributes(webeCarousel, {
-				id: 'webe-carousel',
-				class: 'webe-carousel',
-			});
-			body.appendChild(webeCarousel);
-		};
+		// const webeCarouselScript = () => {
+		// 	const script = document.createElement('script');
+		// 	const webeCarousel = document.createElement('webe-carousel');
+		// 	setAttributes(script, {
+		// 		src: '../components/webe-carousel/webe-carousel.js',
+		// 		type: 'module',
+		// 		content: 'text/javascript',
+		// 		crossorigin: 'anonymous',
+		// 	});
+		// 	head.appendChild(script);
+		// 	// going to import the CSS module from inside component's JS module
+		// 	setAttributes(webeCarousel, {
+		// 		id: 'webe-carousel',
+		// 		class: 'webe-carousel',
+		// 	});
+		// 	body.appendChild(webeCarousel);
+		// };
 
 		const webeFooterScript = () => {
 			const script = document.createElement('script');

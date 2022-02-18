@@ -109,7 +109,7 @@ const hamNavButton = document.createElement('a');
 setAttributes(hamNavButton, {
 	href: '#',
 	id: 'hamNavMenu-button',
-	class: 'hhamNavMenu-button',
+	class: 'hamNavMenu-button',
 	alt: 'hamNavMenu menu button container',
 });
 const span = document.createElement('span');

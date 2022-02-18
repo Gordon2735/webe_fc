@@ -37,7 +37,7 @@ setAttributes(hootWebelistic, {
 	alt: 'HOOT Webelistic',
 });
 
-hootWebelistic.innerHTML = `HOOT Webelistics<sup class="register">&#174;</sup>LLC`;
+hootWebelistic.innerHTML = `HOOT Webelistics<sup class="register">&#174</sup>`;
 
 const about_us = document.createElement('a');
 setAttributes(about_us, {
@@ -51,8 +51,8 @@ about_us.innerHTML = `About Us`;
 
 const apps = document.createElement('a');
 setAttributes(apps, {
-	id: 'Apps',
-	class: 'Apps',
+	id: 'apps',
+	class: 'apps',
 	href: '/app_packages',
 	alt: 'Application Packages Page Link',
 });

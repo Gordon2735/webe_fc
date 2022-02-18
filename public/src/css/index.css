@@ -27,22 +27,3 @@ html:focus-within {
 .body {
 	background: var(--webe-header-primary);
 }
-
-.webe-responsive {
-}
-
-.webe-carousel {
-}
-
-/* .hoot-container {
-	font-family: 'Days One', sans-serif;
-	font-size: 1.5rem;
-	color: hsl(32, 83%, 54%);
-	text-shadow: hsl(32, 93%, 70%) 2px 2px 4px;
-} */
-
-.webe-footer {
-	margin: 1vh auto 1vh auto;
-	position: relative;
-	bottom: 0;
-}
