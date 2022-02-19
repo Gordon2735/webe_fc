@@ -74,6 +74,12 @@ app.use((req, res, next) => {
 	next();
 });
 
+app.get('/', (req, res) => {
+	res.sendFile('javascript-39396.png', {
+		root: __dirname + 'public/src/img/software_logos/',
+	});
+});
+
 router.use((req, res, next) => {
 	if (!res.locals.partials) res.locals.partials = {};
 	next();

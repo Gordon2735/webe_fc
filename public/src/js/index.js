@@ -36,6 +36,23 @@ const init = () => {
 			});
 			body.appendChild(webeHeader);
 		};
+		const webeNav = () => {
+			const script = document.createElement('script');
+			const webeNav = document.createElement('webe-nav');
+			setAttributes(script, {
+				src: '../components/webe-nav/webe-nav.js',
+				type: 'module',
+				content: 'text/javascript',
+				crossorigin: 'anonymous',
+			});
+			head.appendChild(script);
+			setAttributes(webeNav, {
+				id: 'webe-nav',
+				class: 'webe-nav',
+				alt: 'Web-Component Nav',
+			});
+			body.appendChild(webeNav);
+		};
 
 		const owlScript = () => {
 			const script = document.createElement('script');
@@ -103,6 +120,7 @@ const init = () => {
 		};
 		//- :::: Append the 'generated' HTML to the DOM :::: -//
 		webeHeaderScript();
+		webeNav();
 		owlScript();
 		webeResponsiveScript();
 		webeFooterScript();

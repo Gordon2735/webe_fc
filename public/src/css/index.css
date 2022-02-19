@@ -11,6 +11,7 @@
 	--transition-speed: 600ms;
 	--webe-header-primary: hsl(0, 0%, 13%);
 	--webe-header-clr: hsl(32, 83%, 54%);
+	--webe-shadow-clr: hsl(32, 55%, 81%);
 	--webe-header-trim: hsl(30, 4%, 11%);
 	--webe-HOOT-clr: hsl(32, 83%, 54%);
 	--webe-title-clr: hsl(0, 0%, 70%);
@@ -27,6 +28,79 @@ body {
 	margin: 0;
 	padding: 0;
 	width: 100vw;
+	text-align: center;
+}
+
+.accounts-title {
+	top: 10vh;
+	position: absolute;
+	display: inline;
+	margin: 25vh auto 25vh auto;
+	text-align: center;
+	font-size: 3.5rem;
+	font-family: 'Days One', sans-serif;
+	color: var(--webe-header-clr);
+	text-shadow: var(--webe-header-clr) 3px 2px 3px;
+	text-align: center;
+}
+.desktop-title {
+	left: 42vh;
+	top: 10vh;
+	position: absolute;
+	display: inline;
+	margin-top: 20vh;
+	width: 50%;
+	text-align: center;
+	font-size: 2.8rem;
+	font-family: 'Days One', sans-serif;
+	color: var(--webe-header-clr);
+	letter-spacing: 0.4vw;
+	text-shadow: var(--webe-shadow-clr) 3px 1.3px 1.8px;
+}
+
+.desktop-jhc {
+	left: 62vh;
+	top: 45vh;
+	position: absolute;
+	display: inline;
+	margin-top: 20vh;
+	width: 300px;
+	height: auto;
+}
+
+.desktop-electron {
+	left: 25vh;
+	top: 25vh;
+	position: absolute;
+	display: inline;
+	margin-top: 20vh;
+	width: 185px;
+	height: auto;
+}
+
+.electron-title {
+	left: 47vh;
+	top: 32vh;
+	position: absolute;
+	display: inline;
+	margin-top: 20vh;
+	text-align: center;
+	font-size: 1.8rem;
+	font-family: 'Days One', sans-serif;
+	color: var(--webe-header-clr);
+	letter-spacing: 0.2vw;
+	text-shadow: var(--webe-shadow-clr) 1.5px 0.8px 1.3px;
+}
+
+.desktop-webe {
+	left: 115vh;
+	top: 26vh;
+	position: absolute;
+	display: inline;
+	margin-top: 20vh;
+	width: 535px;
+	height: auto;
+	transform: rotate(7deg);
 }
 
 /* Small screens */

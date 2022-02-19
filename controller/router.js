@@ -17,6 +17,10 @@ import support from './routes/support-route.js';
 import q_n_a from './routes/q_n_a-route.js';
 import helps from './routes/helps-route.js';
 import hoot_2022 from './routes/hoot_2022-route.js';
+import internet from './routes/internet-route.js';
+import mobile from './routes/mobile-route.js';
+import desktop from './routes/desktop-route.js';
+import accounts from './routes/accounts-route.js';
 // import fourOfour from './routes/404-route.js';
 // import fiveOO from './routes/500-route.js';
 
@@ -40,6 +44,10 @@ router.use('/', app_design);
 router.use('/', support);
 router.use('/', q_n_a);
 router.use('/', helps);
+router.use('/', internet);
+router.use('/', mobile);
+router.use('/', desktop);
+router.use('/', accounts);
 router.use('/', headers);
 router.use((req, res, next) => {
 	if (!res.locals.partials) res.locals.partials = {};

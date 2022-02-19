@@ -10,7 +10,7 @@ const RenderSection = `
   <nav class="navbar">
     <ul class="navbar-nav">
       <li class="logo">
-        <a href="#" class="nav-link">
+        <a href="/" class="nav-link">
           <span class="link-text logo-text">HOOT<br> Webelistics</span>
           <svg
             aria-hidden="true"
@@ -39,7 +39,7 @@ const RenderSection = `
       </li>
 
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="/internet" class="nav-link">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="globe" class="svg-inline--fa fa-globe fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path fill="currentColor" d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z">
         </path>
         </svg>
@@ -48,7 +48,7 @@ const RenderSection = `
       </li>
 
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="/mobile" class="nav-link">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="mobile" class="svg-inline--fa fa-mobile fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M272 0H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h224c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zM160 480c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z">
         </path>
         </svg>
@@ -57,7 +57,7 @@ const RenderSection = `
       </li>
 
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="/desktop" class="nav-link">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="desktop" class="svg-inline--fa fa-desktop fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M528 0H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h192l-16 48h-72c-13.3 0-24 10.7-24 24s10.7 24 24 24h272c13.3 0 24-10.7 24-24s-10.7-24-24-24h-72l-16-48h192c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-16 352H64V64h448v288z">
         </path>
         </svg>
@@ -66,7 +66,7 @@ const RenderSection = `
       </li>
 
       <li class="nav-item">
-        <a href="#" class="nav-link">
+        <a href="/accounts" class="nav-link">
         <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="users" class="svg-inline--fa fa-users fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M96 224c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm448 0c35.3 0 64-28.7 64-64s-28.7-64-64-64-64 28.7-64 64 28.7 64 64 64zm32 32h-64c-17.6 0-33.5 7.1-45.1 18.6 40.3 22.1 68.9 62 75.1 109.4h66c17.7 0 32-14.3 32-32v-32c0-35.3-28.7-64-64-64zm-256 0c61.9 0 112-50.1 112-112S381.9 32 320 32 208 82.1 208 144s50.1 112 112 112zm76.8 32h-8.3c-20.8 10-43.9 16-68.5 16s-47.6-6-68.5-16h-8.3C179.6 288 128 339.6 128 403.2V432c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48v-28.8c0-63.6-51.6-115.2-115.2-115.2zm-223.7-13.4C161.5 263.1 145.6 256 128 256H64c-35.3 0-64 28.7-64 64v32c0 17.7 14.3 32 32 32h65.9c6.3-47.4 34.9-87.3 75.2-109.4z">
         </path>
         </svg>
@@ -157,67 +157,7 @@ const RenderSection = `
     </ul>
   </nav>
 
-  <main>
-    <h1>Development is awesome and super Cool</h1>
-
-    <p>
-      I'm baby kale chips affogato ennui lumbersexual, williamsburg paleo quinoa
-      iceland normcore tumeric. Kitsch coloring book retro, seitan schlitz
-      tattooed biodiesel vexillologist neutra. Synth mumblecore deep v, umami
-      selfies normcore gluten-free snackwave. Seitan ramps drinking vinegar
-      venmo keytar, humblebrag VHS post-ironic tacos godard pour-over.
-    </p>
-    <p>
-      Sartorial kogi taxidermy, kickstarter synth yr irony ennui everyday carry
-      retro helvetica stumptown cloud bread squid echo park. Etsy cloud bread
-      sartorial quinoa tacos beard mumblecore shaman tumblr pop-up. Twee retro
-      fingerstache af helvetica pabst 8-bit leggings taiyaki portland ramps tbh
-      tumblr vinyl. Neutra humblebrag bushwick portland subway tile plaid, offal
-      scenester flexitarian cliche squid small batch palo santo. Palo santo meh
-      adaptogen +1 3 wolf moon, listicle brunch ethical fanny pack everyday
-      carry fam. Offal fingerstache taxidermy, man bun venmo PBR&amp;B helvetica
-      thundercats everyday carry tote bag artisan cray wolf jianbing.
-    </p>
-    <p>
-      Taxidermy thundercats whatever austin. VHS helvetica ethical, dreamcatcher
-      enamel pin YOLO shabby chic locavore man bun crucifix pabst chillwave
-      pop-up vegan. Air plant mlkshk ethical echo park tumeric, whatever
-      crucifix godard scenester locavore pork belly yuccie vape. +1 gochujang
-      put a bird on it, pork belly whatever selfies vaporware occupy banh mi
-      normcore VHS. Cornhole normcore hashtag tilde. Hell of yr try-hard DIY raw
-      denim banjo, enamel pin irony polaroid copper mug tofu. Dreamcatcher lomo
-      literally 90's before they sold out, 3 wolf moon banh mi seitan chambray
-      cliche offal tote bag occupy pug.
-    </p>
-    <p>
-      Post-ironic hot chicken salvia yr yuccie ugh cold-pressed keffiyeh franzen
-      viral taxidermy mustache slow-carb crucifix vape. Taiyaki yuccie hell of
-      tacos PBR&amp;B, kitsch meggings tbh truffaut kickstarter mixtape af kogi.
-      Fingerstache vegan tofu waistcoat gentrify cray. Drinking vinegar 3 wolf
-      moon health goth craft beer master cleanse. Letterpress health goth 8-bit
-      chillwave craft beer brooklyn. Chicharrones master cleanse 8-bit,
-      mumblecore copper mug messenger bag poutine lomo kale chips flannel. Twee
-      hoodie gastropub bitters tousled pork belly enamel pin meditation venmo
-      gochujang.
-    </p>
-    <p>
-      Next level selfies cronut ethical. Tofu tumblr you probably haven't heard
-      of them, man braid literally forage swag chillwave. Pug yr flannel
-      tumeric. Coloring book yr chillwave snackwave, shoreditch shaman gentrify
-      typewriter tumeric DIY copper mug small batch. Scenester waistcoat YOLO
-      hexagon kombucha poke 8-bit meditation. Selvage scenester forage
-      williamsburg. Hoodie fingerstache tacos mustache, hashtag quinoa next
-      level sartorial craft beer retro disrupt lo-fi.
-    </p>
-    <p>
-      YOLO twee keytar farm-to-table flexitarian cardigan polaroid lumbersexual
-      adaptogen drinking vinegar echo park dreamcatcher. Brunch shoreditch
-      dreamcatcher iPhone knausgaard plaid edison bulb letterpress ethical yr
-      fanny pack. Typewriter portland woke glossier cronut, post-ironic migas
-      gentrify letterpress cray brunch lyft 8-bit master cleanse. Pitchfork
-      thundercats organic pour-over unicorn lomo.
-    </p>   
-  </main>
+ 
 </body>
 		  `;
 

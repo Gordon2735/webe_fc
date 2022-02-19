@@ -16,7 +16,7 @@
 	grid-template-columns: repeat(6, 1fr);
 	grid-template-rows: 1 / 2;
 	/* grid-gap: 0.5px; */
-	bottom: -8vh;
+	bottom: -65vh;
 	margin: 0.1vh auto 0.1vh auto;
 	position: relative;
 	max-width: calc(60% - 60px);
