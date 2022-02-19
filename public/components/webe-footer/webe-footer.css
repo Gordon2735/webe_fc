@@ -16,8 +16,8 @@
 	grid-template-columns: repeat(6, 1fr);
 	grid-template-rows: 1 / 2;
 	/* grid-gap: 0.5px; */
-	bottom: -17vh;
-	margin: 1vh auto 1vh auto;
+	bottom: -8vh;
+	margin: 0.1vh auto 0.1vh auto;
 	position: relative;
 	max-width: calc(60% - 60px);
 	height: auto;
@@ -27,7 +27,7 @@
 	font-family: 'Days One', sans-serif;
 	font-size: 0.7vw;
 	color: var(--webe-title-clr);
-	z-index: 4;
+	z-index: 6;
 }
 
 .footer .hoot-webelistic {
@@ -37,6 +37,7 @@
 	position: relative;
 	display: block;
 	color: var(--webe-title-clr);
+	z-index: 6;
 }
 
 .hoot-webelistic .register {

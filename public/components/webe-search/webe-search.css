@@ -1,4 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+
+:root {
+	--webe-header-primary: hsl(0, 0%, 13%);
+	--webe-backLight-clr: hsl(0, 0%, 26%);
+	--webe-header-clr: hsl(32, 83%, 54%);
+	--webe-header-trim: hsl(30, 4%, 11%);
+	--webe-black-clr: hsl(0, 0%, 0%);
+	--webe-HOOT-clr: hsl(32, 83%, 54%);
+	--webe-gold-clr: hsl(51, 100%, 50%);
+	--webe-title-clr: hsl(0, 0%, 70%);
+	--webe-HOOT-fs: 'Chango', cursive;
+	--webe-title-fs: 'Days One', sans-serif;
+	--webe-work-fs: 'Work Sans', sans-serif;
+}
 
 * {
 	padding: 0;
@@ -6,7 +22,7 @@
 }
 
 body {
-	background-color: #222222;
+	background-color: var(--webe-header-primary);
 }
 
 /* .h1 {
@@ -30,30 +46,32 @@ body {
 .search-wrapper {
 	display: flex;
 	flex-direction: column;
+	width: calc(20% - 20px);
 	gap: 0.25rem;
-	font-family: 'Work Sans', sans-serif;
-	color: #b3b3b3;
+	font-family: var(--webe-work-fs);
+	color: var(--webe-title-clr);
 }
 
 input {
-	font-family: 'Work Sans', sans-serif;
+	font-family: var(--webe-work-fs);
 	font-size: 1rem;
-	color: black;
+	color: var(--webe-header-trim);
 }
 
 .user-cards {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	/* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
+	grid-template-columns: no-repeat (auto-fill, minmax(150px, 1fr)) 1fr;
 	gap: 0.25rem;
 	margin-top: 1rem;
-	font-family: 'Work Sans', sans-serif;
-	color: #b3b3b3;
+	font-family: var(--webe-work-fs);
+	color: var(--webe-title-clr);
 }
 
 .card {
 	padding: 0.5rem;
-	border: 1px solid #b3b3b3;
-	background-color: #424242;
+	border: 1px solid var(--webe-title-clr);
+	background-color: var(--webe-backLight-clr);
 }
 
 .card > .header {
@@ -62,7 +80,7 @@ input {
 
 .card > .body {
 	font-size: 0.8rem;
-	color: gold;
+	color: var(--webe-gold-clr);
 }
 
 .hide {

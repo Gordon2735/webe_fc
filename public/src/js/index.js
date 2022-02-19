@@ -36,6 +36,19 @@ const init = () => {
 			});
 			body.appendChild(webeHeader);
 		};
+
+		const owlScript = () => {
+			const script = document.createElement('script');
+			setAttributes(script, {
+				src: '/src/js/owlMeter.js',
+				type: 'module',
+				content: 'text/javascript',
+				crossorigin: 'anonymous',
+			});
+
+			// head.appendChild(script);
+		};
+
 		const webeResponsiveScript = () => {
 			const script = document.createElement('script');
 			setAttributes(script, {
@@ -88,21 +101,11 @@ const init = () => {
 			});
 			body.appendChild(webeFooter);
 		};
-		const owlScript = () => {
-			const script = document.createElement('script');
-			setAttributes(script, {
-				src: '/src/js/owlMeter.js',
-				type: 'module',
-				content: 'text/javascript',
-				crossorigin: 'anonymous',
-			});
-			head.appendChild(script);
-		};
 		//- :::: Append the 'generated' HTML to the DOM :::: -//
 		webeHeaderScript();
+		owlScript();
 		webeResponsiveScript();
 		webeFooterScript();
-		owlScript();
 		// webeCarouselScript();
 	};
 	RenderWebComponent();

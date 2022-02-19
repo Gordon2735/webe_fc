@@ -6,8 +6,25 @@
 }
 
 /* Utility class for centering */
+/* .meter-container {
+	top: 20vh;
+	margin: 2vh auto 2vh auto;
+	text-align: center;
+	align-items: center;
+	z-index: 6;
+} */
 .meter-container {
-	margin: auto;
+	margin: 0 auto 0 auto;
+	top: -50vh;
+	width: 50%;
+	height: 30vh;
+	position: relative;
+	display: inline;
+	/* width: 40vw;
+	height: 45vh; */
+	/* background-color: var(--webe-header-trim); */
+	overflow: visible;
+	z-index: 4;
 }
 
 /*  hootMeter
@@ -23,23 +40,19 @@
  */
 
 .hoot-meter {
-	margin: 0 auto 0 auto;
-	/* justify-content: center;
-	justify-items: center; */
-	width: 15vw;
+	width: 11vw;
 	height: 5vh;
-	position: relative;
-	animation: sk-chase 2.5s infinite linear both;
+	animation: hoot-meter 2.5s infinite linear both;
 	color: hsl(32, 83%, 54%);
 }
 
 .hoot-meter-owl {
-	width: 15vw;
-	height: 5vh;
+	width: 9vw;
+	height: 3vh;
 	position: absolute;
 	left: 0;
 	top: 0;
-	animation: sk-chase-dot 2s infinite ease-in-out both;
+	animation: hoot-meter-owl 2s infinite ease-in-out both;
 }
 
 .hoot-meter-owl:before {

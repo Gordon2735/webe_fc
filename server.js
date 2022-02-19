@@ -29,18 +29,18 @@ const handlebars = create({
 	layoutsDir: __dirname + '/views/layouts/',
 	partialsDir: __dirname + '/views/partials/',
 	helpersDir: __dirname + '/views/partials/',
-	helpers: {
-		section: function (name, options) {
-			if (!this._sections) this._sections = {};
-			this._sections[name] = options.fn(this);
-			return null;
-		},
-	},
+	// helpers: {
+	// 	section: function (name, options) {
+	// 		if (!this._sections) this._sections = {};
+	// 		this._sections[name] = options.fn(this);
+	// 		return null;
+	// 	},
+	// },
 });
 app.set('views', './views');
 app.set('view engine', 'handlebars');
 app.engine('handlebars', handlebars.engine);
-// app.enable('view cache');
+app.enable('view cache');
 
 app.use(express.static(__dirname + 'controller/'));
 app.use('/', router);

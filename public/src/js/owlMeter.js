@@ -18,30 +18,22 @@ const setAttributes = (tag, attributes) => {
 const owlLoad = () => {
 	const style = document.createElement('style');
 	setAttributes(style, {
-		id: 'style',
-		type: 'text/css',
+		id: 'owlStyle',
 		rel: 'stylesheet',
+		type: 'text/css',
 		crossorigin: 'anonymous',
 	});
-	const styleText = `
-        .meter-container { 
-            margin: 20vh auto 0vh auto;
-            position: relative;
-            display: flex;
-            jusify-content: center;
-            // justify-items: center;
-            width: 40vh;
-            height: auto;
-            background-color: hsl(32, 83%, 54%);
-        }`;
-	style.innerHTML = `${styleText}`;
+	style.innerHTML = `@import "../src/css/owlMeter.css";`;
 	body.appendChild(style);
+
 	const meterContainer = document.createElement('div');
 	setAttributes(meterContainer, {
 		id: 'meter-container',
 		class: 'meter-container',
+		alt: 'meter-container',
 	});
 	body.appendChild(meterContainer);
+
 	const hootMeter = document.createElement('div');
 	setAttributes(hootMeter, {
 		id: 'hoot-meter',
