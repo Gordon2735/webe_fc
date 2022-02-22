@@ -1,4 +1,4 @@
-<!--@ <webe_fc> Development Utilizing Functional Programming Paradigm techniques -->
+<!--@ <webe_fc> Development Partially Utilizing Functional Programming Paradigm techniques -->
 
 <!--& ::::::::::::::::::::::::::  2022.01.20:14:32:30  ::::::::::::::::::::::::: -->
 <!--  -->

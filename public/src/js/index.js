@@ -22,8 +22,8 @@ const init = () => {
 			const script = document.createElement('script');
 			const webeHeader = document.createElement('webe-header');
 			setAttributes(script, {
-				src: '../components/webe-header/webe-header.js',
 				type: 'module',
+				src: '../components/webe-header/webe-header.js',
 				content: 'text/javascript',
 				crossorigin: 'anonymous',
 			});
@@ -36,12 +36,29 @@ const init = () => {
 			});
 			body.appendChild(webeHeader);
 		};
+		const webeSearch = () => {
+			const script = document.createElement('script');
+			const webeSearch = document.createElement('webe-search');
+			setAttributes(script, {
+				type: 'module',
+				src: '../components/webe-search/webe-search.js',
+				content: 'text/javascript',
+				crossorigin: 'anonymous',
+			});
+			head.appendChild(script);
+			setAttributes(webeSearch, {
+				id: 'webe-search',
+				class: 'webe-search',
+				alt: 'Web-Component Search',
+			});
+			body.appendChild(webeSearch);
+		};
 		const webeNav = () => {
 			const script = document.createElement('script');
 			const webeNav = document.createElement('webe-nav');
 			setAttributes(script, {
-				src: '../components/webe-nav/webe-nav.js',
 				type: 'module',
+				src: '../components/webe-nav/webe-nav.js',
 				content: 'text/javascript',
 				crossorigin: 'anonymous',
 			});
@@ -57,8 +74,8 @@ const init = () => {
 		const owlScript = () => {
 			const script = document.createElement('script');
 			setAttributes(script, {
-				src: '/src/js/owlMeter.js',
 				type: 'module',
+				src: '/src/js/owlMeter.js',
 				content: 'text/javascript',
 				crossorigin: 'anonymous',
 			});
@@ -69,8 +86,8 @@ const init = () => {
 		const webeResponsiveScript = () => {
 			const script = document.createElement('script');
 			setAttributes(script, {
-				src: '../components/webe-responsive/webe-responsive.js',
 				type: 'module',
+				src: '../components/webe-responsive/webe-responsive.js',
 				content: 'text/javascript',
 				crossorigin: 'anonymous',
 			});
@@ -105,10 +122,10 @@ const init = () => {
 			const script = document.createElement('script');
 			const webeFooter = document.createElement('webe-footer');
 			setAttributes(script, {
-				src: '../components/webe-footer/webe-footer.js',
 				type: 'module',
-				// content: 'text/javascript',
-				// crossorigin: 'anonymous',
+				src: '../components/webe-footer/webe-footer.js',
+				content: 'text/javascript',
+				crossorigin: 'anonymous',
 			});
 			head.appendChild(script);
 			// going to import the CSS module from inside component's JS module
@@ -121,6 +138,7 @@ const init = () => {
 		//- :::: Append the 'generated' HTML to the DOM :::: -//
 		webeHeaderScript();
 		webeNav();
+		webeSearch();
 		owlScript();
 		webeResponsiveScript();
 		webeFooterScript();

@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
 
-/** PLAN to have Light/Dark Mode  **/
+@import url('../../src/css/index.css');
 
 :root {
 	--webe-header-primary: hsl(0, 0%, 13%);
 	--webe-header-clr: hsl(32, 83%, 54%);
 	--webe-header-trim: hsl(30, 4%, 11%);
+	--webe-footer-clr: rgba(235, 144, 40, 0.09);
 	--webe-HOOT-clr: hsl(32, 83%, 54%);
 	--webe-title-clr: hsl(0, 0%, 70%);
 	--webe-HOOT-fs: 'Chango', cursive;
@@ -16,7 +17,7 @@
 	--text-secondary: #ececec;
 	--text-gold: hsl(56, 86%, 60%);
 	--bg-primary: #23232e;
-	--bg-secondary: #141418;
+	--bg-secondary: rgba(235, 144, 40, 0.09) /*#141418*/;
 	--transition-speed: 600ms;
 }
 
@@ -92,7 +93,7 @@
 	margin-bottom: 0.1rem;
 	text-align: center;
 	color: var(--text-secondary);
-	background: var(--bg-secondary);
+	background: hsla(0, 25%, 5%, 1) /* var(--bg-secondary) */;
 	font-size: 1.3rem;
 	letter-spacing: 0.4ch;
 	width: 100%;
@@ -115,7 +116,7 @@
 	transform: rotate(-180deg);
 }
 
-h1 {
+/* h1 {
 	margin-top: 3vh;
 	text-align: center;
 	color: var(--text-secondary);
@@ -124,7 +125,7 @@ h1 {
 p {
 	margin: 1vh 3vw 0 5vw;
 	padding: 2vh 4vw 0 4vw;
-}
+} */
 
 /* Small screens */
 @media only screen and (max-width: 600px) {
@@ -166,7 +167,7 @@ p {
 }
 
 /* Large screens */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 1100px) {
 	body {
 		background-color: var(--webe-header-primary);
 		background-color: var(--bg-primary);
@@ -200,4 +201,42 @@ p {
 	.navbar:hover .logo-text {
 		left: 0px;
 	}
+}
+
+.dark {
+	--text-gold: hsl(41, 93%, 72%);
+	--text-primary: #b6b6b6;
+	--text-secondary: hsl(32, 83%, 54%);
+	--bg-primary: #23232e;
+	--bg-secondary: #222222;
+}
+
+.light {
+	--text-primary: #1f1f1f;
+	--text-secondary: #000000;
+	--bg-primary: #ffffff;
+	--bg-secondary: #e4e4e4;
+}
+
+.solar {
+	--text-primary: #576e75;
+	--text-secondary: #35535c;
+	--bg-primary: #fdf6e3;
+	--bg-secondary: #f5e5b8;
+}
+
+.theme-icon {
+	display: none;
+}
+
+.dark #darkIcon {
+	display: block;
+}
+
+.light #lightIcon {
+	display: block;
+}
+
+.solar #solarIcon {
+	display: block;
 }

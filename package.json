@@ -1,7 +1,7 @@
 {
 	"name": "webe_fc",
 	"version": "1.0.0",
-	"description": "\"Development and Practice of Functional Programming",
+	"description": "\"Development and Practice of Practical, Declarative, & Functional Programming",
 	"main": "server.js",
 	"type": "module",
 	"directories": {
@@ -12,7 +12,7 @@
 		"test": "jest",
 		"start": "node server.js",
 		"lint": "eslint",
-		"hello-world": "echo \"HOOT Webelistics ~ Web Application Development\"",
+		"hello-world": "echo \"HOOT Webelistics® ~ Internet, Mobile, & Desktop Application Development\"",
 		"preroutineTest": "echo \"Pre-routine test\"",
 		"routineTest": "jest \"./bin/testAction.test.js\n\"",
 		"postroutineTest": "npm run lint\n echo \"Post-routine test\"\"LINT TEST PASSED\"",

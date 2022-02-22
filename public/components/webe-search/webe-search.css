@@ -16,15 +16,6 @@
 	--webe-work-fs: 'Work Sans', sans-serif;
 }
 
-* {
-	padding: 0;
-	margin: 0;
-}
-
-body {
-	background-color: var(--webe-header-primary);
-}
-
 /* .h1 {
 	margin: 20px;
 	font-family: 'Work Sans', sans-serif;
@@ -44,12 +35,17 @@ body {
 } */
 
 .search-wrapper {
+	top: 30vh;
+	right: 2vw;
+	margin: 2vh 5vw 3vh 5vw;
+	position: absolute;
 	display: flex;
 	flex-direction: column;
-	width: calc(20% - 20px);
+	width: calc(20% - 40px);
 	gap: 0.25rem;
 	font-family: var(--webe-work-fs);
 	color: var(--webe-title-clr);
+	text-align: right;
 }
 
 input {
@@ -59,26 +55,33 @@ input {
 }
 
 .user-cards {
+	margin-left: 60%;
+	padding-top: 8%;
+	top: 45vh;
+	right: 3vw;
 	display: grid;
-	/* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
-	grid-template-columns: no-repeat (auto-fill, minmax(150px, 1fr)) 1fr;
-	gap: 0.25rem;
-	margin-top: 1rem;
+	grid-template-columns: repeat(3, 1fr);
+	width: 30%;
 	font-family: var(--webe-work-fs);
 	color: var(--webe-title-clr);
+	z-index: 8;
 }
 
 .card {
+	right: 5vw;
 	padding: 0.5rem;
 	border: 1px solid var(--webe-title-clr);
 	background-color: var(--webe-backLight-clr);
+	z-index: 8;
 }
 
-.card > .header {
+.card .header {
 	margin-bottom: 0.25rem;
 }
 
-.card > .body {
+.card .body {
+	top: 18vh;
+	left: 5vw;
 	font-size: 0.8rem;
 	color: var(--webe-gold-clr);
 }

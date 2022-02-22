@@ -3,6 +3,7 @@
 
 :root {
 	--webe-header-clr-primary: hsl(0, 0%, 13%);
+	--webe-footer-clr: rgba(235, 144, 40, 0.09);
 	--webe-header-clr: hsl(32, 83%, 54%);
 	--webe-header-clr-trim: hsl(30, 4%, 11%);
 	--webe-HOOT-clr: hsl(32, 83%, 54%);
@@ -21,7 +22,7 @@
 	position: relative;
 	max-width: calc(60% - 60px);
 	height: auto;
-	background-color: rgba(235, 144, 40, 0.09);
+	background-color: var(--webe-footer-clr);
 	border-radius: 10px;
 	text-align: center;
 	font-family: 'Days One', sans-serif;
