@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
 
-@import url('../../components/webe-responsive/webe-responsive.css');
-
 :root {
 	font-size: 16px;
 	font-family: 'Open Sans';
@@ -30,12 +28,13 @@ html {
 	background: var(--bg-primary);
 }
 
-body {
+/* body {
 	margin: 0;
 	padding: 0;
 	width: 100vw;
+	height: auto;
 	text-align: center;
-}
+} */
 
 .accounts-title {
 	top: 10vh;

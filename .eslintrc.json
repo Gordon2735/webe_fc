@@ -18,7 +18,8 @@
 	"rules": {
 		"jest/valid-describe-callback": "warn",
 		"jest/valid-expect-in-promise": "warn",
-		"jest/valid-expect": "warn"
+		"jest/valid-expect": "warn",
+		"no-extra-boolean-cast": 0
 	},
 	"ignorePatterns": [
 		"utils/qa/lighthouse/*.js",

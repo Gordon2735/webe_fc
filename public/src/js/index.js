@@ -138,7 +138,7 @@ const init = () => {
 		//- :::: Append the 'generated' HTML to the DOM :::: -//
 		webeHeaderScript();
 		webeNav();
-		webeSearch();
+		// webeSearch();
 		owlScript();
 		webeResponsiveScript();
 		webeFooterScript();
