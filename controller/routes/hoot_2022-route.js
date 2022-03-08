@@ -10,7 +10,9 @@ let user;
 const hoot_2022 = router
 	.get('/hoot_2022', (req, res) => {
 		res.set('Content-Type', 'text/html');
-		res.render('hoot_2022');
+		res.render('hoot_2022', {
+			layout: 'main-tertiary',
+		});
 	})
 	.post('/', async (req, res) => {
 		res.json(

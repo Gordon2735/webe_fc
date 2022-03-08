@@ -1,0 +1,58 @@
+{
+	"internet_app": {
+		"int-app-basic": {
+			"server": "Linux VPN CentOS7 Apache",
+			"server-side": "Node.js, Express",
+			"templating": "Express-Handlebars",
+			"testing": "Jest and JSLint, TDD Test-Driven-Development",
+			"data": "Local JSON Data Files",
+			"transpiling": "Babel JS",
+			"client": "Vanilla JavaScript, HTML5, CSS3",
+			"client-side": "Native Web Components",
+			"design": "CSS Cascading-Style-Sheets",
+			"automated-tasking": "NPM Scripting and Packaging",
+			"dom": "DOM Document-Object-Model HTML5 Hyper-Text-Markup-Language",
+			"package_image": "../img_webe-devtools/int_app_basic.png",
+			"version-control": "GitHub Version Control",
+			"contact-management": "CMS Contact-Management-System",
+			"description": "Basic Internet Application with an intuitive UI (User-Interface) with integrated Client-Side Data capabilities. Webelistics goal in design, look, and feel of all builds is to exceed all expectations in professionally implementing our customers requirements; delivering quality engineered software!",
+			"platforms": "Desktop Computer System"
+		},
+		"int-app-Standard": {
+			"server": "Linux VPN CentOS7 Apache",
+			"server-side": "Node.js, Express",
+			"templating": "Express-Handlebars",
+			"testing": "Jest and JSLint, TDD Test-Driven-Development",
+			"data": "MongoDB Cloud Atlas, Local JSON Data Files",
+			"transpiling": "Babel JS",
+			"client": "Vanilla JavaScript, HTML5, CSS3",
+			"client-side": "Native Web Components",
+			"design": "CSS Cascading-Style-Sheets",
+			"automated-tasking": "NPM Scripting and Packaging",
+			"dom": "DOM Document-Object-Model HTML5 Hyper-Text-Markup-Language",
+			"package_image": "../img_webe-devtools/int_app_standard.png",
+			"version-control": "GitHub Version Control",
+			"contact-management": "CMS Contact-Management-System",
+			"description": "Basic Internet Application with an intuitive UI (User-Interface) with integrated Client-Side Data capabilities. Webelistics goal in design, look, and feel of all builds is to exceed all expectations in professionally implementing our customers requirements; delivering quality engineered software!",
+			"platforms": "Desktop Computer System, iPad and Handheld devices, Mobile/Smart Phone devices"
+		},
+		"int-app-advanced": {
+			"server": "Linux VPN CentOS7 Apache",
+			"server-side": "Node.js, Express",
+			"templating": "Express-Handlebars",
+			"testing": "Jest and JSLint, TDD Test-Driven-Development",
+			"data": "MongoDB Cloud Atlas, Local Mongoose Database",
+			"transpiling": "Babel JS",
+			"client": "Vanilla JavaScript, HTML5, CSS3",
+			"client-side": "Native Web Components",
+			"design": "CSS Cascading-Style-Sheets",
+			"automated-tasking": "NPM Scripting and Packaging",
+			"dom": "DOM Document-Object-Model HTML5 Hyper-Text-Markup-Language",
+			"package_image": "../img_webe-devtools/int_app_advanced.png",
+			"version-control": "GitHub Version Control",
+			"contact-management": "Personal Engineered CMS Application managed and updateable by client and physically positioned on client's own VPN Server; CMS Contact-Management-System",
+			"description": "Basic Internet Application with an intuitive UI (User-Interface) with integrated Client-Side Data capabilities. Webelistics goal in design, look, and feel of all builds is to exceed all expectations in professionally implementing our customers requirements; delivering quality engineered software!",
+			"platforms": "Desktop Computer System, iPad and Handheld devices, Mobile/Smart Phone devices"
+		}
+	}
+}

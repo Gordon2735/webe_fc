@@ -1,10 +1,6 @@
 'use strict';
 
-const setAttributes = (tag, attributes) => {
-	for (let key in attributes) {
-		tag.setAttribute(key, attributes[key]);
-	}
-};
+import { setAttributes } from '../../src/js/webeLibrary.js';
 
 const template = document.createElement('template');
 setAttributes(template, {
@@ -75,6 +71,9 @@ class WebeCarousel extends HTMLElement {
 			'%c This Web Component has || * FIRED * || webe-carousel.js is connected',
 			'background: #222222; color: #FF8C00'
 		);
+
+		this.shadowRoot.appendChild(template.content.cloneNode(true));
+
 		const style = document.createElement('style');
 		setAttributes(style, {
 			id: 'webe-carousel-style',

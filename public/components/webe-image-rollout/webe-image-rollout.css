@@ -1,0 +1,22 @@
+.div-container {
+	margin: 10vh 10vw;
+	padding: 1vh 1vh;
+	width: 40vw;
+	height: auto;
+	align-items: center;
+	text-align: center;
+	border: var(--webe-HOOT-clr) solid 0.5vw;
+	border-radius: 5%;
+	overflow-y: overlay;
+}
+
+.image-text {
+	font-family: var(--webe-title-fs);
+	color: var(--webe-HOOT-clr);
+	text-shadow: var(--webe-header-clr) 2px 1px 1.5px;
+}
+
+.imageAd-home {
+	width: 30vw;
+	height: auto;
+}

@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+
+:root {
+	font-size: 16px;
+	font-family: 'Open Sans';
+	--text-primary: #b6b6b6;
+	--text-secondary: #ececec;
+	--bg-primary: #222222;
+	--bg-secondary: #141418;
+	--webe-header-primary: hsl(0, 0%, 13%);
+	--webe-header-clr: hsl(32, 83%, 54%);
+	--webe-medium-clr: hsl(30, 29%, 97%);
+	--webe-shadow-clr: hsl(32, 55%, 81%);
+	--webe-header-trim: hsl(30, 4%, 11%);
+	--webe-HOOT-clr: hsl(32, 83%, 54%);
+	--webe-title-clr: hsl(0, 0%, 70%);
+	--webe-HOOT-fs: 'Chango', cursive;
+	--webe-title-fs: 'Days One', sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	background: var(--bg-primary);
+}
+
+body {
+	justify-content: center;
+	text-align: center;
+}
+
+.h1-title {
+	margin: 3vh auto 3vh auto;
+	padding: 0.5vh;
+	position: relative;
+	top: -20vh;
+	font-family: var(--webe-title-fs);
+	font-size: 3vw;
+	color: var(--webe-medium-clr);
+	text-shadow: var(--webe-HOOT-clr) 2px 1px 3px;
+}
+
+.h1-sup {
+	font-size: 0.8vw;
+}
+
+.h1-2022 {
+	margin: 8vh auto 2vh auto;
+	padding: 0.5vh;
+	position: relative;
+	top: 38vh;
+	font-family: var(--webe-title-fs);
+	font-size: 3vw;
+	color: var(--webe-HOOT-clr);
+	text-shadow: var(--webe-medium-clr) 2px 1px 3px;
+}
+
+.h2-2022 {
+	margin: 8vh auto 0vh auto;
+	padding: 0.5vh;
+	position: relative;
+	top: 48vh;
+	font-family: var(--webe-title-fs);
+	font-size: 1.5vw;
+	color: var(--webe-HOOT-clr);
+	text-shadow: var(--webe-medium-clr) 2px 1px 3px;
+}

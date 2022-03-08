@@ -1,29 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
-
-:root {
-	--webe-header-primary: hsl(0, 0%, 13%);
-	--webe-header-clr: #eb9028;
-	--webe-header-trim: hsl(30, 4%, 11%);
-	--webe-HOOT-clr: hsl(32, 83%, 54%);
-	--webe-title-clr: hsl(0, 0%, 70%);
-	--webe-white-clr: hsl(0, 3%, 85%);
-	--webe-HOOT-fs: 'Chango', cursive;
-	--webe-title-fs: 'Days One', sans-serif;
-}
-
-/* * {
-	margin: 0;
-	padding: 0;
-}
-
-html {
-	background: var(--webe-header-clr);
-}
-html:focus-within {
-	scroll-behavior: smooth;
-} */
-
 .header {
 	display: grid;
 	grid-template-columns: 0.3fr 1.2fr 1fr;
@@ -150,28 +124,3 @@ html:focus-within {
 	text-shadow: hsl(32, 93%, 70%) 1px 1px 21px;
 	z-index: 3;
 }
-
-/* .header > .box5 {
-	grid-column: 2;
-	grid-row: 2;
-	text-align: center;
-} */
-
-/* .hamNavMenu-button {
-	position: absolute;
-	top: 0.75rem;
-	right: 1rem;
-	display: none;
-	flex-direction: column;
-	justify-content: space-between;
-	width: 30px;
-	height: 21px;
-	background-color: #222222;
-}
-
-.hamNavMenu-button > .bar {
-	height: 3px;
-	width: 100%;
-	background-color: var(--webe-title-clr);
-	border-radius: 10px;
-} */

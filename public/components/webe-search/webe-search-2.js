@@ -1,13 +1,10 @@
 'use strict';
 
+import { setAttributes } from '../../src/js/webeLibrary.js';
+
 const template = document.createElement('template');
 
 const createElements = render => {
-	const setAttributes = (tag, attributes) => {
-		for (let key in attributes) {
-			tag.setAttribute(key, attributes[key]);
-		}
-	};
 	const divContainer = document.createElement('div');
 	const labelSearch = document.createElement('label');
 	const inputSearch = document.createElement('input');

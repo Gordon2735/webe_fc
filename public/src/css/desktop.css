@@ -1,0 +1,103 @@
+.div-container {
+	margin: 10vh 10vw;
+	padding: 1vh 1vh;
+	width: 40vw;
+	height: auto;
+	align-items: center;
+	text-align: center;
+	border: var(--webe-HOOT-clr) solid 0.5vw;
+	border-radius: 5%;
+	overflow-y: overlay;
+}
+
+.image-text {
+	font-family: var(--webe-title-fs);
+	color: var(--webe-HOOT-clr);
+	text-shadow: var(--webe-header-clr) 2px 1px 1.5px;
+}
+
+.imageAd-home {
+	width: 30vw;
+	height: auto;
+}
+
+.h1-subtitle {
+	margin-left: 9vh;
+	position: absolute;
+	top: 25.3vh;
+	left: 5.65vw;
+	font-family: var(--webe-title-fs);
+	font-size: 0.9vw;
+	color: var(--webe-medium-clr);
+	text-shadow: var(--webe-header-clr) 3px 1.8px 7px;
+	letter-spacing: 0.15vw;
+	text-align: center;
+}
+
+.h1-subtitle .sup {
+	font-size: 0.7vw;
+}
+
+.image-right {
+	right: 26vw;
+	top: 22vh;
+	position: absolute;
+	width: 20vw;
+	height: auto;
+}
+
+.image-right-under {
+	right: 6vw;
+	top: 24vh;
+	position: absolute;
+	width: 20vw;
+	height: auto;
+}
+
+.image-middle-under {
+	right: 16vw;
+	top: 60vh;
+	position: absolute;
+	width: 20vw;
+	height: auto;
+}
+
+h2 {
+	position: absolute;
+	top: 27vh;
+	left: 29vw;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: red;
+}
+
+h3 {
+	position: absolute;
+	top: 29vh;
+	left: 9vw;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: skyblue;
+}
+
+h4 {
+	position: absolute;
+	top: 31vh;
+	left: 11vw;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: coral;
+}
+
+h5 {
+	position: absolute;
+	top: 33vh;
+	left: 13vw;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: rgb(99, 116, 104);
+}
+
+h6 {
+	position: absolute;
+	top: 35vh;
+	left: 15vw;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: rgb(240, 236, 4);
+}

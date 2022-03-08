@@ -30,7 +30,7 @@ class WebeNav extends HTMLElement {
 
 		this.attachShadow({ mode: 'open' });
 		const style = document.createElement('style');
-		style.textContent = '@import "./components/webe-nav/webe-nav.css";';
+		style.textContent = '@import "../components/webe-nav/webe-nav.css";';
 		this.shadowRoot.appendChild(style);
 	}
 	connectedCallback() {

@@ -1,10 +1,5 @@
 import Responsive from './webe-responsive.js';
-
-const setAttributes = (element, attributes) => {
-	for (const key in attributes) {
-		element.setAttribute(key, attributes[key]);
-	}
-};
+import { setAttributes } from '../../src/js/webeLibrary.js';
 
 const fireComponent = () => {
 	setTimeout(() => {

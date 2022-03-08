@@ -12,8 +12,12 @@ export class BatchCube extends TemplateTender {
 
 		this.noShadowRoot = true;
 		this.addEventListener('openDialog', e => {
-			this.querySelector('internet-dialog').open(e.detail);
+			this.querySelector('application-dialog').open(e.detail);
 		});
+		console.info(
+			'%c This Web Component has || * FIRED * || batch-cube.js is connected',
+			'background: #222222; color: #EE82EE'
+		);
 	}
 
 	connectedCallback() {
@@ -23,7 +27,7 @@ export class BatchCube extends TemplateTender {
 
 	async getApplication() {
 		const applicationPromise = await fetch(
-			'https://random-data-api.com/api/app/random_app?size=100'
+			'https://random-data-api.com/api/app/random_app?size=10'
 		);
 		const res = await applicationPromise.json();
 		this.application = res.result;
@@ -33,18 +37,18 @@ export class BatchCube extends TemplateTender {
 
 	get template() {
 		return `
-		<style>
-			:root {
-				--primary: rgb(33, 150, 243);
-			}
+			<style>
+				:root {
+					--primary: rgb(33, 150, 243);
+				}
 
-			batch-cube {
-				${sharedStyles.trbl}
-				overflow-y: overlay;
-			}
-		</style>
+				batch-cube {
+					${sharedStyles.trbl}
+					overflow-y: overlay;
+				}
+			</style>
 
-		<internet-dialog></internet-dialog>
+		<application-dialog></application-dialog>
 
 		<application-modal-animator>
 			${

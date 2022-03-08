@@ -46,26 +46,26 @@ export class ApplicationDialog extends TemplateTender {
                 }
 
 
-                ${sharedStyles.card}
+                ${sharedStyles.modal}
             
             </style>
             <dialog>
                 ${
 					this.applicationData
-						? `<img src=${this.profileData.picture.thumbnail} /> 
-                <h1>${this.profileData.name.first}  ${this.profileData.name.last}</h1>
+						? `<img src=${this.applicationData.app_name} /> 
+                <h1>${this.applicationData.app_name} </h1>
 
                 <hr />
                 
                 <section>
                     <div>
                         <img class="cell-img" src='/src/img/cell-phone.png' />
-                        <p>${this.profileData.cell}</p>
+                        <p>${this.applicationData.app_version}</p>
                     </div>                
 
                     <div>
                         <img class="email-img" src='/src/img/email.png' />
-                        <p>${this.profileData.email}</p>
+                        <p>${this.applicationData.app_author}</p>
                     </div>                
 
                 </section>
@@ -85,3 +85,4 @@ export class ApplicationDialog extends TemplateTender {
         `;
 	}
 }
+customElements.define('application-dialog', ApplicationDialog);

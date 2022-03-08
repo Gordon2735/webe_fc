@@ -22,9 +22,9 @@
 }
 
 .navbar {
-	top: 20vh;
-	margin: 0 0 0 0;
-	position: absolute;
+	top: 0vh;
+	margin: -55.5vh 0 0 0;
+	position: inline-block;
 	background-color: var(--bg-primary);
 	transition: width 600ms ease;
 	overflow: scroll;
@@ -37,7 +37,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: right;
-	height: 80%;
+	height: 80vh;
 }
 
 .nav-item {
@@ -129,7 +129,7 @@ p {
 } */
 
 /* Small screens */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1100px) {
 	/* body in media */
 	body {
 		background-color: var(--webe-header-primary);
@@ -167,12 +167,12 @@ p {
 }
 
 /* Large screens */
-@media only screen and (min-width: 601px) {
+@media only screen and (min-width: 600px) {
 	body {
 		background-color: var(--webe-header-primary);
 		background-color: var(--bg-primary);
 		background-color: var(--bg-secondary);
-		--transition-speed: 600ms;
+		--transition-speed: 300ms;
 	}
 	main {
 		color: var(--text-gold);
@@ -181,13 +181,13 @@ p {
 		--transition-speed: 600ms;
 	}
 	.navbar {
-		top: 20vh;
+		top: 12.3vh;
 		width: 5rem;
 		height: 100vh;
 	}
 
 	.navbar:hover {
-		width: 16rem;
+		width: 21.5rem;
 	}
 
 	.navbar:hover .link-text {

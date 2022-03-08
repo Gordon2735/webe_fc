@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 import { TemplateTender } from './template-tender.js';
 
@@ -8,7 +8,7 @@ export class ApplicationModalAnimator extends TemplateTender {
 
 		this.shadowRoot
 			.querySelector('slot')
-			.addEventListener('slotchange', () => this.animate());
+			.addEventListener('slotchange', e => this.animate());
 	}
 
 	animate() {
@@ -27,30 +27,31 @@ export class ApplicationModalAnimator extends TemplateTender {
 				}
 			);
 
-			animation.onfinish = () => (modal.style.opacity = 1);
+			animation.onfinish = e => (modal.style.opacity = 1);
 		});
 	}
 
 	get template() {
 		return `
-        <style>
-        :host {
-            display: flex;
-            flex-wrap: wrap;
-            overflow-x: hidden;
-        }
+			<style>
+				:host {
+					display: flex;
+					flex-wrap: wrap;
+					overflow-x: hidden;
+				}
 
-        ::slotted(profile-card) {
-            transition: transform 0.2s ease-in-out;
-        }
+				::slotted(application-modal) {
+					transition: transform 0.2s ease-in-out;
+				}
 
-        ::slotted(profile-card:hover) {
-            transform: scale(1.05);
-            background: white;
-            box-shadow: 0 2px 9px 1px rgba(0,0,0,0.2);
-            border-radius: 3px;
-        }
-        </style>
+				::slotted(application-modal) {
+					transform: scale(1.05);
+					background: white;
+					box-shadow: 0 2px 9px 1px rgba(0,0,0,0.2);
+					border-radius: 3px;
+				}
+			</style>
+			<slot></slot>
         `;
 	}
 }

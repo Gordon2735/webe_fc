@@ -8,11 +8,13 @@ export class ApplicationModal extends TemplateTender {
 		super();
 
 		this.addEventListener('click', () =>
-			this.dispatchEvent('openDialog', {
-				detail: this.applicationData,
-				bubbles: true,
-				composed: true,
-			})
+			this.dispatchEvent(
+				new CustomEvent('openDialog', {
+					detail: this.applicationData,
+					bubbles: true,
+					composed: true,
+				})
+			)
 		);
 	}
 
@@ -35,8 +37,9 @@ export class ApplicationModal extends TemplateTender {
 
             ${
 				this.applicationData
-					? `<img src=${this.applicationData.picture.thumbnail} />
-            <h1>${this.applicationData.name}</h1>`
+					? `
+					<h1>${this.applicationData.app_name} </h1>
+            		<h1>${this.applicationData.app_author}</h1>`
 					: ''
 			}
         `;
