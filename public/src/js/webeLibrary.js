@@ -10,7 +10,3 @@ export const setAttributes = (tag, attributes) => {
 		tag.setAttribute(key, attributes[key]);
 	}
 };
-
-// export const createTag = ((varName, docuType, tagKind) => {
-//    script.append( `const ${varName} = document.${docuType}('${tagKind}');`)
-// })

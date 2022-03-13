@@ -7,10 +7,10 @@ router.use(express.static('../../views'));
 
 //% /Contacts Login-Page page Route
 let user;
-const toslideshow = router
-	.get('/toslideshow', (req, res) => {
+const devtools_slider = router
+	.get('/devtools_slider', (req, res) => {
 		res.set('Content-Type', 'text/html');
-		res.render('toslideshow');
+		res.render('devtools_slider');
 	})
 	.post('/toslideshow', async (req, res) => {
 		res.json(
@@ -22,4 +22,4 @@ const toslideshow = router
 			})
 		);
 	});
-export default toslideshow;
+export default devtools_slider;

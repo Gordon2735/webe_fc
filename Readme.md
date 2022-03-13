@@ -52,3 +52,5 @@
 <!--?       15. npm i jsdom -D                         -->
 <!--?       16. npm i xstate -G                        -->
 <!--npm :::::::::::::::::::::::::::::::::::::::::::::: -->
+
+STUDY: Creating "General Functions" for integrating common functionality throughout the Application.

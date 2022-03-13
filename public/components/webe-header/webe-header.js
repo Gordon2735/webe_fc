@@ -2,7 +2,11 @@
 
 'use strict';
 
-import { setAttributes } from '../../src/js/webeLibrary.js';
+const setAttributes = (tag, attributes) => {
+	for (const key in attributes) {
+		tag.setAttribute(key, attributes[key]);
+	}
+};
 
 const template = document.createElement('template');
 setAttributes(template, {
@@ -153,13 +157,15 @@ class WebeHeader extends HTMLElement {
 		super();
 
 		this.attachShadow({ mode: 'open' });
-		this.shadowRoot.appendChild(template.content.cloneNode(true));
 	}
 	connectedCallback() {
 		console.info(
 			'%c This Web Component has || * FIRED * || webe-header.js is connected',
 			'background: #222222; color: #EE82EE'
 		);
+
+		this.shadowRoot.appendChild(template.content.cloneNode(true));
+
 		RenderTags();
 		style.innerHTML = `@import "../components/webe-header/webe-header.css";`;
 		this.shadowRoot.appendChild(style);

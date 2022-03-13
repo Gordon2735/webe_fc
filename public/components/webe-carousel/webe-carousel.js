@@ -1,6 +1,10 @@
 'use strict';
 
-import { setAttributes } from '../../src/js/webeLibrary.js';
+const setAttributes = (tag, attributes) => {
+	for (const key in attributes) {
+		tag.setAttribute(key, attributes[key]);
+	}
+};
 
 const template = document.createElement('template');
 setAttributes(template, {

@@ -22,12 +22,13 @@
 }
 
 .navbar {
-	top: 0vh;
-	margin: -55.5vh 0 0 0;
+	top: 15vh;
+	margin: 15.5vh 0 0 0;
 	position: inline-block;
 	background-color: var(--bg-primary);
 	transition: width 600ms ease;
 	overflow: scroll;
+	z-index: 3;
 }
 
 .navbar-nav {

@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 :root {
 	--text-primary: hsl(0, 0%, 71%);
 	--text-secondary: hsl(0, 0%, 93%);
 	--bg-primary: hsl(0, 0%, 13%);
 	--bg-secondary: hsl(240, 9%, 9%);
-	--webe-header-primary: hsl(0, 0%, 13%);
+	--bg-secondary-light: hsl(240, 9%, 9%);
+	--webe-header-primary: hsl(0, 15%, 24%);
 	--webe-header-clr: hsl(32, 83%, 54%);
 	--webe-medium-clr: hsl(30, 29%, 97%);
 	--webe-shadow-clr: hsl(32, 55%, 81%);
@@ -25,46 +27,150 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
 }
 
-html {
-	background: var(--bg-primary);
-}
-
-.main {
-	margin: 8vh auto 2vh auto;
-	position: relative;
+.section-slider {
+	margin: -85vh auto 2vh auto;
 	display: flex;
-	justify-content: center;
-	width: 75vw;
-	min-width: 55vw;
-	height: 40vh;
-	background: var(--webe-HOOT-clr-wopac);
-	opacity: 80;
-	border: var(--webe-HOOT-clr) solid 0.7vw;
-	border-radius: 2.99vh;
-	border-style: groove;
+	position: relative;
+	top: 12vh;
+	right: 10vw;
+	width: 35vw;
+	height: 50vh;
+	overflow: hidden;
+	border-radius: 20px;
+	z-index: 2;
 }
 
-.main .section-devtools {
+.section-slider .slide {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	clip-path: circle(0% at 0 50%);
+	opacity: 0;
 	justify-content: center;
 	align-items: center;
-	overflow-y: hidden;
+	/* border: hsl(323, 100%, 50%) solid 250px; */
 }
 
-.section-devtools .p_1 {
-	padding: 2vh;
-	font-family: var(--webe-title-fs);
-	font-size: 4.05vh;
-	color: var(--webe-medium-clr);
-	text-shadow: var(--webe-fontDark-text-shadow);
+.section-slider .slide.active {
+	clip-path: circle(150% at 0 5%);
+	opacity: 1;
+	transition: 3s ease-in;
+	border: hsl(32, 83%, 54%) solid 7px;
+	justify-content: center;
+	align-items: center;
 }
 
-.section-devtools .p_2 {
-	padding: 2vh;
-	font-family: fantasy;
-	font-size: 2.75vh;
-	letter-spacing: 0.8vh;
-	color: var(--webe-font-clr-freak);
-	text-shadow: var(--webe-fontDark-text-shadow);
+.section-slider .slide .img {
+	margin: 17.5vh 0 0 6vw;
+	position: absolute;
+	width: 60%;
+	height: 60%;
+	object-fit: cover;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-slider .slide .info {
+	/* top: 0.5vh; */
+	position: absolute;
+	color: #222;
+	background: rgba(255, 255, 255, 0.3);
+	width: 75%;
+	margin-top: 2rem;
+	margin-left: 2rem;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+}
+
+.section-slider .slide .info .h2 {
+	font-size: 2em;
+	font-weight: 800;
+}
+
+.section-slider .slide .info .p {
+	font-size: 1em;
+	font-weight: 400;
+}
+
+.navigation {
+	height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+.section-slider:hover .navigation {
+	opacity: 1;
+}
+
+.prev-btn,
+.next-btn {
+	z-index: 999;
+	font-size: 2em;
+	color: red;
+	background: rgba(255, 255, 255, 0.8);
+	padding: 10px;
+	cursor: pointer;
+}
+
+.prev-btn {
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+.next-btn {
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+
+.navigation-visibility {
+	z-index: 999;
+	display: flex;
+	justify-content: center;
+}
+
+.navigation-visibility .slide-icon {
+	z-index: 999;
+	background: rgba(255, 255, 255, 0.5);
+	width: 20px;
+	height: 10px;
+	transform: translateY(-50px);
+	margin: 0 6px;
+	border-radius: 2px;
+	box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+.navigation-visibility .slide-icon.active {
+	background: hsl(140, 100%, 50%);
+}
+
+@media (max-width: 900px) {
+	.section-slider {
+		width: 100%;
+	}
+
+	.section-slider .slide .info {
+		position: relative;
+		width: 80%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+@media (max-width: 500px) {
+	.section-slider .slide .info h2 {
+		font-size: 1.8em;
+		line-height: 40px;
+	}
+
+	.section-slider .slide .info p {
+		font-size: 0.9em;
+	}
 }

@@ -5,7 +5,14 @@
 
 'use strict';
 
-import { head, body, setAttributes } from './webeLibrary.js';
+const head = document.querySelector('head');
+const body = document.querySelector('body');
+
+const setAttributes = (tag, attributes) => {
+	for (const key in attributes) {
+		tag.setAttribute(key, attributes[key]);
+	}
+};
 
 const init = () => {
 	const RenderWebComponents = () => {
@@ -75,23 +82,23 @@ const init = () => {
 		// 	head.appendChild(script);
 		// };
 
-		const webeImageRolloutScript = () => {
-			const script = document.createElement('script');
-			const imageRollout = document.createElement('webe-image-rollout');
-			setAttributes(script, {
-				type: 'module',
-				src: '../components/webe-image-rollout/webe-image-rollout.js',
-				content: 'text/javascript',
-				crossorigin: 'anonymous',
-			});
-			setAttributes(imageRollout, {
-				id: 'webe-image-rollout',
-				class: 'webe-image-rollout',
-				alt: 'Image Component on Home Page',
-			});
-			head.appendChild(script);
-			body.appendChild(imageRollout);
-		};
+		// const webeImageRolloutScript = () => {
+		// 	const script = document.createElement('script');
+		// 	const imageRollout = document.createElement('webe-image-rollout');
+		// 	setAttributes(script, {
+		// 		type: 'module',
+		// 		src: '../components/webe-image-rollout/webe-image-rollout.js',
+		// 		content: 'text/javascript',
+		// 		crossorigin: 'anonymous',
+		// 	});
+		// 	setAttributes(imageRollout, {
+		// 		id: 'webe-image-rollout',
+		// 		class: 'webe-image-rollout',
+		// 		alt: 'Image Component on Home Page',
+		// 	});
+		// 	head.appendChild(script);
+		// 	body.appendChild(imageRollout);
+		// };
 
 		// const batchCubeScript = () => {
 		// 	const script = document.createElement('script');
@@ -111,7 +118,7 @@ const init = () => {
 		// 	body.appendChild(batchCube);
 		// };
 
-		const webeResponsiveScript = () => {
+		const webeResponsiveScript = async () => {
 			const script = document.createElement('script');
 			setAttributes(script, {
 				type: 'module',
@@ -124,28 +131,10 @@ const init = () => {
 			setAttributes(webeResponsive, {
 				id: 'webe-responsive',
 				class: 'webe-responsive',
-				alt: 'SLideout Menu',
+				alt: 'Slideout Menu',
 			});
 			head.appendChild(script);
 			body.appendChild(webeResponsive);
-		};
-
-		const toslideshowScript = () => {
-			const script = document.createElement('script');
-			const link = document.createElement('link');
-			setAttributes(script, {
-				type: 'module',
-				src: '../components/webe-devtools/resources/research/toslideshow/toslideshow.js',
-				content: 'text/javascript',
-				crossorigin: 'anonymous',
-			});
-			setAttributes(link, {
-				rel: 'stylesheet',
-				href: '../components/webe-devtools/resources/research/toslideshow/toslideshow.css',
-				content: 'text/css',
-				crossorigin: 'anonymous',
-			});
-			head.appendChild(script, link);
 		};
 
 		const webeDevtoolsScript = () => {
@@ -167,25 +156,25 @@ const init = () => {
 			body.appendChild(webeDevtools);
 		};
 
-		const webeCarouselScript = () => {
-			const script = document.createElement('script');
-			const webeCarousel = document.createElement('webe-carousel');
-			setAttributes(script, {
-				src: '../components/webe-carousel/webe-carousel.js',
-				type: 'module',
-				content: 'text/javascript',
-				crossorigin: 'anonymous',
-			});
-			head.appendChild(script);
-			// going to import the CSS module from inside component's JS module
-			setAttributes(webeCarousel, {
-				id: 'webe-carousel',
-				class: 'webe-carousel',
-			});
-			body.appendChild(webeCarousel);
-		};
+		// const webeCarouselScript = () => {
+		// 	const script = document.createElement('script');
+		// 	const webeCarousel = document.createElement('webe-carousel');
+		// 	setAttributes(script, {
+		// 		src: '../components/webe-carousel/webe-carousel.js',
+		// 		type: 'module',
+		// 		content: 'text/javascript',
+		// 		crossorigin: 'anonymous',
+		// 	});
+		// 	head.appendChild(script);
+		// 	// going to import the CSS module from inside component's JS module
+		// 	setAttributes(webeCarousel, {
+		// 		id: 'webe-carousel',
+		// 		class: 'webe-carousel',
+		// 	});
+		// 	body.appendChild(webeCarousel);
+		// };
 
-		const webeFooterScript = () => {
+		const webeFooterScript = async () => {
 			const script = document.createElement('script');
 			const webeFooter = document.createElement('webe-footer');
 			setAttributes(script, {
@@ -206,13 +195,12 @@ const init = () => {
 		//- :::: Append the 'generated' HTML to the DOM :::: -//
 		webeHeaderScript();
 		webeNavScript();
-		webeImageRolloutScript();
-		// batchCubeScript();
 		webeResponsiveScript();
-		toslideshowScript();
 		webeDevtoolsScript();
-		webeCarouselScript();
 		webeFooterScript();
+		// webeImageRolloutScript();
+		// batchCubeScript();
+		// webeCarouselScript();
 		// webeSearch();
 		// owlScript();
 	};
