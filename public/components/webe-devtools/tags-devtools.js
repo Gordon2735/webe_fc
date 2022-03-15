@@ -14,7 +14,6 @@ export const createTags = () => {
 	const head = document.querySelector('head');
 	// const script = document.createElement('script');
 	const link = document.createElement('link');
-	const linkSlider = document.createElement('link');
 	const divOne = document.createElement('div');
 	const divTwo = document.createElement('div');
 	const divThree = document.createElement('div');
@@ -57,13 +56,6 @@ export const createTags = () => {
 		crossorigin: 'anonymous',
 	});
 
-	setAttributes(linkSlider, {
-		rel: 'stylesheet',
-		href: '../components/webe-devtools/webe-devtools.css',
-		type: 'text/css',
-		crossorigin: 'anonymous',
-	});
-
 	setAttributes(divOne, {
 		id: 'slideOne',
 		class: 'slide active',
@@ -93,31 +85,26 @@ export const createTags = () => {
 	setAttributes(imgOne, {
 		id: 'img-one',
 		class: 'img',
-		src: '../components/webe-devtools/img_webe-devtools/int_app_basic.png',
 		alt: 'Picture of Application Package in an Image element',
 	});
 	setAttributes(imgTwo, {
 		id: 'img-two',
 		class: 'img',
-		src: '../components/webe-devtools/img_webe-devtools/2.jpg',
 		alt: 'Picture of Application Package in an Image element',
 	});
 	setAttributes(imgThree, {
 		id: 'img-three',
 		class: 'img',
-		src: '../components/webe-devtools/img_webe-devtools/3.jpg',
 		alt: 'Picture of Application Package in an Image element',
 	});
 	setAttributes(imgFour, {
 		id: 'img-four',
 		class: 'img',
-		src: '../components/webe-devtools/img_webe-devtools/4.jpg',
 		alt: 'Picture of Application Package in an Image element',
 	});
 	setAttributes(imgFive, {
 		id: 'img-five',
 		class: 'img',
-		src: '../components/webe-devtools/img_webe-devtools/5.jpg',
 		alt: 'Picture of Application Package in an Image element',
 	});
 

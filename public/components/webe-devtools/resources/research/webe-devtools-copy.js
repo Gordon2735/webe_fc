@@ -1,4 +1,4 @@
-import { setAttributes, createTags } from './tags-devtools.js';
+import { setAttributes, createTags } from '../../tags-devtools.js';
 export const section_slider = document.createElement('section');
 
 const template = document.createElement('template');
@@ -173,7 +173,9 @@ class WebeDevtools extends HTMLElement {
 			const h2Five = shadow.getElementById('h2-five');
 			const pFive = shadow.getElementById('p-five');
 
-			for (let i = 0; i < data.length; i++) {
+			const iterateData = data.reduce((acc, curr) => {
+				let i = curr;
+
 				imgOne.src = `${data[i].intro.image}`;
 				h2One.innerHTML = `Introduction to our Applications:`;
 				pOne.innerHTML = `${data[i].intro.message} <br>
@@ -221,7 +223,8 @@ class WebeDevtools extends HTMLElement {
 					Description: ${data[i].int_app_Ultimate.description} <br>
 					Platform: ${data[i].int_app_Ultimate.platforms} 
 				`;
-			}
+			});
+			iterateData();
 		};
 	}
 	disconnectedCallback() {}

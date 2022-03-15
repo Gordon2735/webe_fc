@@ -22,6 +22,7 @@ import internet from './routes/internet-route.js';
 import mobile from './routes/mobile-route.js';
 import desktop from './routes/desktop-route.js';
 import accounts from './routes/accounts-route.js';
+import TEST from './routes/TEST-route.js';
 // import fourOfour from './routes/404-route.js';
 // import fiveOO from './routes/500-route.js';
 
@@ -51,6 +52,7 @@ router.use('/', mobile);
 router.use('/', desktop);
 router.use('/', accounts);
 router.use('/', headers);
+router.use('/', TEST);
 router.use((req, res, next) => {
 	if (!res.locals.partials) res.locals.partials = {};
 	next();

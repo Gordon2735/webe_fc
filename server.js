@@ -46,7 +46,7 @@ app.enable('view cache');
 app.use(express.static(__dirname + 'controller/'));
 app.use('/', router);
 app.use(cors());
-app.use(morgan('dev'));
+app.use(morgan('dev')); //'tiny'  ?
 app.use(express.static('public'));
 app.use(favicon(path.join(__dirname, 'public/src/img', 'favicon.ico')));
 

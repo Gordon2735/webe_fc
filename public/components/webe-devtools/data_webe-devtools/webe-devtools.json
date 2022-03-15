@@ -1,25 +1,37 @@
 [
 	{
-		"int-app-basic": {
-			"image": "../",
+		"intro": {
+			"image": "../components/webe-devtools/img_webe-devtools/fulllogoDevtools.png",
+			"message": "Welcome to our software engineering's 'Application Development Toolkits' 'Available Options Discovery Window!'",
+			"instructions": "Please, think of these packages has starting points, a foundation that will be used to create that perfect and marvelous application engineered only for you!",
+			"questions": "We welcome your questions from the 'Contact Us' page so please do not hesitate to ask us.",
+			"explainer": "These packages are not exclusionary; the best current technologies will be utilized to meet the demands of the project and its 'LifeCycle' expectations."
+		},
+		"int_app_basic": {
+			"image": "../components/webe-devtools/img_webe-devtools/node_js_tall.png",
 			"server": "Linux VPN CentOS7 Apache",
-			"server-side": "Node.js, Express",
+			"server_side": "Node.js, Express",
 			"templating": "Express-Handlebars",
 			"testing": "Jest and JSLint, TDD Test-Driven-Development",
 			"data": "Local JSON Data Files",
 			"transpiling": "Babel JS",
 			"client": "Vanilla JavaScript, HTML5, CSS3",
-			"client-side": "Native Web Components",
+			"client_side": "Native Web Components",
 			"design": "CSS Cascading-Style-Sheets",
-			"automated-tasking": "NPM Scripting and Packaging",
+			"automated_tasking": "NPM Scripting and Packaging",
 			"dom": "DOM Document-Object-Model HTML5 Hyper-Text-Markup-Language",
 			"package_image": "../img_webe-devtools/int_app_basic.png",
-			"version-control": "GitHub Version Control",
-			"contact-management": "CMS Contact-Management-System",
+			"version_control": "GitHub Version Control",
+			"contact_management": "CMS Contact-Management-System",
 			"description": "Basic Internet Application with an intuitive UI (User-Interface) with integrated Client-Side Data capabilities. Webelistics goal in design, look, and feel of all builds is to exceed all expectations in professionally implementing our customers requirements; delivering quality engineered software!",
 			"platforms": "Desktop Computer System"
 		},
-		"int-app-Standard": {
+		"int_app_Standard": {
+			"image": "../components/webe-devtools/img_webe-devtools/electron-1175035.png",
+			"message": "",
+			"instructions": "",
+			"questions": "",
+			"explainer": "",
 			"server": "Linux VPN CentOS7 Apache",
 			"server-side": "Node.js, Express",
 			"templating": "Express-Handlebars",
@@ -37,7 +49,12 @@
 			"description": "Basic Internet Application with an intuitive UI (User-Interface) with integrated Client-Side Data capabilities. Webelistics goal in design, look, and feel of all builds is to exceed all expectations in professionally implementing our customers requirements; delivering quality engineered software!",
 			"platforms": "Desktop Computer System, iPad and Handheld devices, Mobile/Smart Phone devices"
 		},
-		"int-app-Premium": {
+		"int_app_Premium": {
+			"image": "../components/webe-devtools/img_webe-devtools/box_empty.png",
+			"message": "",
+			"instructions": "",
+			"questions": "",
+			"explainer": "",
 			"server": "Linux VPN CentOS7 Apache",
 			"server-side": "Node.js, Express",
 			"templating": "Express-Handlebars",
@@ -55,7 +72,12 @@
 			"description": "Basic Internet Application with an intuitive UI (User-Interface) with integrated Client-Side Data capabilities. Webelistics goal in design, look, and feel of all builds is to exceed all expectations in professionally implementing our customers requirements; delivering quality engineered software!",
 			"platforms": "Desktop Computer System, iPad and Handheld devices, Mobile/Smart Phone devices"
 		},
-		"int-app-Ultimate": {
+		"int_app_Ultimate": {
+			"image": "../components/webe-devtools/img_webe-devtools/github_modified.png",
+			"message": "",
+			"instructions": "",
+			"questions": "",
+			"explainer": "",
 			"server": "Linux VPN CentOS7 Apache",
 			"server-side": "Node.js, Express",
 			"templating": "Express-Handlebars",
@@ -74,6 +96,11 @@
 			"platforms": "Desktop Computer System, iPad and Handheld devices, Mobile/Smart Phone devices"
 		},
 		"int-app-advanced": {
+			"image": "../components/webe-devtools/img_webe-devtools/node_js_tall.png",
+			"message": "",
+			"instructions": "",
+			"questions": "",
+			"explainer": "",
 			"server": "Linux VPN CentOS7 Apache",
 			"server-side": "Node.js, Express",
 			"templating": "Express-Handlebars",

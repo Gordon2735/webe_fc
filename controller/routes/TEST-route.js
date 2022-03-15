@@ -7,12 +7,12 @@ router.use(express.static('../../views'));
 
 //% /desktop_app_packages page Route
 let user;
-const desktop_app_packages = router
-	.get('/desktop_app_packages', (req, res) => {
+const TEST = router
+	.get('/TEST', (req, res) => {
 		res.set('Content-Type', 'text/html');
-		res.render('desktop_app_packages');
+		res.render('TEST');
 	})
-	.post('/desktop_app_packages', async (req, res) => {
+	.post('/TEST', async (req, res) => {
 		res.json(
 			await user.create(req.body).catch(error => {
 				res.status(400),
@@ -22,4 +22,4 @@ const desktop_app_packages = router
 			})
 		);
 	});
-export default desktop_app_packages;
+export default TEST;

@@ -8,6 +8,7 @@ import { T_responsive as T_responsive2 } from '../utils/test/T_responsive.test.j
 import { T_carousel as T_carousel2 } from '../utils/test/T_carousel.test.js';
 import { T_searchComp as T_searchComp2 } from '../utils/test/T_searchComp.test.js';
 import { T_setAttributes as T_setAttributes2 } from '../utils/test/T_setAttributes.test.js';
+import { T_webe_devtools as T_webe_devtools2 } from '../utils/test/T_webe_devtools.test.js';
 
 const testAction = () => {
 	console.log('testAction');
@@ -19,6 +20,7 @@ const testAction = () => {
 	T_carousel2();
 	T_searchComp2();
 	T_setAttributes2();
+	T_webe_devtools2();
 };
 
 export default testAction;

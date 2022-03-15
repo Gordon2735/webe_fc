@@ -1,0 +1,12 @@
+{
+	"name": "data_webe-devtools",
+	"version": "1.0.0",
+	"description": "Data Integration Files for the webe-devtools Web-Component",
+	"main": "dataIntercept-devtools.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Gordon R Mullen Jr",
+	"license": "MIT"
+}

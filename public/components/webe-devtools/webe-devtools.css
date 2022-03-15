@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 :root {
 	--text-primary: hsl(0, 0%, 71%);
+	--text-primary-slider: hsl(0, 0%, 13%);
 	--text-secondary: hsl(0, 0%, 93%);
+	--text-secondary-slider: hsl(32, 83%, 54%);
 	--bg-primary: hsl(0, 0%, 13%);
 	--bg-secondary: hsl(240, 9%, 9%);
 	--bg-secondary-light: hsl(240, 9%, 9%);
@@ -24,6 +22,10 @@
 	--webe-fontDark-text-shadow: hsl(0, 0%, 13%) 3px 1px 5px;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
@@ -35,21 +37,22 @@
 	margin: -85vh auto 2vh auto;
 	display: flex;
 	position: relative;
-	top: 12vh;
-	right: 10vw;
-	width: 35vw;
-	height: 50vh;
+	top: 4vh;
+	left: 2vw;
+	width: 85vw;
+	height: 70vh;
 	overflow: hidden;
 	border-radius: 20px;
-	z-index: 2;
+	/* z-index: 2; */
 }
 
 .section-slider .slide {
 	position: absolute;
+	display: flex;
 	width: 100%;
 	height: 100%;
 	clip-path: circle(0% at 0 50%);
-	opacity: 0;
+	/* opacity: 0; */
 	justify-content: center;
 	align-items: center;
 	/* border: hsl(323, 100%, 50%) solid 250px; */
@@ -57,7 +60,7 @@
 
 .section-slider .slide.active {
 	clip-path: circle(150% at 0 5%);
-	opacity: 1;
+	/* opacity: 1; */
 	transition: 3s ease-in;
 	border: hsl(32, 83%, 54%) solid 7px;
 	justify-content: center;
@@ -65,24 +68,26 @@
 }
 
 .section-slider .slide .img {
-	margin: 17.5vh 0 0 6vw;
-	position: absolute;
-	width: 60%;
-	height: 60%;
+	position: relative;
+	top: 12vh;
+	left: 23vw;
+	width: 50vw;
+	height: auto;
 	object-fit: cover;
 	justify-content: center;
 	align-items: center;
 }
 
 .section-slider .slide .info {
-	/* top: 0.5vh; */
-	position: absolute;
-	color: #222;
+	position: relative;
+	top: -22.8vh;
+	right: 35vw;
 	background: rgba(255, 255, 255, 0.3);
-	width: 75%;
-	margin-top: 2rem;
-	margin-left: 2rem;
-	padding: 20px;
+	width: 100%;
+	height: auto;
+	margin-top: 2vh;
+	margin-left: 0.5vw;
+	padding: 2px;
 	border-radius: 5px;
 	box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
 }
@@ -90,11 +95,13 @@
 .section-slider .slide .info .h2 {
 	font-size: 2em;
 	font-weight: 800;
+	color: var(--webe-font-clr-freak);
 }
 
 .section-slider .slide .info .p {
 	font-size: 1em;
 	font-weight: 400;
+	color: var(--text-secondary-slider);
 }
 
 .navigation {
