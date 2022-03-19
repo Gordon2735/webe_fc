@@ -67,7 +67,7 @@ class WebeDevtools extends HTMLElement {
 		const slides = shadow.querySelectorAll('.slide');
 		const slideIcons = shadow.querySelectorAll('.slide-icon');
 		const numberOfSlides = slides.length;
-		var slideNumber = 0;
+		let slideNumber = 0;
 
 		//image slider next button
 		nextBtn.addEventListener('click', () => {
