@@ -1,6 +1,6 @@
 'use strict';
 
-import PubSub from '../library/pubsub.js';
+import PubSub from '/state/library/pubsub.js';
 
 export default class Store {
 	constructor(params) {
