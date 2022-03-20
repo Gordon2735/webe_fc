@@ -43,7 +43,7 @@ app.set('view engine', 'handlebars');
 app.engine('handlebars', handlebars.engine);
 app.enable('view cache');
 
-app.use(express.static(__dirname + 'controller/'));
+app.use(express.static('controller'));
 app.use('/', router);
 app.use(cors());
 app.use(morgan('dev')); //'tiny'  ?
@@ -79,6 +79,25 @@ app.get('/', (req, res) => {
 	res.sendFile('javascript-39396.png', {
 		root: __dirname + 'public/src/img/software_logos/',
 	});
+});
+
+app.get('/state', (req, res) => {
+	res.sendFile('components.js', {
+		root: '/state/library/',
+	});
+	res.set('Content-Type', 'text/javascript');
+});
+app.get('/state', (req, res) => {
+	res.sendFile('pubsub.js', {
+		root: '/state/library/',
+	});
+	res.set('Content-Type', 'text/javascript');
+});
+app.get('/state', (req, res) => {
+	res.sendFile('store.js', {
+		root: '/state/store/',
+	});
+	res.set('Content-Type', 'text/javascript');
 });
 
 router.use((req, res, next) => {

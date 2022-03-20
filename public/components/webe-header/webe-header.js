@@ -152,7 +152,7 @@ const RenderTags = () => {
 	box6.appendChild(topDown);
 };
 
-class WebeHeader extends HTMLElement {
+export default class WebeHeader extends HTMLElement {
 	constructor() {
 		super();
 

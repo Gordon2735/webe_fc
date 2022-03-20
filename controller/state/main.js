@@ -1,15 +1,15 @@
 'use strict';
 
-import store from './store/indexState.js';
-import Count from './components/count.js';
-import List from './components/list.js';
-import Status from './components/status.js';
+import store from '/state/store/indexState.js';
+import Count from '/state/components/count.js';
+import List from '/state/components/list.js';
+import Status from '/state/components/status.js';
 
 const formElement = document.querySelector('.js-form');
 const inputElement = document.querySelector('#new-item-field');
 
-formElement.addEventListener('submit', evt => {
-	evt.preventDefault();
+formElement.addEventListener('submit', event => {
+	event.preventDefault();
 
 	let value = inputElement.value.trim();
 
@@ -25,5 +25,8 @@ const listInstance = new List();
 const statusInstance = new Status();
 
 countInstance.render();
-listInstance.render();
+listInstance.render(),
+	() => {
+		console.info('List rendered');
+	};
 statusInstance.render();

@@ -2,26 +2,27 @@
 * Define variables
 */
 :root {
-	--border: #888888;
-	--decor: #777777;
-	--text: #141414;
-	--text-secondary: #555555;
-	--danger: #d62c1a;
-	--danger--dark: #a82315;
+	--border: #f8e323;
+	--decor: #f5f256;
+	--text: #fcfafa;
+	--text-secondary: #fdbe6c;
+	--text-tertiary: #fce301;
+	--danger: #fc9f95;
+	--danger--dark: #ac6f68;
 }
 
 /** 
 * Core styles 
 */
-html {
+/* html {
 	height: 100%;
 	font-size: 16px;
 	background: #f3f3f3;
-}
+} */
 
-body {
+.main {
+	margin: 20vh auto 6vh auto;
 	font-family: sans-serif;
-	margin: 0;
 	padding: 2rem 1rem;
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 		Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Helvetica, Arial,
@@ -37,6 +38,8 @@ p {
 
 h1,
 h2 {
+	color: var(--text-secondary);
+	margin: 4vh;
 	font-weight: 400;
 	line-height: 1.1;
 	margin: 0;
@@ -55,7 +58,7 @@ h2 {
 */
 .intro {
 	padding: 0 0 1rem 0;
-	margin: 0 0 2rem 0;
+	margin: 5vh 0 2rem 0;
 	border-bottom: 1px dotted var(--border);
 }
 
@@ -71,6 +74,7 @@ h2 {
 
 .intro__summary b {
 	font-weight: 500;
+	color: var(--text-tertiary);
 }
 
 /**

@@ -1,9 +1,9 @@
 'use strict';
 
-import actions from './actions.js';
-import mutations from './mutations.js';
-import state from './state.js';
-import Store from './store.js';
+import actions from '/state/store/actions.js';
+import mutations from '/state/store/mutations.js';
+import state from '/state/store/state.js';
+import Store from '/state/store/store.js';
 
 export default new Store({
 	actions,

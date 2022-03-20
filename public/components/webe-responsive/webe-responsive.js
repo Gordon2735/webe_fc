@@ -222,7 +222,7 @@ class Responsive extends HTMLElement {
 	}
 	disconnectedCallback() {
 		this.shadowRoot.removeChild(style);
-		this.shadowRoot.removeChild(template);
+		// this.shadowRoot.removeChild(template);
 		this.remove();
 		console.info(
 			'%c This Web-Component has || * DISCONNECTED * || webe-responsive.js',

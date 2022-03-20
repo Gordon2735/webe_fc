@@ -1,7 +1,7 @@
 'use strict';
 
-import Component from '../library/component.js';
-import store from '../store/indexState.js';
+import Component from '/state/library/component.js';
+import store from '/state/store/indexState.js';
 
 export default class List extends Component {
 	constructor() {

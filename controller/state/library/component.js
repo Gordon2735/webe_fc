@@ -1,6 +1,6 @@
 'use strict';
 
-import Store from '../store/store.js';
+import Store from '/state/store/store.js';
 
 export default class Component {
 	constructor(props = {}) {
