@@ -8,8 +8,40 @@
 
 <!--info   Description:  4-Day Implementation Study -- Terminates 2022.01.23:18:00:00  -->
 
-        Development and Practice for leveraging Web-Componentized techniques as well as utilizing the powerful NPM Scripting capabilities within the <<<< package.json >>>> that facilitates organizing Minification, Uglifying, Bundeling, Tasks & Testing without the need of an added layer of weight by using tools such as Gulp, and Grunt etc, NPM Scripting offers dependancy managment of packaging files and is a well-hidden development tool that everybody uses for downloading node packages never knowing the powerful additional asset that NPM Scripting affords. This is a  Node.js Server-Side Application that utilizes templating for HTML generation coupled with noSQL database modeling through MongoDB integration and mongoose's flexible versatility. Synthesizing Node.js with Express to encorporate the templating distinctiveness of express-handlebars with its minimalist, and  enterprising templating engine.
-        hat<!--state ::::  This Internet Application utilizes industry-standard tools and practices! Built upon the Assembling & Integration of Web-Components for Modularity, Encapsulation, and providing sustainability in that "-- IT WILL BE "FUTURE_PROOFED --" !!. Because, it is inherently, being a Web-Component that is naturally a standard HTML & JavaScript implementation, a non-deprecating software-tool that  "assures and insures" integration with the latest and greatest technologies.
+<!--npm :::::::::::::::: NPM INSTALLS :::::::::::::::  -->
+<!--?       1.  npm init                               -->
+<!--?       2.  npm i express                          -->
+<!--?       3.  npm i express-handlebars               -->
+<!--?       4.  npm i mongoose                         -->
+<!--?       5.  npm i @babel/core @babel/preset-env -D -->
+<!--?       6.  npm i babel-jest @babel/registry -D    -->
+<!--?       7.  npm i babel-core@7.0.0-bridge.0 -D     -->
+<!--?       8.  npm i @babel/cli @babel/node -D        -->
+<!--?       9.  npm i jest -D                          -->
+<!--?       10. npm i open nodemon serve-favicon -D    -->
+<!--?       11. npm i path date-fns uuid morgan -D     -->
+<!--?       12. npm i cors dotenv body-parser          -->
+<!--?       13. npm i eslint-plugin-html -D            -->
+<!--?       14. npm i eslint-config-prettier -G        -->
+<!--?       14. npm i -G eslint-plugin-jest            -->
+<!--?       15. npm i jsdom -D                         -->
+<!--?       16. npm i xstate -G                        -->
+<!--?       16. npm rm xstate                        -->
+<!--?       17. npm i puppeteer -G                     -->
+<!--?       17. npm i puppeteer-core                     -->
+<!--npm :::::::::::::::::::::::::::::::::::::::::::::: -->
+
+STUDY: Creating "General Functions" for integrating common functionality throughout the Application.
+
+TESTING: Making Better Use of Lighthouse with Puppeteer.
+https://evanhalley.dev/post/web-performance-analysis/
+https://developers.google.com/web/tools/lighthouse
+https://automationrhapsody.com/performance-testing-in-the-browser/
+
+<!--  -->
+
+Development and Practice for leveraging Web-Componentized techniques as well as utilizing the powerful NPM Scripting capabilities within the <<<< package.json >>>> that facilitates organizing Minification, Uglifying, Bundeling, Tasks & Testing without the need of an added layer of weight by using tools such as Gulp, and Grunt etc, NPM Scripting offers dependancy managment of packaging files and is a well-hidden development tool that everybody uses for downloading node packages never knowing the powerful additional asset that NPM Scripting affords. This is a Node.js Server-Side Application that utilizes templating for HTML generation coupled with noSQL database modeling through MongoDB integration and mongoose's flexible versatility. Synthesizing Node.js with Express to encorporate the templating distinctiveness of express-handlebars with its minimalist, and enterprising templating engine.
+hat<!--state :::: This Internet Application utilizes industry-standard tools and practices! Built upon the Assembling & Integration of Web-Components for Modularity, Encapsulation, and providing sustainability in that "-- IT WILL BE "FUTURE_PROOFED --" !!. Because, it is inherently, being a Web-Component that is naturally a standard HTML & JavaScript implementation, a non-deprecating software-tool that "assures and insures" integration with the latest and greatest technologies.
 
 <!--todo            <<<< Backlog >>>>               -->
 
@@ -32,25 +64,3 @@
         17. With modularity and encapsulation at the forefront of the development process, the User-Interface will be componentized and modularized. Incorporating 'Web Components' is simply the next logical step in the development process. HOOT Webelistics will utilize the Web Components paradigm to create a reusable, modular, and reusable UI. Web Components are native to the browser, and with JavaScript, with an even greater caveat in that CSS, the styling tool for development, can ambiguously be applied to the components without conflict to the rest of the application. The persistency of the components will be the key to the success of the application. The Web Components will not be coupled with any frameworks and be without any dependencies or edge-cases concerning versioning or any interoperability issues.
         Web Components will naturally progress with the browser's evolution, and will be the foundation for the future of the application; IT WILL BE "FUTURE_PROOFED". This is counter-intuitive
         in the world of web development wherein in the process of time there are many issues with broken dependencies due to versioning and continuing forward compatibility. In a nutshell, you can not go wrong with Web Components. The proper combination of design configuration, event handling that's arrayed properly with state management, and finally a steadfastness in adherence to Test-Driven-Development(TDD) and coding 'Best Practices', the end product will be a robust, stable, and scalable application that's easily maintained. So, it's time to get excited and start coding! It just feels good to know that what you're doing, and the way you are doing it, is the right thing to do and that it is right right right!!!
-
-<!--npm :::::::::::::::: NPM INSTALLS :::::::::::::::  -->
-<!--?       1.  npm init                               -->
-<!--?       2.  npm i express                          -->
-<!--?       3.  npm i express-handlebars               -->
-<!--?       4.  npm i mongoose                         -->
-<!--?       5.  npm i @babel/core @babel/preset-env -D -->
-<!--?       6.  npm i babel-jest @babel/registry -D    -->
-<!--?       7.  npm i babel-core@7.0.0-bridge.0 -D     -->
-<!--?       8.  npm i @babel/cli @babel/node -D        -->
-<!--?       9.  npm i jest -D                          -->
-<!--?       10. npm i open nodemon serve-favicon -D    -->
-<!--?       11. npm i path date-fns uuid morgan -D     -->
-<!--?       12. npm i cors dotenv body-parser          -->
-<!--?       13. npm i eslint-plugin-html -D            -->
-<!--?       14. npm i eslint-config-prettier -G        -->
-<!--?       14. npm i -G eslint-plugin-jest            -->
-<!--?       15. npm i jsdom -D                         -->
-<!--?       16. npm i xstate -G                        -->
-<!--npm :::::::::::::::::::::::::::::::::::::::::::::: -->
-
-STUDY: Creating "General Functions" for integrating common functionality throughout the Application.

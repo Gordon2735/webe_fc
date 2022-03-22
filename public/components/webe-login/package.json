@@ -1,0 +1,11 @@
+{
+  "name": "webe-login",
+  "version": "1.0.0",
+  "description": "A Login Web-Component",
+  "main": "webe-login.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Gordon R Mullen Jr",
+  "license": "MIT"
+}

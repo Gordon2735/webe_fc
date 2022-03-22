@@ -20,7 +20,15 @@ export const currentDOM = async () => {
 					store.dispatch('headerElement', event);
 				}
 			});
-			await new Promise(resolve => setTimeout(resolve, 0));
+			await new Promise(
+				resolve => setTimeout(resolve, 100),
+				() => {
+					console.info(
+						`%c Header Element is loaded`,
+						'background: #222222; color: #EE82EE'
+					);
+				}
+			);
 		};
 		checkHeader();
 
