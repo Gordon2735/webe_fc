@@ -26,7 +26,7 @@ const handlebars = create({
 	extname: '.handlebars',
 	defaultView: 'default',
 	defaultLayout: 'main',
-	// layouts: 'main-secondary',
+	layouts: ['main', 'main-secondary', 'main-tertiary'],
 	layoutsDir: __dirname + '/views/layouts/',
 	partialsDir: __dirname + '/views/partials/',
 	helpersDir: __dirname + '/views/partials/',

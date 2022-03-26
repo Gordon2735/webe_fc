@@ -187,7 +187,7 @@ class Responsive extends HTMLElement {
 		setAttributes(style, {
 			rel: 'stylesheet',
 			type: 'text/css',
-			origin: 'anonymous',
+			crossorigin: 'anonymous',
 		});
 		style.innerHTML = `@import "../components/webe-responsive/webe-responsive.css";`;
 		this.shadowRoot.appendChild(style);

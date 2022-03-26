@@ -11,9 +11,9 @@ let user;
 const about = router
 	.get('/about', (req, res) => {
 		res.set('Content-Type', 'text/html');
-		res.render('about');
+		res.render('about', { layout: 'main-secondary' });
 	})
-	.post('/', async (req, res) => {
+	.post('/about', async (req, res) => {
 		res.json(
 			await user.create(req.body).catch(error => {
 				res.status(400),
@@ -23,8 +23,8 @@ const about = router
 			})
 		);
 	});
-router.use((req, res, next) => {
-	if (!res.locals.partials) res.locals.partials = {};
-	next();
-});
+// router.use((req, res, next) => {
+// 	if (!res.locals.partials) res.locals.partials = {};
+// 	next();
+// });
 export default about;
