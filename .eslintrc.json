@@ -1,4 +1,5 @@
 {
+	"parser": "babel-eslint",
 	"env": {
 		"node": true,
 		"browser": true,
@@ -9,7 +10,9 @@
 	"extends": "eslint:recommended",
 	"parserOptions": {
 		"ecmaVersion": 13,
-		"sourceType": "module"
+		"sourceType": "module",
+		"jsx": true,
+		"modules": true
 	},
 
 	"plugins": ["jest", "eslint-plugin-html"],
@@ -20,7 +23,14 @@
 		"jest/valid-describe-callback": "warn",
 		"jest/valid-expect-in-promise": "warn",
 		"jest/valid-expect": "warn",
-		"no-extra-boolean-cast": 0
+		"no-extra-boolean-cast": 0,
+		"no-const-assign": "warn",
+		"no-this-before-super": "warn",
+		"no-unreachable": "warn",
+		"no-unused-vars": "warn",
+		"constructor-super": "warn",
+		"valid-typeof": "warn",
+		"quotes": [2, "single", { "allowTemplateLiterals": true }]
 	},
 	"ignorePatterns": [
 		"utils/qa/lighthouse/*.js",

@@ -3,92 +3,70 @@
 
 'use strict';
 
-import setAttributes, {
-	appendChildren,
+import { RenderTemplate } from './render-template.js';
+import { sharedStyles } from './login-shared-styles.js';
+import appendChildren, {
 	main,
+	setAttributes,
 	divSignupForm,
 	divLoginForm,
 } from './loginIndex.js';
 
-const template = document.createElement('template');
-
-const style = document.createElement('style');
-setAttributes(style, {
-	rel: 'stylesheet',
-	type: 'text/css',
-	crossorigin: 'anonymous',
-});
-
 const divFormsRend = [main, divSignupForm, divLoginForm];
-
-const script = document.createElement('script');
-setAttributes(script, {
-	type: 'module',
-	content: 'text/javascript',
-	crossorigin: 'anonymous',
+const head = document.querySelector('head');
+const title = document.createElement('title');
+setAttributes(title, {
+	textContent: 'webe-login',
 });
-
-function signupToggle() {
-	const container = document.querySelector('.container');
-	container.classList.toggle('active');
-	const popup = document.querySelector('.signup-form');
-	popup.classList.toggle('active');
-}
-
-function loginToggle() {
-	const container = document.querySelector('.container');
-	container.classList.toggle('active');
-	const popup = document.querySelector('.login-form');
-	popup.classList.toggle('active');
-}
-
-class WebeLogin extends HTMLElement {
+export class WebeLogin extends RenderTemplate {
 	constructor() {
 		super();
 
-		this.attachShadow({ mode: 'open' });
+		this.addEventListener('click', () =>
+			this.dispatchEvent(
+				new CustomEvent('openDialog', {
+					detail: this.loginData,
+					bubbles: true,
+					composed: true,
+				})
+			)
+		);
 
-		script.innerHTML = `
-			${signupToggle}
-			${loginToggle}
-		`;
-		this.shadowRoot.appendChild(script);
-	}
-
-	connectedCallback() {
 		console.info(
 			'%c This Web Component has || * FIRED * || webe-login.js is connected',
 			'background: #222; color: #bada55'
 		);
-
-		this.shadowRoot.appendChild(template.content.cloneNode(true));
-		const shadowDoc = this.shadowRoot;
-		const RenderShadowElements = () => {
-			appendChildren(this.shadowRoot, divFormsRend);
-		};
-		RenderShadowElements();
-
-		style.innerHTML = `@import "/components/webe-login/webe-login.css";`;
-		this.shadowRoot.appendChild(style);
-
-		const liOnclick = shadowDoc.querySelector('li');
-
-		liOnclick.onclick = false;
-		liOnclick.onclick = true;
-
-		// const li = shadowDoc.querySelectorAll('li');
-		// li.addEventListener('onclick', function (e) {
-		// 	e.preventDefault(), () => e.signupToggle();
-		// });
 	}
-	attributeChangedCallback(name, oldValue, newValue) {}
 
-	// 	return ['loginToggle', 'signupToggle'];
-	// }
-	//
-	// disconnectedCallback() {
-	// 	this.shadowRoot.removeChild(template);
-	// 	this.remove();
-	// }
+	get template() {
+		return `
+			
+			<script type="module">
+    			import './webe-login.js';
+			</script>						
+		`;
+	}
+	connectedCallback() {
+		head.appendChild(title);
+		appendChildren(this.attachShadow({ mode: 'open' }), divFormsRend);
+		this.shadowRoot.innerHTML = `
+		${sharedStyles.modal}
+		${sharedStyles.active}
+		<script type="module">							
+			function signupToggle() {
+				const container = this.shadowRoot.querySelector('.container');
+				container.classList.toggle('active');
+				const popup = this.shadowRoot.querySelector('.signup-form');
+				popup.classList.toggle('active');
+			}
+			
+			function loginToggle() {
+				const container = this.shadowRoot.querySelector('.container');
+				container.classList.toggle('active');
+				const popup = this.shadowRoot.querySelector('.login-form');
+				popup.classList.toggle('active');
+			}
+		</script>`;
+	}
 }
 window.customElements.define('webe-login', WebeLogin);

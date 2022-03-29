@@ -2,17 +2,17 @@
 
 const body = document.querySelector('body');
 
-export default function setAttributes(element, attributes) {
+export const setAttributes = (element, attributes) => {
 	for (const key in attributes) {
 		element.setAttribute(key, attributes[key]);
 	}
-}
+};
 
-export const appendChildren = (parent, children) => {
+export default function appendChildren(parent, children) {
 	children.forEach(child => {
 		parent.appendChild(child);
 	});
-};
+}
 
 const listMaker = (list, element) => {
 	list.forEach(item => {
@@ -28,11 +28,6 @@ const loopList = (list, element, attribute) => {
 		element.appendChild(li);
 	});
 };
-
-const title = document.createElement('title');
-setAttributes(title, {
-	textContent: 'webe-login',
-});
 
 setAttributes(body, {
 	class: 'body-login',
