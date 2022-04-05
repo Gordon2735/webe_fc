@@ -1,5 +1,6 @@
 import { RenderTemplate } from './render-template.js';
-import './loginIndex.js';
+import { sharedStyles } from './login-shared-styles.js';
+import './login-index.js';
 
 export class LoginModal extends RenderTemplate {
 	constructor() {
@@ -8,13 +9,19 @@ export class LoginModal extends RenderTemplate {
 		this.noShadow = false;
 	}
 	connectedCallback() {
-		console.info('connectedCallback');
+		super.connectedCallback();
+
+		console.info(
+			'%c This Web Component has || * FIRED * || webe-login.js is connected',
+			'background: #222222; color: hsl(64, 97%, 45%);'
+		);
+		// console.info('connectedCallback');
 	}
 	// static get observedAttributes() {
 	// 	return ['modal-open'];
 	// }
 	attributeChangedCallback(name, oldValue, newValue) {
-		console.info('attributeChangedCallback');
+		// console.info('attributeChangedCallback');
 	}
 	static get observedProperties() {}
 	get template() {
@@ -26,8 +33,8 @@ export class LoginModal extends RenderTemplate {
             
         `;
 	}
-	disconnectedCallback() {
-		console.info('disconnectedCallback');
-	}
+	// disconnectedCallback() {
+	// 	console.info('disconnectedCallback');
+	// }
 }
 customElements.define('login-modal', LoginModal);

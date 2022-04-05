@@ -19,6 +19,8 @@ sharedStyles.main = `
             background: lightblue;
             user-select: none;
         }
+
+        
  `;
 
 sharedStyles.login = `
@@ -30,11 +32,7 @@ sharedStyles.login = `
     
         html {
             background: lightblue;
-        }
-
-        .webe-login {
-            background: lightblue;
-        }
+        }        
 
         body {
             width: 100%;
@@ -143,11 +141,7 @@ sharedStyles.login = `
             padding: 1rem;
             list-style-type: none;
             display: inline-block;
-        }
-
-        header .menu ul:hover {
-            color: #ffffff;              
-        }
+        }       
         
         header .menu ul li {
             display: inline;
@@ -157,62 +151,39 @@ sharedStyles.login = `
             font-family: 'Work Sans', sans-serif;
             font-size: 1rem;
             font-weight: 400;
-            color: hsl(0, 0%, 0%);
             cursor: pointer;
             text-decoration: none;
         }              
 
         header .menu ul li:hover {
             border-radius: 0.5vw;
-            color: hsl(195, 74%, 56%);
             font-style: extra-bold;
             font-weight: 700;
             background-color: hsl(195, 74%, 56%);
-            text-shadow: hsl(77, 97%, 15%) 0.5px 4px 10px;            
+            text-shadow: hsl(77, 97%, 15%) 0.5px 2px 3px;            
             box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2),
                 -3px -3px 10px 1px rgba(255, 255, 255, 1);
         }
 
-        header .menu ul .li-menu .anchor {
+        .menu ul .li-menu .anchor {
             list-style: none;
-            text-decoration: none;
-        }
-
-        .anchor {
             color: hsl(0, 0%, 0%);
-        }
-        .anchor.styled-default:not([href]) {
-            cursor: default;
             text-decoration: none;
-
-        }
-        .anchor.styled-pointer:not([href]) {
-            cursor: pointer;
-        }
-
+        }             
         
-
-              
+        .menu ul .li-menu .anchor:hover {
+            color: hsl(195, 74%, 96%);
+        }             
         
         header .login ul {
             grid-area: login-buttons;
-            min-width: 30%;
-            height: auto;
             list-style-type: none;
             display: inline ;
             padding: 12px 18px;
 
-        }
+        }        
 
-        header .login ul:hover {
-            width: 0%;
-            height: 0%;
-            padding: 0;
-            margin: 0;
-            display: no-flex;
-        }
-
-        header .login ul li {
+        header .login ul .li-buttons {
             margin: 0 16px;
             list-style: none;
             display: inline;
@@ -220,13 +191,9 @@ sharedStyles.login = `
             font-size: 0.8rem;
             font-weight: 900;
             font-style: extra-bold;
-            color: hsl(0, 0%, 0%);
+            color: hsl(195, 72%, 48%);
             letter-spacing: 0.28vw;
             cursor: pointer;
-        }
-
-        header .login ul li {
-            color: hsl(32, 83%, 54%);            
             padding: 16px 22px;
             border-radius: 0.5vw;             
             background: hsl(213, 22%, 90%);          
@@ -234,13 +201,13 @@ sharedStyles.login = `
                 -3px -3px 10px 1px rgba(255, 255, 255, 1);
         }
 
-        header .login ul li:hover {              
-            color: hsl(195, 74%, 56%);
+        header .login ul .li-buttons:hover {              
+            color: hsl(195, 98%, 50%);
             text-shadow: hsl(77, 97%, 15%) 0.5px 4px 10px;
             
         }
 
-        header .login ul li:active {
+        header .login ul .li-buttons:active {
             box-shadow: inset 3px 3px 10px 1px rgba(0, 0, 0, 0.2),
                 inset -3px -3px 10px 1px rgba(255, 255, 255, 1);
             color: hsl(0, 0%, 0%);
@@ -249,8 +216,8 @@ sharedStyles.login = `
         .signup-form,
         .login-form {
             position: relative;
-            top: 75%;
-            right: 10%;
+            top: 55%;
+            left: 50%;
             transform: translate(-50%, -50%);
             background: #fff;
             border-radius: 10px;
@@ -258,6 +225,8 @@ sharedStyles.login = `
             visibility: hidden;
             transition: 1s;
             opacity: 0;
+            color: hsl(195, 72%, 48%);
+
         }
 
         .form {
@@ -318,7 +287,6 @@ sharedStyles.login = `
         .container:active {
             filter: blur(20px);
             transition: 1s;
-            pointer-events: none;
         }
 
             /*  */
@@ -370,3 +338,13 @@ export { sharedStyles };
 // hsl(32, 83%, 54%);
 // background: hsl(213, 22%, 90%);
 // color: hsl(0, 0%, 0%);
+
+// .material-button {
+//     position: absolute;
+//     top: 30vh;
+//     left: 10vw;
+//     width: 100px;
+//     height: auto;
+//     z-index: 9;
+//     background: #808080;
+// }

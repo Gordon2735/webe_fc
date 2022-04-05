@@ -3,8 +3,10 @@
 import { RenderTemplate } from './render-template.js';
 import { sharedStyles } from './login-shared-styles.js';
 import './webe-login.js';
-import './loginIndex.js';
+import './login-index.js';
 import './login-modal.js';
+import { anchorHome, anchorAbout } from './login-index.js';
+// import { signupToggle, loginsToggle } from './webe-login.js';
 
 const body = document.querySelector('body');
 const script = document.createElement('script');
@@ -38,78 +40,43 @@ export class ComponentShell extends RenderTemplate {
 		);
 	}
 
-	async getToggle() {
-		const toggleOne = await import('./loginIndex.js');
-		const toggleTwo = await import('./loginIndex.js');
-
-		const toggleSignup = toggleOne.signupToggle;
-		const toggleLogin = toggleTwo.loginToggle;
-
-		this.render();
-	}
+	getToggle() {}
 
 	get template() {
 		return `
 
 
 
-			<webe-login class="webe-login"></webe-login>
-			// <login-modal class="login-modal"></login-modal>				
+			<webe-login class="webe-login">
+				<login-index>
+					
+				</login-index>
+			</webe-login>
+
+			<login-modal></login-modal>
+
+							
 		
 			<style>
 				@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 				@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
 				@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
-				
+				${sharedStyles.main}
 						
 				component-shell {
 					${sharedStyles.trbl}
 					overflow-y: overlay;
 				}							
 			</style>
-
 	`;
 	}
 	static get observedAttributes() {}
 }
 customElements.define('component-shell', ComponentShell);
 
-// const initRender = () => {
-// 	setAttributes(script, {
-// 		type: 'module',
-// 		content: 'text/javascript',
-// 		crossorigin: 'anonymous',
-// 		alt: 'Script for Popup',
-// 	});
-// 	const elementSwitch = (script.innerHTML = `${signupToggle} ${loginToggle}`);
-// 	const initialRenderGroup = [script, elementSwitch];
-// 	appender(body, initialRenderGroup);
-// };
-// initRender();
+// <login-modal class="login-modal"></login-moda
+// ${!!toggleSignup ? toggleSignup : ''}
+// 					${!!toggleLogins ? toggleLogins : ''}
 
-// const jsLogicFunctions = async () => {
-// 	if (!this.noShadowRoot === true) {
-// 		this.template = this.attachShadow({ mode: 'open' });
-// 		this.render();
-// 	} else {
-// 		this.innerHTML = `${recycle}`;
-// 		throw new Error('noShadowRoot is true', () => {
-// 			console.error(
-// 				'%c noShadowRoot is true',
-// 				'font-size: large; color: red; font-weight: bold; text-transform: uppercase; letter-spacing: 2px;',
-// 				Error
-// 			);
-// 		});
-// 	}
-// 	const recycle = setInterval(() => jsLogicFunctions(), 1000);
-// 	setTimeout(() => {
-// 		clearInterval(recycle);
-// 		alert(
-// 			`Recycled the logic function that render's the
-// 			"TOGGLE-logic-functions"-Script in the shadowRoot,
-// 			but there is still no shadowRoot available;
-// 			even after ten seconds of recycling the function; ?`
-// 		);
-// 	}, 10000);
-// };
+/*<material-button class="material-button"></material-button>*/

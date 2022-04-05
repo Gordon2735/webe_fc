@@ -1,6 +1,6 @@
 'use strict';
 
-import { RenderTemplate } from './render-template';
+import { RenderTemplate } from './render-template.js';
 // import { sharedStyles } from './login-shared-styles';
 
 const head = document.querySelector('head');
@@ -12,11 +12,11 @@ export const setAttributes = (element, attributes) => {
 	}
 };
 
-export const renderHeadScripts = (scripts, stickyNote) => {
+export const renderHeadScripts = (scripts, renderNote) => {
 	for (const script of scripts) {
 		head.appendChild(script);
 	}
-	return stickyNote;
+	return renderNote;
 };
 
 export default function appendChildren(parent, children) {
@@ -41,7 +41,6 @@ const loopList = (list_li, attribute, element) => {
 	list_li.forEach((item_li, item_anchor) => {
 		const li = document.createElement('li');
 		li.append(item_li);
-		// li.append(item_anchor);
 		li.setAttribute('class', attribute);
 		element.appendChild(li);
 	});
@@ -54,16 +53,16 @@ const renderArray = async array => {
 };
 
 export function signupToggle() {
-	const container = this.shadowRoot.querySelector('.container');
+	const container = this.querySelector('.container');
 	container.classList.toggle('active');
-	const popup = this.shadowRoot.querySelector('.signup-form');
+	const popup = this.querySelector('.signup-form');
 	popup.classList.toggle('active');
 }
 
-export function loginToggle() {
-	const container = this.shadowRoot.querySelector('.container');
+export function loginsToggle() {
+	const container = this.querySelector('.container');
 	container.classList.toggle('active');
-	const popup = this.shadowRoot.querySelector('.login-form');
+	const popup = this.querySelector('.login-form');
 	popup.classList.toggle('active');
 }
 
@@ -76,13 +75,19 @@ setAttributes(scriptLogin, {
 const scriptIndex = document.createElement('script');
 setAttributes(scriptIndex, {
 	type: 'module',
-	src: '../components/webe-login/loginIndex.js',
+	src: '../components/webe-login/login-index.js',
 	crossorigin: 'anonymous',
 });
 const scriptModal = document.createElement('script');
 setAttributes(scriptModal, {
 	type: 'module',
 	src: '../components/webe-login/login-modal.js',
+	crossorigin: 'anonymous',
+});
+const scriptButton = document.createElement('script');
+setAttributes(scriptButton, {
+	type: 'module',
+	src: '../components/webe-login/buttonExample.js',
 	crossorigin: 'anonymous',
 });
 
@@ -93,6 +98,7 @@ setAttributes(body, {
 
 export const main = document.createElement('main');
 setAttributes(main, {
+	id: 'main',
 	class: 'container ',
 	alt: 'Main Container',
 });
@@ -111,6 +117,7 @@ setAttributes(figure, {
 
 const figureImg = document.createElement('img');
 setAttributes(figureImg, {
+	id: 'owlHead',
 	class: 'figure-img',
 	src: '../components/webe-login/img_webe-login/head_icononly_transparent_nobuffer.png',
 	alt: 'Logo Image',
@@ -149,12 +156,6 @@ setAttributes(supR, {
 	alt: 'Logo Registered of Document',
 });
 
-const nav = document.createElement('nav');
-setAttributes(nav, {
-	class: 'nav',
-	alt: 'Navigation of Document',
-});
-
 const divMenu = document.createElement('div');
 setAttributes(divMenu, {
 	class: 'menu',
@@ -167,16 +168,20 @@ setAttributes(ulMenu, {
 	alt: 'Menu Unordered List of Document',
 });
 
-const anchorHome = document.createElement('a');
+export const anchorHome = document.createElement('a');
 setAttributes(anchorHome, {
+	id: 'home',
 	class: 'anchor',
 	href: '/',
+	onclick: 'location.href="/"',
 	alt: 'Home Link of Document',
 });
 const anchorHomeText = (anchorHome.innerHTML = `Home`);
+anchorHome.onclick = 'location.href="/"';
 
-const anchorAbout = document.createElement('a');
+export const anchorAbout = document.createElement('a');
 setAttributes(anchorAbout, {
+	id: 'about',
 	class: 'anchor',
 	href: '/about',
 	alt: 'About Link of Document',
@@ -185,6 +190,7 @@ const anchorAboutText = (anchorAbout.innerHTML = `About`);
 
 const anchorContact = document.createElement('a');
 setAttributes(anchorContact, {
+	id: 'contact',
 	class: 'anchor',
 	href: '/contacts',
 	alt: 'Contact Link of Document',
@@ -215,22 +221,24 @@ setAttributes(ulLogin, {
 export const liLoginOne = document.createElement('li');
 setAttributes(liLoginOne, {
 	id: 'li-login-one',
-	class: 'li-login',
-	onclick: '',
+	class: 'li-buttons',
+	onclick: `signupToggle()`,
 	alt: 'Login List Item of Document',
 });
 const buttoneSignup = (liLoginOne.innerHTML = 'Sign Up');
-liLoginOne.setAttribute('onclick', 'signupToggle()');
+liLoginOne.onclick = `signupToggle()`;
+// liLoginOne.setAttribute('onclick', 'signupToggle()');
 
 export const liLoginTwo = document.createElement('li');
 setAttributes(liLoginTwo, {
 	id: 'li-login-two',
-	class: 'li-login',
-	onclick: '',
+	class: 'li-buttons',
+	onclick: `loginsToggle()`,
 	alt: 'Login List Item of Document',
 });
 const buttonLogin = (liLoginTwo.innerHTML = 'Login');
-liLoginTwo.setAttribute('onclick', 'loginToggle()');
+liLoginTwo.onclick = `loginsToggle()`;
+// liLoginTwo.setAttribute('onclick', 'loginToggle()');
 
 export const divSignupForm = document.createElement('div');
 setAttributes(divSignupForm, {
@@ -335,10 +343,10 @@ export const divLogClose = document.createElement('div');
 setAttributes(divLogClose, {
 	id: 'div-log-close',
 	class: 'close',
-	onclick: 'loginToggle()',
+	onclick: 'loginsToggle()',
 	alt: 'Close Login Form',
 });
-const loginX = `divLogClose.innerHTML = '&times;'`;
+const loginX = (divLogClose.innerHTML = `&times;`);
 
 export const divLogText = document.createElement('div');
 setAttributes(divLogText, {
@@ -351,7 +359,7 @@ setAttributes(h1LoginForms, {
 	class: 'h1-forms',
 	alt: 'Signup & Login Forms Title',
 });
-const h1Login = `h1LoginForms.innerHTML = 'Login'`;
+const h1Login = (h1LoginForms.innerHTML = `Login`);
 
 const formTwo = document.createElement('form');
 setAttributes(formTwo, {
@@ -393,7 +401,7 @@ setAttributes(webeLogin, {
 	alt: 'webe-login',
 });
 
-const scriptsPackage = [scriptLogin, scriptIndex, scriptModal];
+const scriptsPackage = [scriptLogin, scriptIndex, scriptModal, scriptButton];
 const stickyNotes = [
 	console.info(
 		'%c The login index file has || ***  " FIRED THE OPERATIONAL SCRIPTS "  *** || and rendered them to the head element',
@@ -404,9 +412,9 @@ const stickyNotes = [
 		'background: #222222; color: hsl(59, 100%, 50%);'
 	),
 	// prettier-ignore
-	console.group(
-		'%c Note_One: JavaScripting is so much FUN!! :: I Love it so much!! Need to really study hard to fully understand the "reflection" of properties. A method of taking an elements properties and then mirroring or "reflecting" them into(creating) attributes. We can use the reflection to hook into DOM elements and manipulate their state within the DOM. I love JavaScripting, and to JavaScript is a privilege!!',
-	'background: #222222; color: hsl(59, 100%, 50%);'),
+	// console.group(
+	// 	'%c Note_One: JavaScripting is so much FUN!! :: I Love it so much!! Need to really study hard to fully understand the "reflection" of properties. A method of taking an elements properties and then mirroring or "reflecting" them into(creating) attributes. We can use the reflection to hook into DOM elements and manipulate their state within the DOM. I love JavaScripting, and to JavaScript is a privilege!!',
+	// 'background: #222222; color: hsl(59, 100%, 50%);'),
 ];
 
 const innerVars = [
@@ -421,8 +429,7 @@ const innerVars = [
 	anchorAboutText,
 	anchorContactText,
 ];
-const headerElements = [figure, divLogo];
-const navElements = [divMenu, divLogin];
+const navElements = [figure, divLogo, divMenu, divLogin];
 const liMenuElements = [anchorHome, anchorAbout, anchorContact];
 const liLoginElements = [liLoginOne, liLoginTwo];
 const classAttribute = 'li-menu';
@@ -437,45 +444,46 @@ const signupEmailInputs = [
 const divFormTwoElements = [divLogClose, divLogText, formTwo];
 const loginInputs = [inputEmailLogin, inputPasswordLogin, inputSubmitLogin];
 
+renderHeadScripts(scriptsPackage, stickyNotes);
+renderArray(innerVars);
+main.appendChild(header);
+appendChildren(header, navElements);
+figure.appendChild(figureImg);
+figure.appendChild(figcaption);
+divLogo.appendChild(h1);
+divMenu.appendChild(ulMenu);
+loopList(liMenuElements, classAttribute, ulMenu);
+divLogin.appendChild(ulLogin);
+listMaker(liLoginElements, ulLogin);
+
+//< :::: append the signup-form class :::: >//
+divSignupForm.appendChild(divFormOne);
+appendChildren(divFormOne, divFormOneElements);
+divSignupText.appendChild(h1RegisterForms);
+formOne.appendChild(divSignupRow);
+appendChildren(divSignupRow, signupRowInputs);
+appendChildren(formOne, signupEmailInputs);
+
+//< :::: append the login-form class :::: >//
+divLoginForm.appendChild(divFormTwo);
+appendChildren(divFormTwo, divFormTwoElements);
+divLogText.appendChild(h1LoginForms);
+appendChildren(formTwo, loginInputs);
+
 export class LoginIndex extends RenderTemplate {
 	constructor() {
 		super();
+
+		this.noShadow = true;
 	}
 	connectedCallback() {
 		super.connectedCallback();
 
 		//< :::: append the container class :::: >//
-		renderHeadScripts(scriptsPackage, stickyNotes);
-		renderArray(innerVars);
-		main.appendChild(header);
-		appendChildren(header, headerElements);
-		figure.appendChild(figureImg);
-		figure.appendChild(figcaption);
-		divLogo.appendChild(h1);
-		header.appendChild(nav);
-		appendChildren(nav, navElements);
-		divMenu.appendChild(ulMenu);
-		loopList(liMenuElements, classAttribute, ulMenu);
-		divLogin.appendChild(ulLogin);
-		listMaker(liLoginElements, ulLogin);
-
-		//< :::: append the signup-form class :::: >//
-		divSignupForm.appendChild(divFormOne);
-		appendChildren(divFormOne, divFormOneElements);
-		divSignupText.appendChild(h1RegisterForms);
-		formOne.appendChild(divSignupRow);
-		appendChildren(divSignupRow, signupRowInputs);
-		appendChildren(formOne, signupEmailInputs);
-
-		//< :::: append the login-form class :::: >//
-		divLoginForm.appendChild(divFormTwo);
-		appendChildren(divFormTwo, divFormTwoElements);
-		divLogText.appendChild(h1LoginForms);
-		appendChildren(formTwo, loginInputs);
 
 		console.info(
-			'%c This Web Component has || * FIRED * || component-shell.js is connected',
-			'background: transparent ; color: hsl(32, 83%, 54%);'
+			'%c This Web Component has || * FIRED * || login-index.js is connected',
+			'background: transparent ; color: hsl(313, 98%, 50%);'
 		);
 	}
 }

@@ -14,13 +14,16 @@
 	--webe-HOOT-ff: 'Chango', cursive;
 	--webe-title-ff: 'Days One', sans-serif;
 	--webe-menu-ff: 'Work Sans', sans-serif;
-	--webe-clr-bright-pink: hsl(313, 97%, 66%);
-	--webe-clr-bluify: hsl(231, 100%, 75%);
+	--webe-clr-bright-pink: hsl(313, 98%, 50%);
+	--webe-clr-bluify: hsl(195, 72%, 48%);
 	color:  hsl(0, 0%, 100%);
 	color:  hsl(77, 97%, 15%);
 	color:  hsl(76, 98%, 50%);
 	color:  hsl(195, 74%, 96%);
 	color:  hsl(0, 0%, 100%);
+	color: hsl(195, 98%, 50%);
+	color: hsl(239, 97%, 77%);
+	--webe-login-modal-clr: hsl(64, 97%, 45%);
 }
 
 * {

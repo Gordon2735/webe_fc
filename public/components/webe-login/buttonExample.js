@@ -64,6 +64,8 @@ export class MaterialButton extends HTMLElement {
           justify-content: center;
           position: relative;
           overflow: hidden;
+          top: 20vh;
+          right: 20vw;
         }
         
         button:hover {

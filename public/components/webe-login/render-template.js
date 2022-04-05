@@ -3,6 +3,7 @@ export class RenderTemplate extends HTMLElement {
 		if (!this.noShadow) this.attachShadow({ mode: 'open' });
 		this.render();
 	}
+
 	render(template) {
 		if (this.noShadow) {
 			this.innerHTML = template || this.template;
