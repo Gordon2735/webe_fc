@@ -1,10 +1,10 @@
 export class RenderTemplate extends HTMLElement {
 	connectedCallback() {
-		if (!this.noShadowRoot) this.attachShadow({ mode: 'open' });
+		if (!this.noShadow) this.attachShadow({ mode: 'open' });
 		this.render();
 	}
 	render(template) {
-		if (this.noShadowRoot) {
+		if (this.noShadow) {
 			this.innerHTML = template || this.template;
 			return;
 		} else {

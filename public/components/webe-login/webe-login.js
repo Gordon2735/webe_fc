@@ -5,68 +5,91 @@
 
 import { RenderTemplate } from './render-template.js';
 import { sharedStyles } from './login-shared-styles.js';
+import './loginIndex.js';
 import appendChildren, {
 	main,
-	setAttributes,
 	divSignupForm,
 	divLoginForm,
+	liLoginOne,
+	liLoginTwo,
 } from './loginIndex.js';
-
+import { signupToggle, loginToggle } from './loginIndex.js';
 const divFormsRend = [main, divSignupForm, divLoginForm];
-const head = document.querySelector('head');
-const title = document.createElement('title');
-setAttributes(title, {
-	textContent: 'webe-login',
-});
+
 export class WebeLogin extends RenderTemplate {
+	static get observedProperties() {}
+
 	constructor() {
 		super();
 
-		this.addEventListener('click', () =>
-			this.dispatchEvent(
-				new CustomEvent('openDialog', {
-					detail: this.loginData,
-					bubbles: true,
-					composed: true,
-				})
-			)
-		);
+		this.noShadow = false;
 
-		console.info(
-			'%c This Web Component has || * FIRED * || webe-login.js is connected',
-			'background: #222; color: #bada55'
-		);
-	}
+		// appendChildren(shadow, divFormsRend);
 
-	get template() {
-		return `
-			
-			<script type="module">
-    			import './webe-login.js';
-			</script>						
-		`;
+		// this.attachShadow({ mode: 'open' });
+		// liSignup.onclick = () => signupToggle;
+		// liLogin.onclick = () => loginToggle;
+
+		// liSignup.setAttribute('class', ' active');
+		// liLogin.setAttribute('class', ' active');
+		// liSignup.setAttribute('onclick', 'signupToggle');
+		// liLogin.setAttribute('onclick', 'loginToggle');
+		this.render();
 	}
 	connectedCallback() {
-		head.appendChild(title);
-		appendChildren(this.attachShadow({ mode: 'open' }), divFormsRend);
+		super.connectedCallback();
+		console.info(
+			'%c This Web Component has || * FIRED * || webe-login.js is connected',
+			'background: #222222; color: hsl(246, 98%, 49%);'
+		);
+		this.shadowRoot.append(main);
+		appendChildren(this.shadowRoot, divFormsRend);
 		this.shadowRoot.innerHTML = `
-		${sharedStyles.modal}
-		${sharedStyles.active}
-		<script type="module">							
-			function signupToggle() {
-				const container = this.shadowRoot.querySelector('.container');
-				container.classList.toggle('active');
-				const popup = this.shadowRoot.querySelector('.signup-form');
-				popup.classList.toggle('active');
-			}
+		<style>
+		${sharedStyles.main}				
+		${sharedStyles.login}
+		</style>
+		`;
+		// this.shadowRoot.appendChild(template.content.cloneNode(true));
+	}
+	attributeChangedCallback(name, oldValue, newValue) {}
+
+	// set template(template) {
+	// 	this.render();
+	// }
+
+	get template() {
+		return `		
+		
+
+			<script type="module">
+				${signupToggle} 
+				${loginToggle}
+			</script>				
 			
-			function loginToggle() {
-				const container = this.shadowRoot.querySelector('.container');
-				container.classList.toggle('active');
-				const popup = this.shadowRoot.querySelector('.login-form');
-				popup.classList.toggle('active');
-			}
-		</script>`;
+		`;
+	}
+	static get observedAttributes() {
+		liLoginOne.setAttribute('class', 'active');
+		liLoginTwo.setAttribute('class', 'active');
 	}
 }
-window.customElements.define('webe-login', WebeLogin);
+
+customElements.define('webe-login', WebeLogin);
+
+// const liSignup = this.querySelector('#li-login-one');
+// 		const liLogin = this.querySelector('.li-login');
+// 		prettier-ignore
+// 		let liOne = window.getComputedStyle(liSignup).active;
+// 		let lliTwo = window.getComputedStyle(liLogin).onclick;
+// 		console.log(liOne);
+// 		console.log(lliTwo);
+
+// console.time("While loop");
+// while (i < 1000000) {
+// 	i++;
+// }
+// console.timeEnd('While loop');
+
+// console.time('For loop');
+//for (i = 0; i < 1000000; i++) {} // For Loop}console.timeEnd("For loop");

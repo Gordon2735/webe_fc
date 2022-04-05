@@ -58,6 +58,7 @@
 	aspect-ratio: 0.9 / 1;
 	filter: drop-shadow(4px 5px 9px rgb(3, 3, 3));
 	transform: rotate(15deg) translate(0, -1.2vw);
+	color: hsl(0, 0%, 35%)
 }
 
 .box2 > .hoot-title {

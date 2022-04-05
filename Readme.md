@@ -23,13 +23,16 @@
 <!--?       12. npm i cors dotenv body-parser          -->
 <!--?       13. npm i eslint-plugin-html -D            -->
 <!--?       14. npm i eslint-config-prettier -G        -->
-<!--?       14. npm i -G eslint-plugin-jest            -->
-<!--?       15. npm i jsdom -D                         -->
-<!--?       16. npm i xstate -G                        -->
-<!--?       16. npm rm xstate                        -->
-<!--?       17. npm i puppeteer -G                     -->
-<!--?       17. npm i puppeteer-core                     -->
+<!--?       15. npm i -G eslint-plugin-jest            -->
+<!--?       16. npm i jsdom -D                         -->
+<!--?       17. npm i xstate -G                        -->
+<!--?       18. npm rm xstate                        -->
+<!--?       19. npm i puppeteer -G                     -->
+<!--?       20. npm i puppeteer-core                   -->
+<!--?       21. npm install --save-dev npmignore       -->
 <!--npm :::::::::::::::::::::::::::::::::::::::::::::: -->
+<!--! CHECK OUT npm install --save-dev common-ignore   -->
+<!--- A tool for generating .gitignore and .npmignore files with a common file for both ignores.   -->
 
 STUDY: Creating "General Functions" for integrating common functionality throughout the Application.
 

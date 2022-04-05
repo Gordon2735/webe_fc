@@ -52,6 +52,7 @@
 		"jest-environment-jsdom": "^27.4.6",
 		"jest-environment-jsdom-global": "^3.0.0",
 		"nodemon": "^2.0.15",
+		"npmignore": "^0.2.0",
 		"open": "^8.4.0"
 	}
 }
