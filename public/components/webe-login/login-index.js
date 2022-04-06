@@ -1,7 +1,6 @@
 'use strict';
 
 import { RenderTemplate } from './render-template.js';
-// import { sharedStyles } from './login-shared-styles';
 
 const head = document.querySelector('head');
 export const body = document.querySelector('body');

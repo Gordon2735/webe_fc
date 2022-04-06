@@ -9,6 +9,7 @@ const navElement = document.querySelector('webe-nav');
 const responsiveElement = document.querySelector('webe-responsive');
 const devtoolsElement = document.querySelector('webe-devtools');
 const footerElement = document.querySelector('webe-footer');
+const compShellElement = document.querySelector('component-shell');
 
 export const currentDOM = async () => {
 	if (store.state.checkHead === true) {
@@ -84,12 +85,6 @@ export const currentDOM = async () => {
 		};
 		checkFooter();
 	}
-	await new Promise(
-		resolve => setTimeout(resolve, 0),
-		() => {
-			store.state('footerElement', event);
-		}
-	);
 };
 currentDOM();
 

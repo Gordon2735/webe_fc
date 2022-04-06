@@ -21,8 +21,6 @@ export class WebeLogin extends RenderTemplate {
 		super();
 
 		this.noShadow = false;
-
-		const shadowBody = this.shadowRoot;
 	}
 	connectedCallback() {
 		super.connectedCallback();
@@ -66,10 +64,10 @@ export class WebeLogin extends RenderTemplate {
 		}
 
 		liSignup.addEventListener('click', event => {
-			signupToggle();
+			event.target, () => signupToggle();
 		});
 		liLogin.addEventListener('click', event => {
-			loginsToggle();
+			event.target, () => loginsToggle();
 		});
 	}
 
@@ -100,13 +98,16 @@ export class WebeLogin extends RenderTemplate {
 		`;
 	}
 	get active() {
-		return this.getAttribute('style', 'active: false');
+		const shadowBody = this.shadowRoot;
+
+		return shadowBody.getAttribute('style', 'active: true');
 	}
 	set active(active) {
+		const shadowBody = this.shadowRoot;
 		if (active) {
-			this.setAttribute('true', active);
+			shadowBody.setAttribute('true', active);
 		} else {
-			this.setAttribute('false');
+			shadowBody.setAttribute('style', 'active: false');
 		}
 	}
 }

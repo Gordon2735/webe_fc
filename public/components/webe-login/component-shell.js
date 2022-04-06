@@ -5,8 +5,6 @@ import { sharedStyles } from './login-shared-styles.js';
 import './webe-login.js';
 import './login-index.js';
 import './login-modal.js';
-import { anchorHome, anchorAbout } from './login-index.js';
-// import { signupToggle, loginsToggle } from './webe-login.js';
 
 const body = document.querySelector('body');
 const script = document.createElement('script');
@@ -45,17 +43,13 @@ export class ComponentShell extends RenderTemplate {
 	get template() {
 		return `
 
-
-
 			<webe-login class="webe-login">
 				<login-index>
 					
 				</login-index>
 			</webe-login>
 
-			<login-modal></login-modal>
-
-							
+			<login-modal></login-modal>							
 		
 			<style>
 				@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
@@ -76,7 +70,4 @@ export class ComponentShell extends RenderTemplate {
 customElements.define('component-shell', ComponentShell);
 
 // <login-modal class="login-modal"></login-moda
-// ${!!toggleSignup ? toggleSignup : ''}
-// 					${!!toggleLogins ? toggleLogins : ''}
-
 /*<material-button class="material-button"></material-button>*/
