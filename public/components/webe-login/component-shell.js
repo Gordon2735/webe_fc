@@ -1,3 +1,6 @@
+//hw :::::::: HooT Webelistics® :::::::: hw//
+//)  ::::::::  component-shell  :::::::: )//
+
 'use strict';
 
 import { RenderTemplate } from './render-template.js';
@@ -43,13 +46,10 @@ export class ComponentShell extends RenderTemplate {
 	get template() {
 		return `
 
-			<webe-login class="webe-login">
-				<login-index>
-					
-				</login-index>
-			</webe-login>
+			<webe-login class="webe-login"></webe-login>
 
-			<login-modal></login-modal>							
+			<login-modal class="login-modal"></login-modal>
+
 		
 			<style>
 				@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
@@ -60,6 +60,7 @@ export class ComponentShell extends RenderTemplate {
 						
 				component-shell {
 					${sharedStyles.trbl}
+
 					overflow-y: overlay;
 				}							
 			</style>

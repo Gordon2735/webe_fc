@@ -1,0 +1,12 @@
+{
+  "name": "node_events",
+  "version": "1.0.0",
+  "description": "Collection of Listener/EventEmitter Classes",
+  "type": "module",
+  "main": "appListener.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Gordon R Mullen Jr",
+  "license": "MIT"
+}

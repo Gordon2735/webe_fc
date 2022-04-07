@@ -1,0 +1,12 @@
+{
+  "name": "js_utility",
+  "version": "1.0.0",
+  "description": "General Function Utilities Hub-Spot",
+  "type": "module",
+  "main": "generalFunc.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Gordon R Mullen Jr",
+  "license": "MIT"
+}

@@ -224,7 +224,7 @@ sharedStyles.login = `
             box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
             visibility: hidden;
             transition: 1s;
-            opacity: 0;
+            opacity: 1;
             color: hsl(195, 72%, 48%);
 
         }
@@ -276,13 +276,16 @@ sharedStyles.login = `
             outline: none;
         }
 
-        .signup-form:active,
-        .login-form:active {
+        .signup-form.active,
+        .login-form.active {
             top: 50%;
             transition: 1s;
             visibility: visible;
             opacity: 1;
         }
+
+            
+        
 
         .container:active {
             filter: blur(20px);
@@ -292,42 +295,53 @@ sharedStyles.login = `
             /*  */
 
         
-
-        .blink {
-            animation: blink 1s steps(1, end) infinite;
-          }
-          
-          @keyframes blink {
-            0% {
-              opacity: 1;
-            }
-            50% {
-              opacity: 0;
-            }
-            100% {
-              opacity: 1;
-            }
-          }
-
-          .fade-in {
-            animation: fadeIn ease 10s;
-            -webkit-animation: fadeIn ease 10s;
-            -moz-animation: fadeIn ease 10s;
-            -o-animation: fadeIn ease 10s;
-            -ms-animation: fadeIn ease 10s;
-          }
-            @keyframes fadeIn {
-                0% {
-                opacity:0;
-                }
-                100% {
-               opacity:1;
-                }
-            }    
 `;
 
 sharedStyles.modal = `
+    /* minimal reset */
+    * {
+    margin:0;
+    border:0;
+    padding:0;
+    box-sizing:border-box;
+    list-style:none;
+    }
 
+    body{
+    background-color: #333;
+    /* because serifs are gross (IMO) */
+    font-family: sans-serif;
+    }
+
+    .gator-tabs-container{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    }
+
+    .gator-tabs-header {
+    background-color:#DFA612;
+    display:flex;
+    flex-wrap:wrap;
+    padding:.375rem;
+    }
+
+    .gator-tabs-header > li {
+    color:#fff;
+    cursor:pointer;
+    flex-grow:1;
+    padding:.375rem;
+    font-size:1.125rem;
+    }
+
+    .gator-tabs {
+    display:flex;
+    }
+
+    .gator-tab {
+    padding:1rem;
+    color:#fff;
+    }
 `;
 
 export { sharedStyles };

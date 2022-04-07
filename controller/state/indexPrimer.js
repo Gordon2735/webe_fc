@@ -9,7 +9,6 @@ const navElement = document.querySelector('webe-nav');
 const responsiveElement = document.querySelector('webe-responsive');
 const devtoolsElement = document.querySelector('webe-devtools');
 const footerElement = document.querySelector('webe-footer');
-const compShellElement = document.querySelector('component-shell');
 
 export const currentDOM = async () => {
 	if (store.state.checkHead === true) {
@@ -41,7 +40,7 @@ export const currentDOM = async () => {
 					store.dispatch('navElement', event);
 				}
 			});
-			await new Promise(resolve => setTimeout(resolve, 0));
+			await new Promise(resolve => setTimeout(resolve, 100));
 		};
 		checkNav();
 
@@ -53,7 +52,7 @@ export const currentDOM = async () => {
 					store.dispatch('responsiveElement', event);
 				}
 			});
-			await new Promise(resolve => setTimeout(resolve, 0));
+			await new Promise(resolve => setTimeout(resolve, 100));
 		};
 		checkResponsive();
 
@@ -65,7 +64,7 @@ export const currentDOM = async () => {
 					store.dispatch('devtoolsElement', event);
 				}
 			});
-			await new Promise(resolve => setTimeout(resolve, 0));
+			await new Promise(resolve => setTimeout(resolve, 100));
 		};
 		checkDevtools();
 
@@ -81,7 +80,7 @@ export const currentDOM = async () => {
 					);
 				}
 			});
-			await new Promise(resolve => setTimeout(resolve, 0));
+			await new Promise(resolve => setTimeout(resolve, 100));
 		};
 		checkFooter();
 	}
@@ -103,7 +102,7 @@ export const checkBody = async () => {
 				}
 			});
 			await new Promise(
-				resolve => setTimeout(resolve, 0),
+				resolve => setTimeout(resolve, 100),
 				() => {
 					store.state('DOMContentLoaded', true);
 				}
@@ -112,7 +111,7 @@ export const checkBody = async () => {
 		domBody();
 	} else {
 		await new Promise(
-			resolve => setTimeout(resolve, 0),
+			resolve => setTimeout(resolve, 100),
 			() => {
 				if (store.state.checkBody === false)
 					store.state('DOMContentLoaded', true);

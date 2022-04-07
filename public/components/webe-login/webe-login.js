@@ -1,4 +1,4 @@
-//hw :::::::: HOOT Webelistics® :::::::: hw//
+//hw :::::::: HooT Webelistics® :::::::: hw//
 //)  ::::::::    webe-login     :::::::: )//
 
 'use strict';
@@ -10,13 +10,22 @@ import appendChildren, {
 	main,
 	divSignupForm,
 	divLoginForm,
-	liLoginOne,
-	liLoginTwo,
 } from './login-index.js';
 
 const divFormsRend = [main, divSignupForm, divLoginForm];
 
 export class WebeLogin extends RenderTemplate {
+	static get observedAttributes() {
+		return ['visibility', 'hidden'];
+	}
+	attributedChangedCallback(name, oldValue, newValue) {
+		if (name === 'visibility') {
+			this.hidden = newValue;
+		} else if (name === 'hidden') {
+			this.hidden = newValue;
+		}
+	}
+
 	constructor() {
 		super();
 
@@ -29,87 +38,61 @@ export class WebeLogin extends RenderTemplate {
 			'background: #222222; color: hsl(239, 97%, 77%);'
 		);
 
-		const shadowBody = this.shadowRoot;
+		const root = this.shadowRoot;
 
-		appendChildren(shadowBody, divFormsRend);
+		appendChildren(root, divFormsRend);
 
-		const home = shadowBody.getElementById('home');
-		// home.addEventListener('click', event =>
-		// 	shadowBody.dispatchEvent(
-		// 		console.log(event.target),
-		// 		new CustomEvent('location home.href', {
-		// 			bubbles: true,
-		// 			cancelable: true,
-		// 			composed: true,
-		// 			detail: open(url, '/'),
-		// 		})
-		// 	)
-		// );
+		const liSignup = root.getElementById('li-login-one');
+		const signupForm = root.querySelector('.signup-form');
+		const mainContainer = root.querySelector('.container');
+		const liLogin = root.getElementById('li-login-two');
+		const loginForm = root.querySelector('.login-form');
 
-		const liSignup = shadowBody.getElementById('li-login-one');
-		const liLogin = shadowBody.getElementById('li-login-two');
-
-		function signupToggle() {
-			const container = shadowBody.querySelector('.container');
-			container.classList.toggle('active');
-			const popup = shadowBody.querySelector('.signup-form');
-			popup.classList.toggle('active');
-		}
-
-		function loginsToggle() {
-			const container = shadowBody.querySelector('.container');
-			container.classList.toggle('active');
-			const popup = shadowBody.querySelector('.login-form');
-			popup.classList.toggle('active');
-		}
-
-		liSignup.addEventListener('click', event => {
-			event.target, () => signupToggle();
-		});
-		liLogin.addEventListener('click', event => {
-			event.target, () => loginsToggle();
-		});
+		liSignup.addEventListener('click', () =>
+			signupForm.classList.toggle('active')
+		);
+		liLogin.addEventListener('click', () =>
+			loginForm.classList.toggle('active')
+		);
 	}
-
 	get template() {
 		return `	
 
+			
 			<style>
-				${sharedStyles.main}				
 				${sharedStyles.login}
-			</style>
-
-			<script type="module">
-				function signupToggle() {
-					const container = this.shadowRoot.querySelector('.container');
-					container.classList.toggle('active');
-					const popup = this.shadowRoot.querySelector('.signup-form');
-					popup.classList.toggle('active');
-				}
-		
-				function loginsToggle() {
-					const container = this.shadowRoot.querySelector('.container');
-					container.classList.toggle('active');
-					const popup = this.shadowRoot.querySelector('.login-form');
-					popup.classList.toggle('active');
-				}
-			</script>				
+			</style>							
 			
 		`;
 	}
-	get active() {
-		const shadowBody = this.shadowRoot;
-
-		return shadowBody.getAttribute('style', 'active: true');
+	get hidden() {
+		return root.hasAttribute('style', 'hidden');
 	}
-	set active(active) {
-		const shadowBody = this.shadowRoot;
-		if (active) {
-			shadowBody.setAttribute('true', active);
+	set hidden(isHidden) {
+		if (isHidden) {
+			root.setAttribute('visible', '');
 		} else {
-			shadowBody.setAttribute('style', 'active: false');
+			root.removeAttribute('hidden');
 		}
 	}
 }
 
 customElements.define('webe-login', WebeLogin);
+
+{
+	/* <script type="module">
+				export function signupToggle() {
+					const container = this.querySelector('.container');
+					container.classList.toggle('active');
+					const popup = this.querySelector('.signup-form');
+					popup.classList.toggle('active');
+				}
+				
+				export function loginsToggle() {
+					const container = this.querySelector('.container');
+					container.classList.toggle('active');
+					const popup = this.querySelector('.login-form');
+					popup.classList.toggle('active');
+				}
+			</script> */
+}

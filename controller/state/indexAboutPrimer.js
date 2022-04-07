@@ -1,6 +1,7 @@
 import store from '/state/store/indexState.js';
 import startComponentShell from '/state/components/startComponentShell.js';
 
+const compShellElement = document.querySelector('component-shell');
 const loginElement = document.querySelector('webe-login');
 
 export const currentDOM = async () => {

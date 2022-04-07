@@ -89,3 +89,78 @@
 	// .anchor.styled-pointer:not([href]) {
 	// 	cursor: pointer;
 	// }
+
+
+	//& NODE EVENT LISTENER 
+	// liSignup = shadowBody.getElementById('li-login-one');
+	// attributeChangedCallback(liSignup, hidden, visible) {
+	// 	switch (liSignup) {
+	// 		case 'active':
+	// 			signupListener.emit('visibility', visible);
+	// 			break;
+	// 		case '':
+	// 			signupListener.emit('visibility', hidden);
+	// 			break;
+	// 		default:
+	// 			throw new Error('Error: liSignup is not defined');
+	// 	}
+	// }
+	// liLogin = shadowBody.getElementById('li-login-two');
+	// attributeChangedCallback(liLogin, hidden, visible) {
+	// 	switch (liLogin) {
+	// 		case 'active':
+	// 			loginListener.emit('visibility', visible);
+	// 			break;
+	// 		case '':
+	// 			loginListener.emit('visibility', hidden);
+	// 			break;
+	// 		default:
+	// 			throw new Error('Error: liSignup is not defined');
+	// 	}
+	// }
+
+// 	const signupListener = new appListener();
+// const loginListener = new appListener();
+
+// signupListener.on('style', active => {
+// 	const container = shadowBody.querySelector('.container');
+// 	const popup = shadowBody.querySelector('.signup-form');
+// 	if (active) {
+// 		container.classList.toggle('active');
+// 		popup.classList.toggle('active');
+// 	} else {
+// 		throw new Error('Error: active is not defined');
+// 	}
+// });
+
+// loginListener.on('style', active => {
+// 	const container = shadowBody.querySelector('.container');
+// 	const popup = shadowBody.querySelector('.login-form');
+// 	if (active) {
+// 		container.classList.toggle('active');
+// 		popup.classList.toggle('active');
+// 	} else {
+// 		throw new Error('Error: active is not defined');
+// 	}
+// });
+// signupListener.emit('style', liSignup.style.active);
+// loginListener.emit('style', liLogin.style.active);
+
+
+// nodeListener.once('newListener', (event, listener) => {
+// 	if (event === 'active') {
+// 		listener();
+// 	}
+// });
+
+// import nodeListener, {
+// 	appListener,
+// } from '../../src/js/js_lib/node_events/nodeListener.js';
+
+//% SERVER
+// class AppListener extends EventEmitter {}
+// const appListener = new AppListener();
+// export default { appListener };
+// app.use(EventEmitter(path.join(__dirname, 'server.js')));
+
+// app.use(express.static('/'));

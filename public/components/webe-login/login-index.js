@@ -51,20 +51,6 @@ const renderArray = async array => {
 	});
 };
 
-export function signupToggle() {
-	const container = this.querySelector('.container');
-	container.classList.toggle('active');
-	const popup = this.querySelector('.signup-form');
-	popup.classList.toggle('active');
-}
-
-export function loginsToggle() {
-	const container = this.querySelector('.container');
-	container.classList.toggle('active');
-	const popup = this.querySelector('.login-form');
-	popup.classList.toggle('active');
-}
-
 const scriptLogin = document.createElement('script');
 setAttributes(scriptLogin, {
 	type: 'module',
