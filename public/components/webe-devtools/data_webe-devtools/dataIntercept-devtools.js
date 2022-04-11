@@ -18,7 +18,7 @@ fetch('../components/webe-devtools/data_webe-devtools/webe-devtools.json')
 	.catch(error => console.log(error));
 
 const appendData = data => {
-	const shadow = WebeDevtools2.shadowRoot;
+	const shadow = WebeDevtools.shadowRoot;
 	const imgOne = shadow.getElementById('img-one');
 	const h2One = shadow.getElementById('h2-one');
 	const pOne = shadow.getElementById('p-one');

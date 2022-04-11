@@ -22,8 +22,11 @@
 	color:  hsl(195, 74%, 96%);
 	color:  hsl(0, 0%, 100%);
 	color: hsl(195, 98%, 50%);
+	color: hsl(195, 98%, 34%);
 	color: hsl(239, 97%, 77%);
 	--webe-login-modal-clr: hsl(64, 97%, 45%);
+	color: hsl(195, 53%, 85%);
+	color: hsl(196, 100%, 95%);
 }
 
 * {

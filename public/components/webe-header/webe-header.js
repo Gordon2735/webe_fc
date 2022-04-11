@@ -155,16 +155,15 @@ const RenderTags = () => {
 export default class WebeHeader extends HTMLElement {
 	constructor() {
 		super();
-
-		this.attachShadow({ mode: 'open' });
 	}
 	connectedCallback() {
+		const root = this.attachShadow({ mode: 'open' });
 		console.info(
 			'%c This Web Component has || * FIRED * || webe-header.js is connected',
 			'background: #222222; color: #EE82EE'
 		);
 
-		this.shadowRoot.appendChild(template.content.cloneNode(true));
+		root.appendChild(template.content.cloneNode(true));
 
 		RenderTags();
 		style.innerHTML = `@import "../components/webe-header/webe-header.css";`;

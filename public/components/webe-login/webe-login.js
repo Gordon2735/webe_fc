@@ -12,7 +12,7 @@ import appendChildren, {
 	divLoginForm,
 } from './login-index.js';
 
-const divFormsRend = [main, divSignupForm, divLoginForm];
+const divFormsRender = [main, divSignupForm, divLoginForm];
 
 export class WebeLogin extends RenderTemplate {
 	static get observedAttributes() {
@@ -23,6 +23,8 @@ export class WebeLogin extends RenderTemplate {
 			this.hidden = newValue;
 		} else if (name === 'hidden') {
 			this.hidden = newValue;
+		} else if (name === 'visible') {
+			this.visible = oldValue;
 		}
 	}
 
@@ -40,24 +42,38 @@ export class WebeLogin extends RenderTemplate {
 
 		const root = this.shadowRoot;
 
-		appendChildren(root, divFormsRend);
+		appendChildren(root, divFormsRender);
 
 		const liSignup = root.getElementById('li-login-one');
 		const signupForm = root.querySelector('.signup-form');
-		const mainContainer = root.querySelector('.container');
 		const liLogin = root.getElementById('li-login-two');
 		const loginForm = root.querySelector('.login-form');
+		const signupClose = root.getElementById('div-signup-close');
+		const loginClose = root.getElementById('div-log-close');
+		const inputSignup = root.getElementById('input-submit-register');
+		const inputLogin = root.getElementById('input-submit-login');
 
-		liSignup.addEventListener('click', () =>
+		liSignup.addEventListener('click', event => {
+			signupForm.classList.toggle('active'), event.stopPropagation();
+		});
+		liLogin.addEventListener('click', event => {
+			loginForm.classList.toggle('active'), event.stopPropagation();
+		});
+		signupClose.addEventListener('click', () =>
 			signupForm.classList.toggle('active')
 		);
-		liLogin.addEventListener('click', () =>
+		inputSignup.addEventListener('click', event => {
+			signupForm.classList.toggle('active'), event.stopPropagation();
+		});
+		loginClose.addEventListener('click', () =>
 			loginForm.classList.toggle('active')
 		);
+		inputLogin.addEventListener('click', event => {
+			loginForm.classList.toggle('active'), event.stopPropagation();
+		});
 	}
 	get template() {
-		return `	
-
+		return `
 			
 			<style>
 				${sharedStyles.login}
@@ -79,8 +95,7 @@ export class WebeLogin extends RenderTemplate {
 
 customElements.define('webe-login', WebeLogin);
 
-{
-	/* <script type="module">
+/* <script type="module">
 				export function signupToggle() {
 					const container = this.querySelector('.container');
 					container.classList.toggle('active');
@@ -95,4 +110,3 @@ customElements.define('webe-login', WebeLogin);
 					popup.classList.toggle('active');
 				}
 			</script> */
-}

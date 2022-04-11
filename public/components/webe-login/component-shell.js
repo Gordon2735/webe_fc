@@ -7,7 +7,8 @@ import { RenderTemplate } from './render-template.js';
 import { sharedStyles } from './login-shared-styles.js';
 import './webe-login.js';
 import './login-index.js';
-import './login-modal.js';
+import './register-index.js';
+import './login-register.js';
 
 const body = document.querySelector('body');
 const script = document.createElement('script');
@@ -48,7 +49,8 @@ export class ComponentShell extends RenderTemplate {
 
 			<webe-login class="webe-login"></webe-login>
 
-			<login-modal class="login-modal"></login-modal>
+			<login-register class="login-register"></login-register>
+
 
 		
 			<style>

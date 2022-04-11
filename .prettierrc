@@ -17,5 +17,9 @@
 	"useTabs": true,
 	"vueIndentScriptAndStyle": false,
 	"filepath": "d:\\webe_fc\\public\\components\\webe-login\\login-shared-styles.js",
-	"parser": "babel"
+	"parser": "babel",
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
+	
 }

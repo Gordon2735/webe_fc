@@ -1,0 +1,13 @@
+
+[
+    {
+        "Register": {
+            "header": "Create an Account and Register",
+            "Option_One": "Access individual consultation",
+            "Option_Two": "Create an Application specific to your needs",
+            "Option_Three": "Recieve out quarterly report",
+            "Option_Four": "Obtain Quotes for individual-specific packages",
+            "Option_Five": "Sign-up for our in-depth courses on what software and the type of application that will fulfill your business or personal needs "
+        }
+    }
+]

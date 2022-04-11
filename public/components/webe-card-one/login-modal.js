@@ -2,6 +2,13 @@ import { RenderTemplate } from './render-template.js';
 import { sharedStyles } from './login-shared-styles.js';
 import './login-index.js';
 
+const scriptModal = document.createElement('script');
+setAttributes(scriptModal, {
+	type: 'module',
+	src: '../components/webe-login/login-modal.js',
+	crossorigin: 'anonymous',
+});
+
 export class LoginModal extends RenderTemplate {
 	constructor() {
 		super();
@@ -105,3 +112,50 @@ export class LoginModal extends RenderTemplate {
 	// }
 }
 customElements.define('login-modal', LoginModal);
+
+sharedStyles.modal = `
+    /* minimal reset */
+    * {
+    margin:0;
+    border:0;
+    padding:0;
+    box-sizing:border-box;
+    list-style:none;
+    }
+
+    body{
+    background-color: #333;
+    /* because serifs are gross (IMO) */
+    font-family: sans-serif;
+    }
+
+    .gator-tabs-container{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    }
+
+    .gator-tabs-header {
+    background-color:#DFA612;
+    display:flex;
+    flex-wrap:wrap;
+    padding:.375rem;
+    }
+
+    .gator-tabs-header > li {
+    color:#fff;
+    cursor:pointer;
+    flex-grow:1;
+    padding:.375rem;
+    font-size:1.125rem;
+    }
+
+    .gator-tabs {
+    display:flex;
+    }
+
+    .gator-tab {
+    padding:1rem;
+    color:#fff;
+    }
+`;

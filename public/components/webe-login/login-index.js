@@ -1,43 +1,46 @@
+//hw :::::::: HooT Webelistics® :::::::: hw//
+//)  ::::::::    login-index     :::::::: )//
+
 'use strict';
 
 import { RenderTemplate } from './render-template.js';
 
-const head = document.querySelector('head');
+export const head = document.querySelector('head');
 export const body = document.querySelector('body');
 
-export const setAttributes = (element, attributes) => {
+export const setAttributes = async (element, attributes) => {
 	for (const key in attributes) {
-		element.setAttribute(key, attributes[key]);
+		await element.setAttribute(key, attributes[key]);
 	}
 };
 
-export const renderHeadScripts = (scripts, renderNote) => {
-	for (const script of scripts) {
+export const renderHeadScripts = async (scripts, renderNote) => {
+	for await (const script of scripts) {
 		head.appendChild(script);
 	}
 	return renderNote;
 };
 
-export default function appendChildren(parent, children) {
-	children.forEach(child => {
+export default async function appendChildren(parent, children) {
+	await children.forEach(child => {
 		parent.append(child);
 	});
 }
 
-export const appender = (parent, children) => {
-	children.map(child => {
+export const appender = async (parent, children) => {
+	await children.map(child => {
 		parent.append(child);
 	});
 };
 
-const listMaker = (list, element) => {
-	list.forEach(item => {
+export const listMaker = async (list, element) => {
+	await list.forEach(item => {
 		element.appendChild(item);
 	});
 };
 
-const loopList = (list_li, attribute, element) => {
-	list_li.forEach((item_li, item_anchor) => {
+export const loopList = async (list_li, attribute, element) => {
+	await list_li.forEach((item_li, item_anchor) => {
 		const li = document.createElement('li');
 		li.append(item_li);
 		li.setAttribute('class', attribute);
@@ -45,8 +48,8 @@ const loopList = (list_li, attribute, element) => {
 	});
 };
 
-const renderArray = async array => {
-	array.map(item => {
+export const renderArray = async array => {
+	await array.map(item => {
 		return item;
 	});
 };
@@ -63,12 +66,7 @@ setAttributes(scriptIndex, {
 	src: '../components/webe-login/login-index.js',
 	crossorigin: 'anonymous',
 });
-const scriptModal = document.createElement('script');
-setAttributes(scriptModal, {
-	type: 'module',
-	src: '../components/webe-login/login-modal.js',
-	crossorigin: 'anonymous',
-});
+
 const scriptButton = document.createElement('script');
 setAttributes(scriptButton, {
 	type: 'module',
@@ -162,7 +160,6 @@ setAttributes(anchorHome, {
 	alt: 'Home Link of Document',
 });
 const anchorHomeText = (anchorHome.innerHTML = `Home`);
-anchorHome.onclick = 'location.href="/"';
 
 export const anchorAbout = document.createElement('a');
 setAttributes(anchorAbout, {
@@ -182,15 +179,6 @@ setAttributes(anchorContact, {
 });
 const anchorContactText = (anchorContact.innerHTML = `Contact Us`);
 
-const liMenuObjects = [
-	{
-		Home: {
-			class: 'li-menu-home',
-			href: '<a href="/">HOOT Home</a>',
-		},
-	},
-];
-
 const divLogin = document.createElement('div');
 setAttributes(divLogin, {
 	class: 'login',
@@ -207,22 +195,18 @@ export const liLoginOne = document.createElement('li');
 setAttributes(liLoginOne, {
 	id: 'li-login-one',
 	class: 'li-buttons',
-	onclick: `signupToggle()`,
 	alt: 'Login List Item of Document',
 });
 const buttoneSignup = (liLoginOne.innerHTML = 'Sign Up');
-liLoginOne.onclick = `signupToggle()`;
-// liLoginOne.setAttribute('onclick', 'signupToggle()');
 
 export const liLoginTwo = document.createElement('li');
 setAttributes(liLoginTwo, {
 	id: 'li-login-two',
 	class: 'li-buttons',
-	onclick: `loginsToggle()`,
 	alt: 'Login List Item of Document',
 });
 const buttonLogin = (liLoginTwo.innerHTML = 'Login');
-liLoginTwo.onclick = `loginsToggle()`;
+// liLoginTwo.onclick = `loginsToggle()`;
 // liLoginTwo.setAttribute('onclick', 'loginToggle()');
 
 export const divSignupForm = document.createElement('div');
@@ -240,7 +224,7 @@ setAttributes(divFormOne, {
 export const divSignupClose = document.createElement('div');
 setAttributes(divSignupClose, {
 	id: 'div-signup-close',
-	class: 'close',
+	class: 'signup-close',
 	alt: 'Close Signup Form',
 });
 const signupX = (divSignupClose.innerHTML = '&times;');
@@ -261,6 +245,7 @@ const registerForm = (h1RegisterForms.innerHTML = 'Register Form');
 const formOne = document.createElement('form');
 setAttributes(formOne, {
 	action: '#',
+	class: 'form-one',
 	alt: 'Signup Form',
 });
 
@@ -273,6 +258,7 @@ setAttributes(divSignupRow, {
 
 const inputFirstName = document.createElement('input');
 setAttributes(inputFirstName, {
+	class: 'input-name',
 	type: 'text',
 	placeholder: 'First Name',
 	alt: 'First Name Input',
@@ -280,6 +266,7 @@ setAttributes(inputFirstName, {
 
 const inputLastName = document.createElement('input');
 setAttributes(inputLastName, {
+	class: 'input-name',
 	type: 'text',
 	placeholder: 'Last Name',
 	alt: 'Last Name Input',
@@ -308,9 +295,11 @@ setAttributes(inputConfirmPassword, {
 
 const inputSubmitRegister = document.createElement('input');
 setAttributes(inputSubmitRegister, {
+	id: 'input-submit-register',
 	type: 'submit',
 	value: 'Register',
 	alt: 'Submit Register Input',
+	class: 'input-register',
 });
 
 export const divLoginForm = document.createElement('div');
@@ -318,17 +307,17 @@ setAttributes(divLoginForm, {
 	class: 'login-form ',
 	alt: 'Login Form Container',
 });
-// this.disabled ? "disabled" : "active"
+
 const divFormTwo = document.createElement('div');
 setAttributes(divFormTwo, {
 	class: 'form',
 	alt: 'Login Form Container',
 });
+
 export const divLogClose = document.createElement('div');
 setAttributes(divLogClose, {
 	id: 'div-log-close',
-	class: 'close',
-	onclick: 'loginsToggle()',
+	class: 'login-close',
 	alt: 'Close Login Form',
 });
 const loginX = (divLogClose.innerHTML = `&times;`);
@@ -349,6 +338,7 @@ const h1Login = (h1LoginForms.innerHTML = `Login`);
 const formTwo = document.createElement('form');
 setAttributes(formTwo, {
 	action: '#',
+	class: 'form-two',
 	alt: 'Login Form',
 });
 
@@ -368,9 +358,11 @@ setAttributes(inputPasswordLogin, {
 
 const inputSubmitLogin = document.createElement('input');
 setAttributes(inputSubmitLogin, {
+	id: 'input-submit-login',
 	type: 'submit',
-	value: 'Register',
+	value: 'Login',
 	alt: 'Submit Register Input',
+	class: 'input-login',
 });
 
 export const scriptToggles = document.createElement('script');
@@ -386,7 +378,7 @@ setAttributes(webeLogin, {
 	alt: 'webe-login',
 });
 
-const scriptsPackage = [scriptLogin, scriptIndex, scriptModal, scriptButton];
+const scriptsPackage = [scriptLogin, scriptIndex, scriptButton];
 const stickyNotes = [
 	console.info(
 		'%c The login index file has || ***  " FIRED THE OPERATIONAL SCRIPTS "  *** || and rendered them to the head element',
