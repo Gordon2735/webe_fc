@@ -5,7 +5,6 @@
 
 import { RenderTemplate } from './render-template.js';
 import { sharedStyles } from './login-shared-styles.js';
-import './login-index.js';
 import './loginLog-index.js';
 
 export class LoginLogin extends RenderTemplate {

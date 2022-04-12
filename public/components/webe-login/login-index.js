@@ -5,54 +5,15 @@
 
 import { RenderTemplate } from './render-template.js';
 
-export const head = document.querySelector('head');
-export const body = document.querySelector('body');
-
-export const setAttributes = async (element, attributes) => {
-	for (const key in attributes) {
-		await element.setAttribute(key, attributes[key]);
-	}
-};
-
-export const renderHeadScripts = async (scripts, renderNote) => {
-	for await (const script of scripts) {
-		head.appendChild(script);
-	}
-	return renderNote;
-};
-
-export default async function appendChildren(parent, children) {
-	await children.forEach(child => {
-		parent.append(child);
-	});
-}
-
-export const appender = async (parent, children) => {
-	await children.map(child => {
-		parent.append(child);
-	});
-};
-
-export const listMaker = async (list, element) => {
-	await list.forEach(item => {
-		element.appendChild(item);
-	});
-};
-
-export const loopList = async (list_li, attribute, element) => {
-	await list_li.forEach((item_li, item_anchor) => {
-		const li = document.createElement('li');
-		li.append(item_li);
-		li.setAttribute('class', attribute);
-		element.appendChild(li);
-	});
-};
-
-export const renderArray = async array => {
-	await array.map(item => {
-		return item;
-	});
-};
+import appendChildren, {
+	body,
+	setAttributes,
+	renderHeadScripts,
+	listMaker,
+	loopList,
+	renderArray,
+} from './login-utility.js';
+import './login-utility.js';
 
 const scriptLogin = document.createElement('script');
 setAttributes(scriptLogin, {
@@ -64,13 +25,6 @@ const scriptIndex = document.createElement('script');
 setAttributes(scriptIndex, {
 	type: 'module',
 	src: '../components/webe-login/login-index.js',
-	crossorigin: 'anonymous',
-});
-
-const scriptButton = document.createElement('script');
-setAttributes(scriptButton, {
-	type: 'module',
-	src: '../components/webe-login/buttonExample.js',
 	crossorigin: 'anonymous',
 });
 
@@ -119,6 +73,7 @@ setAttributes(figcaption, {
 
 const divLogo = document.createElement('div');
 setAttributes(divLogo, {
+	id: 'div-logo',
 	class: 'logo',
 	alt: 'Name Logo of Document',
 });
@@ -145,6 +100,7 @@ setAttributes(supR, {
 
 const divMenu = document.createElement('div');
 setAttributes(divMenu, {
+	id: 'div-menu',
 	class: 'menu',
 	alt: 'Menu of Document',
 });
@@ -369,7 +325,7 @@ setAttributes(inputSubmitLogin, {
 	class: 'input-login',
 });
 
-export const scriptToggles = document.createElement('script');
+const scriptToggles = document.createElement('script');
 setAttributes(scriptToggles, {
 	type: 'module',
 	alt: 'Script for Login & Signup Toggle',
@@ -382,7 +338,7 @@ setAttributes(webeLogin, {
 	alt: 'webe-login',
 });
 
-const scriptsPackage = [scriptLogin, scriptIndex, scriptButton];
+const scriptsPackage = [scriptLogin, scriptIndex];
 const stickyNotes = [
 	console.info(
 		'%c The login index file has || ***  " FIRED THE OPERATIONAL SCRIPTS "  *** || and rendered them to the head element',

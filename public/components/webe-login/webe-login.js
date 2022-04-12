@@ -6,11 +6,10 @@
 import { RenderTemplate } from './render-template.js';
 import { sharedStyles } from './login-shared-styles.js';
 import './login-index.js';
-import appendChildren, {
-	main,
-	divSignupForm,
-	divLoginForm,
-} from './login-index.js';
+import { main, divSignupForm, divLoginForm } from './login-index.js';
+import appendChildren from './login-utility.js';
+import './login-utility.js';
+import './login-register.js';
 
 const divFormsRender = [main, divSignupForm, divLoginForm];
 
@@ -36,7 +35,7 @@ export class WebeLogin extends RenderTemplate {
 		appendChildren(root, divFormsRender);
 
 		const figureClick = root.getElementById('figure');
-		const headerLogo = root.getElementById('header');
+		const divLogo = root.getElementById('div-logo');
 		const liSignup = root.getElementById('li-login-one');
 		const signupForm = root.querySelector('.signup-form');
 		const liLogin = root.getElementById('li-login-two');
@@ -50,7 +49,7 @@ export class WebeLogin extends RenderTemplate {
 			event.preventDefault();
 			location.href = '/';
 		});
-		headerLogo.addEventListener('click', event => {
+		divLogo.addEventListener('click', event => {
 			event.preventDefault();
 			location.href = '/';
 		});

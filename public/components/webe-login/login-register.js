@@ -5,8 +5,8 @@
 
 import { RenderTemplate } from './render-template.js';
 import { sharedStyles } from './login-shared-styles.js';
-import './login-index.js';
 import { mainRegister } from './register-index.js';
+import './login-index.js';
 
 export class LoginRegister extends RenderTemplate {
 	constructor() {

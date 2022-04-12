@@ -9,9 +9,7 @@ import './webe-login.js';
 import './login-index.js';
 import './register-index.js';
 import './login-register.js';
-
-const body = document.querySelector('body');
-const script = document.createElement('script');
+import './login-utility.js';
 
 export class ComponentShell extends RenderTemplate {
 	constructor() {
@@ -62,7 +60,6 @@ export class ComponentShell extends RenderTemplate {
 						
 				component-shell {
 					${sharedStyles.trbl}
-
 					overflow-y: overlay;
 				}							
 			</style>

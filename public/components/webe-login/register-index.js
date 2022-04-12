@@ -8,7 +8,9 @@ import appendChildren, {
 	loopList,
 	renderArray,
 	setAttributes,
-} from './login-index.js';
+} from './login-utility.js';
+import './login-utility.js';
+import './login-index.js';
 
 const scriptRegister = document.createElement('script');
 setAttributes(scriptRegister, {

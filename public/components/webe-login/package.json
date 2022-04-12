@@ -2,6 +2,7 @@
   "name": "webe-login",
   "version": "1.0.0",
   "description": "A Login Web-Component",
+  "type": "module",
   "main": "webe-login.js",
   "scripts": {
     "test": "jest"
