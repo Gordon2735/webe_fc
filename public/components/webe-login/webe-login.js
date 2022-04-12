@@ -18,15 +18,6 @@ export class WebeLogin extends RenderTemplate {
 	static get observedAttributes() {
 		return ['visibility', 'hidden'];
 	}
-	attributedChangedCallback(name, oldValue, newValue) {
-		if (name === 'visibility') {
-			this.hidden = newValue;
-		} else if (name === 'hidden') {
-			this.hidden = newValue;
-		} else if (name === 'visible') {
-			this.visible = oldValue;
-		}
-	}
 
 	constructor() {
 		super();
@@ -44,6 +35,8 @@ export class WebeLogin extends RenderTemplate {
 
 		appendChildren(root, divFormsRender);
 
+		const figureClick = root.getElementById('figure');
+		const headerLogo = root.getElementById('header');
 		const liSignup = root.getElementById('li-login-one');
 		const signupForm = root.querySelector('.signup-form');
 		const liLogin = root.getElementById('li-login-two');
@@ -53,6 +46,14 @@ export class WebeLogin extends RenderTemplate {
 		const inputSignup = root.getElementById('input-submit-register');
 		const inputLogin = root.getElementById('input-submit-login');
 
+		figureClick.addEventListener('click', event => {
+			event.preventDefault();
+			location.href = '/';
+		});
+		headerLogo.addEventListener('click', event => {
+			event.preventDefault();
+			location.href = '/';
+		});
 		liSignup.addEventListener('click', event => {
 			signupForm.classList.toggle('active'), event.stopPropagation();
 		});
@@ -80,6 +81,15 @@ export class WebeLogin extends RenderTemplate {
 			</style>							
 			
 		`;
+	}
+	attributedChangedCallback(name, oldValue, newValue) {
+		if (name === 'visibility') {
+			this.hidden = newValue;
+		} else if (name === 'hidden') {
+			this.hidden = newValue;
+		} else if (name === 'visible') {
+			this.visible = oldValue;
+		}
 	}
 	get hidden() {
 		return root.hasAttribute('style', 'hidden');

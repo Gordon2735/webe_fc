@@ -23,7 +23,7 @@
 			"dom": "DOM Document-Object-Model HTML5 Hyper-Text-Markup-Language",
 			"package_image": "../img_webe-devtools/int_app_basic.png",
 			"version_control": "GitHub Version Control",
-			"contact_management": "CMS Contact-Management-System",
+			"content_management": "CMS Content-Management-System",
 			"description": "Basic Internet Application with an intuitive UI (User-Interface) with integrated Client-Side Data capabilities. Webelistics goal in design, look, and feel of all builds is to exceed all expectations in professionally implementing our customers requirements; delivering quality engineered software!",
 			"platforms": "Desktop Computer System"
 		},
@@ -46,7 +46,7 @@
 			"dom": "DOM Document-Object-Model HTML5 Hyper-Text-Markup-Language",
 			"package_image": "../img_webe-devtools/int_app_standard.png",
 			"version-control": "GitHub Version Control",
-			"contact-management": "CMS Contact-Management-System",
+			"content_management": "CMS Content-Management-System",
 			"description": "Basic Internet Application with an intuitive UI (User-Interface) with integrated Client-Side Data capabilities. Webelistics goal in design, look, and feel of all builds is to exceed all expectations in professionally implementing our customers requirements; delivering quality engineered software!",
 			"platforms": "Desktop Computer System, iPad and Handheld devices, Mobile/Smart Phone devices"
 		},
@@ -69,7 +69,7 @@
 			"dom": "DOM Document-Object-Model HTML5 Hyper-Text-Markup-Language",
 			"package_image": "../img_webe-devtools/int_app_advanced.png",
 			"version-control": "GitHub Version Control",
-			"contact-management": "Personal Engineered CMS Application managed and updateable by client and physically positioned on client's own VPN Server; CMS Contact-Management-System",
+			"content-management": "Personal Engineered CMS Application managed and updateable by client and physically positioned on client's own VPN Server; CMS Content-Management-System",
 			"description": "Basic Internet Application with an intuitive UI (User-Interface) with integrated Client-Side Data capabilities. Webelistics goal in design, look, and feel of all builds is to exceed all expectations in professionally implementing our customers requirements; delivering quality engineered software!",
 			"platforms": "Desktop Computer System, iPad and Handheld devices, Mobile/Smart Phone devices"
 		},

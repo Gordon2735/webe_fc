@@ -22,6 +22,12 @@ setAttributes(scriptRegisterIndex, {
 	type: 'module',
 });
 
+const titleElement = document.createElement('title');
+setAttributes(titleElement, {
+	id: 'Login & Register',
+});
+titleElement.textContent = 'Login & Register';
+
 export const mainRegister = document.createElement('main');
 setAttributes(mainRegister, {
 	id: 'mainRegister-container',
@@ -68,37 +74,10 @@ setAttributes(ulRegister, {
 	'aria-label': 'ul register',
 });
 
-const footer = document.createElement('footer');
-setAttributes(footer, {
-	id: 'footer',
-	class: 'footer',
-	alt: 'footer',
-	role: 'footer',
-	'aria-label': 'footer',
-});
-
-const navFooter = document.createElement('nav');
-setAttributes(navFooter, {
-	id: 'nav',
-	class: 'nav-footer',
-	alt: 'nav',
-	role: 'nav',
-	'aria-label': 'nav',
-});
-
-const ulNavFooter = document.createElement('ul');
-setAttributes(ulNavFooter, {
-	id: 'ul-nav',
-	class: 'ul-nav-footer',
-	alt: 'ul nav',
-	role: 'ul nav',
-	'aria-label': 'ul nav',
-});
-
 const anchorHome = document.createElement('a');
 setAttributes(anchorHome, {
 	id: 'anchor-home',
-	class: 'anchor-home',
+	class: 'li-anchor',
 	href: '/',
 	alt: 'anchor home',
 	role: 'anchor home',
@@ -109,7 +88,7 @@ const anchorHomeText = (anchorHome.innerHTML = `Home`);
 const anchorInternet = document.createElement('a');
 setAttributes(anchorInternet, {
 	id: 'anchor-internet',
-	class: 'anchor-internet',
+	class: 'li-anchor',
 	href: '/internet',
 	alt: 'anchor internet',
 	role: 'anchor internet',
@@ -121,7 +100,7 @@ const anchorInternetText =
 const anchorDesktop = document.createElement('a');
 setAttributes(anchorDesktop, {
 	id: 'anchor-desktop',
-	class: 'anchor-desktop',
+	class: 'li-anchor',
 	href: '/desktop',
 	alt: 'anchor desktop',
 	role: 'anchor desktop',
@@ -133,7 +112,7 @@ const anchorDesktopText =
 const anchorHandheld = document.createElement('a');
 setAttributes(anchorHandheld, {
 	id: 'anchor-handheld',
-	class: 'anchor-handheld',
+	class: 'li-anchor',
 	href: '/mobile',
 	alt: 'anchor handheld',
 	role: 'anchor handheld',
@@ -145,7 +124,7 @@ const anchorHandheldText =
 const anchorAccounts = document.createElement('a');
 setAttributes(anchorAccounts, {
 	id: 'anchor-accounts',
-	class: 'anchor-accounts',
+	class: 'li-anchor',
 	href: '/accounts',
 	alt: 'anchor accounts',
 	role: 'anchor accounts',
@@ -156,7 +135,7 @@ const anchorAccountsText = (anchorAccounts.innerHTML = `Accounts`);
 const anchorHelp = document.createElement('a');
 setAttributes(anchorHelp, {
 	id: 'anchor-help',
-	class: 'anchor-help',
+	class: 'li-anchor',
 	href: '/help',
 	alt: 'anchor help',
 	role: 'anchor help',
@@ -191,7 +170,14 @@ setAttributes(ulNavSidebar, {
 	'aria-label': 'ul nav sidebar',
 });
 
-const scriptRenderer = [scriptRegister, scriptRegisterIndex];
+const hrSidebar = document.createElement('hr');
+setAttributes(hrSidebar, {
+	id: 'hr-sidebar',
+	class: 'hr-sidebar',
+	alt: 'hr sidebar',
+});
+
+const scriptRenderer = [scriptRegister, scriptRegisterIndex, titleElement];
 const stickyNotes = [
 	console.info(
 		'%c The register-index file has || ***  " FIRED THE OPERATIONAL SCRIPTS "  *** || and rendered them to the head element',
@@ -199,11 +185,17 @@ const stickyNotes = [
 	),
 ];
 
-const mainElements = [headerRegister, articleRegister, asideSidebar, footer];
-const liClassNavFooter = 'li-nav-footer';
+const mainElements = [headerRegister, articleRegister, asideSidebar];
 const liClassNavSidebar = 'li-nav-sidebar';
-const liNavFooter = [anchorHome, anchorAccounts, anchorHelp];
-const liNavSidebar = [anchorInternet, anchorDesktop, anchorHandheld];
+const liNavSidebar = [
+	anchorHome,
+	anchorInternet,
+	anchorDesktop,
+	anchorHandheld,
+	anchorAccounts,
+	anchorHelp,
+	hrSidebar,
+];
 
 const innerVars = [
 	h1HeaderText,
@@ -216,10 +208,7 @@ const innerVars = [
 ];
 
 renderHeadScripts(scriptRenderer, stickyNotes);
-
 navSidebar.appendChild(ulNavSidebar);
-footer.appendChild(navFooter);
-navFooter.appendChild(ulNavFooter);
 
 appendChildren(mainRegister, mainElements);
 headerRegister.appendChild(h1Header);
@@ -228,6 +217,4 @@ articleRegister.appendChild(ulRegister);
 asideSidebar.appendChild(navSidebar);
 
 renderArray(innerVars);
-
 loopList(liNavSidebar, liClassNavSidebar, ulNavSidebar);
-loopList(liNavFooter, liClassNavFooter, ulNavFooter);

@@ -1,0 +1,72 @@
+{
+    "Basic_Node_Javascript": {
+        "Backend": "Server-Side Softeware based on Node.js and Express.js",
+        "Database": "none, JSON Data Files upto 15kb",
+        "CMS": "None",
+        "Platform": "Internet/Web-Application, Desktop/Mobile/Hand-Held Devices",
+        "Frontend": "Client-Side Software includes Javascript(Latest ECMAScript Usage), HTML5, CSS3",
+        "Automated_Tasking": "NPM Scripting and Packaging",
+        "Description": "Basic Internet Application with an intuitive UI (User-Interface) with integrated Client-Side Data capabilities. Webelistics goal in design, look, and feel of all builds is to exceed all expectations in professionally implementing our customers requirements; delivering quality engineered software!",
+		"Version_control": "GitHub Version Control",
+        "Pages": "5-10, Static or Dynamic",
+        "E-Commerce": "No"
+    },
+    "Standard_Node_Javascript": {
+        "Backend": "Server-Side Softeware based on Node.js and Express.js, Handlebars-Express",
+        "Database": "NoSQL (MongoDB), (size & type of deployment could affect pricing), JSON Data Files upto 50kb",
+        "CMS": "Basic CMS Content-Management-System",
+        "Platform": "Internet/Web-Application, Desktop/Mobile/Hand-Held Devices",
+        "Frontend": "Client-Side Software includes Javascript(Latest ECMAScript Usage), HTML5, CSS3",
+        "Automated_Tasking": "NPM Scripting and Packaging",
+        "Description": "Standard Internet Application with an intuitive UI (User-Interface) with integrated Client-Side Data capabilities. Webelistics goal in design, look, and feel of all builds is to exceed all expectations in professionally implementing our customers requirements; delivering quality engineered software!",
+		"Version_control": "GitHub Version Control",
+        "Pages": "10-20, Dynamic SPA (Single Page Application) for Speed & Scalability",
+        "E-Commerce": "Yes, Type might affect pricing"
+    },
+    "Professional_Node_Javascript": {
+        "Backend": "Server-Side Softeware based on Node.js and Express.js, Handlebars-Express",
+        "Database": "NoSQL (MongoDB Cloud Atlas) with Mongoose, (size & type of deployment could affect pricing), JSON Data Files upto 100kb+",
+        "CMS": "Professionally Developed CMS Content-Management-System",
+        "Platform": "Internet/Web-Application, Desktop/Mobile/Hand-Held Devices",
+        "Frontend": "Client-Side Software includes Javascript(Latest ECMAScript Usage), HTML5, CSS3",
+        "Automated_Tasking": "NPM Scripting and Packaging",
+        "Description": "Professional Internet Application with an intuitive UI (User-Interface) with integrated Client-Side Data capabilities. Webelistics goal in design, look, and feel of all builds is to exceed all expectations in professionally implementing our customers requirements; delivering quality engineered software!",
+        "Version_control": "GitHub Version Control",
+        "Pages": "20-30, Dynamic SPA (Single Page Application) for Speed & Scalability",
+        "E-Commerce": "Yes, Type might affect pricing"
+    },
+    "Enterprise_Node_Javascript": {
+        "Backend": "Server-Side Softeware based on Node.js and Express.js, Handlebars-Express",
+        "Database": "NoSQL (MongoDB Cloud Atlas) with Mongoose, Full & Total Scalability, JSON Data Files upto 500kb+",
+        "CMS": "Enterprise Dynamically Developed CMS Content-Management-System",
+        "Platform": "Internet/Web-Application, Desktop/Mobile/Hand-Held Devices",
+        "Frontend": "Client-Side Software includes Javascript(Latest ECMAScript Usage), HTML5, CSS3",
+        "Automated_Tasking": "NPM Scripting and Packaging",
+        "Description": "Enterprise Internet Application with an intuitive UI (User-Interface) with integrated Client-Side Data capabilities. Webelistics goal in design, look, and feel of all builds is to exceed all expectations in professionally implementing our customers requirements; delivering quality engineered software!",
+        "Version_control": "GitHub Version Control",
+        "Pages": "30-40, Dynamic SPA (Single Page Application) for Speed & Scalability",
+        "E-Commerce": "Yes, Type might affect pricing"
+    },
+    "Standard_Desktop_Application": {
+        "Description": "LAN (Local Area Network) based Desktop Application with an intuitive UI (User-Interface) with integrated Client-Side Data capabilities. Webelistics goal in design, look, and feel of all builds is to exceed all expectations in professionally implementing our customers requirements; delivering quality engineered software!",
+        "Software": "Electron, JavaScript, TypeScript, HTML5, CSS3",
+        "Platform": "Desktop/Laptop",
+        "Version_control": "GitHub Version Control",
+        "Size": "1-2GB"
+    },
+    "Professional_Desktop_Application": {
+        "Description": "LAN (Local Area Network) based Desktop Application with an intuitive UI (User-Interface) with integrated Client-Side Data capabilities. Webelistics goal in design, look, and feel of all builds is to exceed all expectations in professionally implementing our customers requirements; delivering quality engineered software!",
+        "Software": "Electron, JavaScript, TypeScript, HTML5, CSS3",
+        "Platform": "Desktop/Laptop",
+        "Version_control": "GitHub Version Control",
+        "Size": "2-4GB"
+    },
+    "Enterprise_Desktop_Application": {
+        "Description": "LAN (Local Area Network) based Desktop Application with an intuitive UI (User-Interface) with integrated Client-Side Data capabilities. Webelistics goal in design, look, and feel of all builds is to exceed all expectations in professionally implementing our customers requirements; delivering quality engineered software!",
+        "Software": "Electron, JavaScript, TypeScript, HTML5, CSS3",
+        "Platform": "Desktop/Laptop",
+        "Version_control": "GitHub Version Control",
+        "Size": "4-8GB"
+    }
+    
+}

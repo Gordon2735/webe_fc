@@ -88,14 +88,18 @@ setAttributes(main, {
 // this.disabled ? "disabled" : "active"
 const header = document.createElement('header');
 setAttributes(header, {
+	id: 'header',
 	class: 'header',
 	alt: 'Header of Document',
+	href: '/',
 });
 
 const figure = document.createElement('figure');
 setAttributes(figure, {
+	id: 'figure',
 	class: 'figure',
 	alt: 'Logo Image',
+	href: '/',
 });
 
 const figureImg = document.createElement('img');

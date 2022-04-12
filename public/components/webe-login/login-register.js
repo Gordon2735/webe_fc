@@ -42,7 +42,6 @@ export class LoginRegister extends RenderTemplate {
 			const appendData = data => {
 				const ulRegister = root.getElementById('ul-register');
 				const liClass = 'li-register';
-				const liSpanClass = 'li-span-register';
 				for (let i = 0; i < data.length; i++) {
 					const liOne = `${data[i].Register.Option_One}`;
 					const liTwo = `${data[i].Register.Option_Two}`;
@@ -53,8 +52,6 @@ export class LoginRegister extends RenderTemplate {
 					console.log(dataGrab);
 					dataGrab.forEach(item => {
 						const li = document.createElement('li');
-						const span = document.createElement('span');
-						const lineBreak = document.createElement('br');
 						li.append(item);
 						li.setAttribute('class', liClass);
 						ulRegister.append(li);

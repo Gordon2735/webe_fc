@@ -15,7 +15,7 @@
 	--webe-title-ff: 'Days One', sans-serif;
 	--webe-menu-ff: 'Work Sans', sans-serif;
 	--webe-clr-bright-pink: hsl(313, 98%, 50%);
-	--webe-clr-bluify: hsl(195, 72%, 48%);
+	--webe-clr-bluify: rgb(66, 205, 252);
 	color:  hsl(0, 0%, 100%);
 	color:  hsl(77, 97%, 15%);
 	color:  hsl(76, 98%, 50%);
@@ -27,7 +27,48 @@
 	--webe-login-modal-clr: hsl(64, 97%, 45%);
 	color: hsl(195, 53%, 85%);
 	color: hsl(196, 100%, 95%);
+	background: hsl(195, 70%, 71%);
+	color: hsl(0, 0%, 0%);
+	COLOR: rgba(255, 255, 255, 1);
+	COLOR: rgba(153, 224, 248, 0.9);
+	color: hsl(195, 98%, 34%);
+	color: hsl(195, 96%, 22%);
+	color: rgba(2, 129, 172, 0.9);
+
 }
+
+ header .login ul .li-buttons {
+	     margin: 0 16px;
+	     list-style: none;
+	     display: inline;
+	     font-family: 'Work Sans', sans-serif;
+	     font-size: 0.8rem;
+	     font-weight: 900;
+	     font-style: extra-bold;
+	     color: hsl(0, 0%, 100%);
+     	 letter-spacing: 0.28vw;
+	     cursor: pointer;
+	     padding: 16px 22px;
+	     border-radius: 0.5vw;
+     	 background: hsl(195, 98%, 34%);
+	     box-shadow: 1.5px 3px 10px 0.9px rgba(2, 129, 172, 0.3),
+	       -3px -1.5px 4px 0.5px rgba(153, 224, 248, 0.9);
+	}
+
+	header .login ul .li-buttons:hover {   
+		background:   hsl(195, 98%, 50%);         
+		color: hsl(195, 98%, 34%);
+		text-shadow: hsl(77, 97%, 15%) 0.5px 4px 10px;
+		box-shadow: 3.5px 3px 20px 0.2px rgba(2, 129, 172, 0.9),
+			-5px -3px 2px 2px rgba(153, 224, 248, 0.2);
+		
+	}
+
+	header .login ul .li-buttons:active {
+		box-shadow: inset 3px 3px 10px 1px rgba(2, 129, 172, 0.2),
+			inset -3px -3px 10px 1px rgba(2, 129, 172);
+		color: hsl(0, 0%, 100%);
+	}
 
 * {
 	margin: 0;

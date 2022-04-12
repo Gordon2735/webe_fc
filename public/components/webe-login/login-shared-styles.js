@@ -61,13 +61,20 @@ sharedStyles.login = `
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
         }   
         
+        
         header .figure {
             grid-area: figure;
             width: 100%;
             height: auto;
             position: inline;
-            cursor: pointer;
         }
+        
+        .figure:hover {
+            filter: hue-rotate(350deg) brightness(100%);
+            cursor: pointer;
+            transition: 3s;
+            z-index: 2;
+        }        
 
         .figure .figure-img {
             width: 4.93vw;
@@ -91,10 +98,6 @@ sharedStyles.login = `
             z-index: 2;
         }
         
-        .figure .figcaption-text:hover {
-            visibility: visible;
-            z-index: 2;
-        }        
 
         header .logo {
             grid-area: h1-logo;
@@ -104,7 +107,8 @@ sharedStyles.login = `
             align-items: left;
             position: inline;
         }
-
+        
+        
         .logo h1 {
             position: inline;
             font-size: 1.6rem;
@@ -114,6 +118,12 @@ sharedStyles.login = `
             text-shadow: black 2px 1px 5px;
             letter-spacing: 0.55vw;
             padding: 1.5vw 1.5vw 1.5vw 0.9vw;
+        }        
+        
+        h1:hover {
+            filter: hue-rotate(350deg) brightness(100%);
+            cursor: pointer;
+            transition: 3s;
         }
 
         h1 .h1-tm {
@@ -132,48 +142,48 @@ sharedStyles.login = `
             letter-spacing: -0.5vw;
         }
 
-        header .menu ul {
+        header .menu  {
             grid-area: nav-menu;
             min-width: 35%;
             height: auto;
-            padding: 1rem;
-            list-style-type: none;
+            padding: 1rem; 
             display: inline-block;
-        }       
+        }
         
-        header .menu ul li {
+        .menu .ul-menu {
+            padding: 0;
+        }
+        
+        .ul-menu .li-menu {
             display: inline;
             padding: 12px 18px;
             margin: 0 16px;
-            list-style: none;
-            font-family: 'Work Sans', sans-serif;
-            font-size: 1rem;
-            font-weight: 400;
+            list-style: none;            
             cursor: pointer;
+        } 
+        
+        .ul-menu .li-menu:hover {
+            background-color: hsl(195, 74%, 56%);
+            border-radius: 0.7vh;
+        }
+        
+        .li-menu .anchor {
+            list-style: none;
             text-decoration: none;
-        }              
-
-        header .menu ul li:hover {
-            border-radius: 0.5vw;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 1rem;            
             font-style: extra-bold;
             font-weight: 700;
+            color: hsl(195, 98%, 34%);
+        }             
+        
+        .li-menu .anchor:hover {
             background-color: hsl(195, 74%, 56%);
-            text-shadow: hsl(77, 97%, 15%) 0.5px 2px 3px;            
-            box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2),
-                -3px -3px 10px 1px rgba(255, 255, 255, 1);
-        }
-
-        .menu ul .li-menu .anchor {
-            list-style: none;
-            color: hsl(0, 0%, 0%);
-            text-decoration: none;
+            color: hsl(0, 0%, 100%);
+            font-weight: 400;
         }             
         
-        .menu ul .li-menu .anchor:hover {
-            color: hsl(195, 74%, 96%);
-        }             
-        
-        header .login ul {
+        header .login .ul-login {
             grid-area: login-buttons;
             list-style-type: none;
             display: inline ;
@@ -181,7 +191,7 @@ sharedStyles.login = `
 
         }        
 
-        header .login ul .li-buttons {
+        header .login .ul-login .li-buttons {
             margin: 0 16px;
             list-style: none;
             display: inline;
@@ -193,25 +203,28 @@ sharedStyles.login = `
             letter-spacing: 0.28vw;
             cursor: pointer;
             padding: 16px 22px;
+            border: 0.2px solid rgba(2, 129, 172, 0.1);
+            border-style: inset;
             border-radius: 0.5vw;             
             background: hsl(213, 22%, 90%);          
             box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2),
                 -3px -3px 10px 1px rgba(255, 255, 255, 1);
         }
 
-        header .login ul .li-buttons:hover {              
+        header .login .ul-login .li-buttons:hover {              
             color: hsl(195, 98%, 50%);
             text-shadow: hsl(77, 97%, 15%) 0.5px 4px 10px;
+            filter: hue-rotate(350deg) brightness(100%);
+            cursor: pointer;
+            transition: 0.75s;
             
         }
 
-        header .login ul .li-buttons:active {
+        header .login .ul-login .li-buttons:active {
             box-shadow: inset 3px 3px 10px 1px rgba(0, 0, 0, 0.2),
                 inset -3px -3px 10px 1px rgba(255, 255, 255, 1);
             color: hsl(0, 0%, 0%);
-        }
-
-        
+        }       
 
         .signup-form {
             position: relative;
@@ -219,13 +232,13 @@ sharedStyles.login = `
             left: 50%;
             width: 31.5vw;
             transform: translate(-50%, -50%);
-            background: hsl(195, 53%, 88%);
+            background: hsl(195, 98%, 34%);
             border-radius: 10px;
             box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
             visibility: hidden;
             transition: 1s;
             opacity: 0;
-            color: hsl(195, 72%, 48%);
+            color: hsl(0, 0%, 100%);
             text-shadow: hsl(77, 97%, 15%) 0.5px 1.2px 3px;
         }
 
@@ -235,13 +248,13 @@ sharedStyles.login = `
             left: 80%;
             width: 20%;
             transform: translate(-50%, -50%);
-            background: hsl(195, 53%, 88%);
+            background: hsl(195, 98%, 34%);
             border-radius: 10px;
             box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
             visibility: hidden;
             transition: 1s;
             opacity: 0;
-            color: hsl(195, 72%, 48%);
+            color: hsl(0, 0%, 100%);
             text-shadow: hsl(77, 97%, 15%) 0.5px 1.2px 3px;
         }
 
@@ -304,8 +317,11 @@ sharedStyles.login = `
         }
 
         .input-register:hover {
-            background: hsl(195, 72%, 48%);
-            color: hsl(195, 74%, 96%);
+            background: lightblue;
+            font-style: bold;
+            font-weight: 700;
+
+            color: hsl(0, 0%, 0%);
         }
 
         .input-login {
@@ -313,8 +329,10 @@ sharedStyles.login = `
         }
 
         .input-login:hover {
-            background: hsl(195, 72%, 48%);
-            color: hsl(195, 74%, 96%);
+            background: lightblue;
+            font-style: bold;
+            font-weight: 700;
+            color: hsl(0, 0%, 0%);
         }
 
         .form form input {
@@ -345,7 +363,7 @@ sharedStyles.login = `
         }        
 
         .container:active {
-            filter: blur(20px);
+            filter: blur(10px);
             transition: 1s;
         }
 
@@ -361,125 +379,123 @@ sharedStyles.register = `
             "aside header"
             "aside main"
             "aside footer";            
-            padding: 0.5vh 0.5vw;
+            padding: 4vh;
             position: relative;
             top: 2vh;
             left: 1vw;
-            width: 45vw; 
+            width: 48vw; 
             height: auto;           
-            background: hsl(195, 53%, 88%);
-            border: 1.5px solid #000;
-            border-radius: 10px;
-            box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
-            color: hsl(195, 72%, 48%);
+            background: hsl(195, 98%, 34%);
+            border-radius: 0.5vw;
+            box-shadow: 1px 5px 20px 1px rgba(0, 0, 0, 0.5),
+                -3px -3px 12px 1px rgba(255, 255, 255, 1);
+            color: hsl(0, 0%, 100%);
         }
 
         .main-register .header-register {
             grid-area: header;
             top: 0;
             left: 28vw;
-            width: 100%;
-            border: 1.5px solid #000;
-            background: orange;
+            width: 100%;            
+            border-radius: 0vw 0.3vw 0.3vw 0vw;
+            background: hsl(195, 70%, 71%);
+            box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.2);
+
         }
 
         .header-register .h1-header {
-            padding: 0.3vh 0.3vw 0.3vh 2vw;
+            padding: 0.3vh 0.3vw 0.3vh 3vw;
             font-family: 'Work Sans', sans-serif;
-            font-size: 1.9rem;
+            font-size: 2.5rem;
             font-style: bold;
             letter-spacing: 0.3vw;
-            color: hsl(195, 72%, 48%);
+            color: hsl(0, 0%, 100%);
             text-shadow: hsl(77, 97%, 15%) 0.5px 1.2px 3px;
         }
 
         .main-register .aside-sidebar {
             grid-area: aside;
-            display: flex;            
             position: relative;
             top: 0;
             left: 0;
-            width: 6vw;
+            width: 9vw;
             height: 100%;
-            border: 1.5px solid #000;
-            background: pink;
-        }
+            background: hsl(195, 70%, 71%);
+            border-radius: 0.3vw 0vw 0.3vw 0.3vw;
+
+        }        
         
         .aside-sidebar .nav-sidebar {
-            border: 1.5px solid #000;
+            padding-top: 2vh;
+
         }
 
         .nav-sidebar .ul-nav-sidebar {
             padding: 0;
-            background: green;
         }
         
         .ul-nav-sidebar .li-nav-sidebar {
-            padding: 1vh 0.2vw 1vh 0.6vw;
+            padding: 1vh 0.2vw 3vh 1.6vw;
             list-style-type: none;
+        }
+        .ul-nav-sidebar .li-nav-sidebar:active {
+            padding: 1vh 0.2vw 3vh 0.6vw;
+            list-style-type: none;
+            filter: blur(20px);
+            transition: 1s;
+        }      
+
+        .li-nav-sidebar .li-anchor {
             text-decoration: none;
+            font-family: 'Work Sans', sans-serif;
             font-size: 0.9rem;
-            color: hsl(195, 72%, 48%);
+            font-style: bold;
+            font-weight: 900;
+            color: hsl(195, 96%, 22%);
         }
         
-        .main-register .ul-register {
+        .li-nav-sidebar .li-anchor:hover {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 9);
+            transition: 0.3s;
+        }
+
+        .li-nav-sidebar .hr-sidebar {
+            position: fixed;
+            padding-right: 0.6vw;
+            width: 5vw;
+            border-top:  1px solid hsl(195, 98%, 34%);
+            border-bottom:  1px solid rgba(153, 224, 248, 0.9);
+            box-shadow: 0.5px 0.5px 4px  rgba(0, 0, 0, 0.4);
+            border-radius: 0.3vw;
+        }
+        
+        .main-register .artical-register {
             grid-area: main;
             top: 25vh;
             left: 20vw;
             width: 100%;
             justify-content: left;
             display: inline-flex;            
-            border: 1.5px solid #000;
-            background: hsl(195, 53%, 88%);
-            background: yellow;
+        }
+        
+        .article-register .ul-register {
+            margin: 0;
+            padding: 0;
+            padding-top: 2.5vh;
+            padding-left: 0.5vw;
         }
 
         .ul-register .li-register {
             list-style-type: none;
+            padding: 1.5vh 0.5vw 1.5vh 1.5vw;   
             font-family: 'Work Sans', sans-serif;
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             font-style: normal;
-            color: hsl(195, 72%, 48%);
+            color: hsl(0, 0%, 100%);
         }
-
-        .main-register .footer {
-            grid-area: footer;
-            margin: 0 4vw;
-            bottom: 0;
-            left: 20vw;
-            display: inline-flex;            
-            width: 100%;
-            list-style: none;
-            border: 1.5px solid #000;
-            background: blue;
-        }
-
-        .footer .nav-footer {
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-footer .ul-nav-footer {
-            margin: 0;
-            padding: 0;
-        }
-
-        .ul-nav-footer .li-nav-footer {
-            list-style-type: none;
-            text-decoration: none;
-            font-family: 'Work Sans', sans-serif;
-            font-size: 0.8rem;
-            font-style: italic;
-            color: hsl(195, 72%, 48%);
-        }
-        
-        
-
 
                 /*  */
-
-
-
 `;
 
 sharedStyles.loginLogin = `
