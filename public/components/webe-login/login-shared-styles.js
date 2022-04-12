@@ -1,6 +1,15 @@
 const sharedStyles = {};
 sharedStyles.trbl = `
+    html {
+        background: lightblue;
+    }
 
+    body {
+        width: 100%;
+        min-height: 100vh;
+        background: lightblue;
+        user-select: none;
+    }
    
  `;
 
@@ -498,8 +507,11 @@ sharedStyles.register = `
                 /*  */
 `;
 
-sharedStyles.loginLogin = `
+sharedStyles.user = `
         
+        
+
+        /*  */
 
 `;
 

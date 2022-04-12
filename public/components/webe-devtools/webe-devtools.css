@@ -1,11 +1,15 @@
 :root {
 	--text-primary: hsl(0, 0%, 71%);
+	--bg-greyDark-clr: hsl(0, 0%, 71%);
 	--text-primary-slider: hsl(0, 0%, 13%);
 	--text-secondary: hsl(0, 0%, 93%);
+	--webe-fontLight-clr: hsl(0, 3%, 85%);
+	--webe-fontWhite-clr: hsl(0, 100%, 100%);
 	--text-secondary-slider: hsl(32, 83%, 54%);
 	--bg-primary: hsl(0, 0%, 13%);
 	--bg-secondary: hsl(240, 9%, 9%);
-	--bg-secondary-light: hsl(240, 9%, 9%);
+	--bg-GreyLightDark-clr: #b2b1b1;
+	--bg-GreyLight-clr: hsl(0, 4%, 89%);
 	--webe-header-primary: hsl(0, 15%, 24%);
 	--webe-header-clr: hsl(32, 83%, 54%);
 	--webe-medium-clr: hsl(30, 29%, 97%);
@@ -16,15 +20,20 @@
 	--webe-title-clr: hsl(0, 0%, 70%);
 	--webe-HOOT-fs: 'Chango', cursive;
 	--webe-title-fs: 'Days One', sans-serif;
+	--webe-poppins-fs: 'Poppins', sans-serif;
+	--webe-work-fs: 'Work Sans', sans-serif;
 	--webe-font-clr: hsl(0, 0%, 13%);
 	--webe-font-clr-freak: hsla(90, 100%, 50%, 0.9);
 	--webe-font-text-shadow: hsl(32, 83%, 54%) 3px 1px 4px;
 	--webe-fontDark-text-shadow: hsl(0, 0%, 13%) 3px 1px 5px;
+	--webe-fontBlack-clr: hsl(0, 0%, 0%);
+	--webe-fontDarkAdj-clr: rgba(33, 33, 33, 0.8);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 
 * {
 	margin: 0;

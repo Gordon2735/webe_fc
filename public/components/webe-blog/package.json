@@ -1,0 +1,12 @@
+{
+  "name": "webe-blog",
+  "version": "1.0.0",
+  "description": "Web-Component of a Blog Application",
+  "type": "module",
+  "main": "webe-blog.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Gordon R Mullen Jr",
+  "license": "MIT"
+}

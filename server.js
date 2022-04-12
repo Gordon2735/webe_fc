@@ -13,6 +13,9 @@ import { fileURLToPath } from 'url';
 import cors from 'cors';
 import router from './controller/router.js';
 import fs from 'fs';
+// import mongoose from 'mongoose';
+
+// export default mongoose;
 
 dotenv.config();
 const app = express();

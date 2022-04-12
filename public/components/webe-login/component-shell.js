@@ -9,6 +9,8 @@ import './webe-login.js';
 import './login-index.js';
 import './register-index.js';
 import './login-register.js';
+import './login-user.js';
+import './user-index.js';
 import './login-utility.js';
 
 export class ComponentShell extends RenderTemplate {

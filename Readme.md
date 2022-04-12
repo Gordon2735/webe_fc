@@ -67,3 +67,60 @@ hat<!--state :::: This Internet Application utilizes industry-standard tools and
         17. With modularity and encapsulation at the forefront of the development process, the User-Interface will be componentized and modularized. Incorporating 'Web Components' is simply the next logical step in the development process. HOOT Webelistics will utilize the Web Components paradigm to create a reusable, modular, and reusable UI. Web Components are native to the browser, and with JavaScript, with an even greater caveat in that CSS, the styling tool for development, can ambiguously be applied to the components without conflict to the rest of the application. The persistency of the components will be the key to the success of the application. The Web Components will not be coupled with any frameworks and be without any dependencies or edge-cases concerning versioning or any interoperability issues.
         Web Components will naturally progress with the browser's evolution, and will be the foundation for the future of the application; IT WILL BE "FUTURE_PROOFED". This is counter-intuitive
         in the world of web development wherein in the process of time there are many issues with broken dependencies due to versioning and continuing forward compatibility. In a nutshell, you can not go wrong with Web Components. The proper combination of design configuration, event handling that's arrayed properly with state management, and finally a steadfastness in adherence to Test-Driven-Development(TDD) and coding 'Best Practices', the end product will be a robust, stable, and scalable application that's easily maintained. So, it's time to get excited and start coding! It just feels good to know that what you're doing, and the way you are doing it, is the right thing to do and that it is right right right!!!
+
+<!--* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  -->
+<!--* Create a user database to "Hydrate" the login-user Web-Component  -->
+<!--*    thoughts to "Hydrate" the login-user Web-Component    -->
+<!--~      * Create a user-authentication Web-Component        -->
+<!--~      * Create a user-registration Web-Component         -->
+<!--~      * Create a user-logout Web-Component               -->
+<!--~      * Create a user-profile Web-Component              -->
+<!--~      * Create a user-profile-edit Web-Component        -->
+<!--~      * Create a user-profile-delete Web-Component      -->
+<!--~      * Create a user-profile-update Web-Component      -->
+<!--~      * Create a user-profile-create Web-Component      -->
+<!--~      * Create a user-profile-list Web-Component        -->
+<!--~      * Create a user-profile-list-all Web-Component    -->
+<!--~      * Create a user-profile-list-all-by-id Web-Component-->
+<!--~      * Create a user-profile-list-all-by-name Web-Component-->
+<!--~      * Create a user-profile-list-all-by-email Web-Component-->
+<!--~      * Create a user-profile-list-all-by-username Web-Component-->
+<!--~      * Create a user-profile-list-all-by-password Web-Component-->
+<!--~      * Create a user-profile-list-all-by-created Web-Component-->
+<!--~      * Create a user-profile-list-all-by-updated Web-Component-->
+<!--~      * Create a user-profile-list-all-by-deleted Web-Component-->
+<!--~      * Create a user-profile-list-all-by-active Web-Component-->
+<!--~      * Create a user-profile-list-all-by-inactive Web-Component-->
+<!--~      * Create a user-profile-list-all-by-verified Web-Component-->
+<!--~      * Create a user-profile-list-all-by-unverified Web-Component-->
+<!--~      * Create a user-profile-list-all-by-admin Web-Component-->
+<!--~      * Create a user-profile-list-all-by-non-admin Web-Component-->
+<!--~      * Create a user-profile-list-all-by-banned Web-Component-->
+<!--~      * Create a user-profile-list-all-by-unbanned Web-Component-->
+<!--~      * Create a user-profile-list-all-by-suspended Web-Component-->
+<!--~      * Create a user-profile-list-all-by-unsuspended Web-Component-->
+<!--~      * Create a user-profile-list-all-by-locked Web-Component-->
+<!--~      * Create a user-profile-list-all-by-unlocked Web-Component-->
+<!--~      * Create a user-profile-list-all-by-online Web-Component-->
+<!--~      * Create a user-profile-list-all-by-offline Web-Component-->
+<!--~      * Create a user-profile-list-all-by-last-login Web-Component-->
+<!--~      * Create a user-profile-list-all-by-last-logout Web-Component-->
+<!--~      * Create a user-profile-list-all-by-last-login-ip Web-Component-->
+<!--~      * Create a user-profile-list-all-by-last-logout-ip Web-Component-->
+<!--~      * Create a user-profile-list-all-by-last-login-agent Web-Component-->
+<!--~      * Create a user-profile-list-all-by-last-logout-agent Web-Component-->
+<!--~      * Create a user-profile-list-all-by-last-login-at Web-Component-->
+<!--~      * Create a user-profile-list-all-by-last-logout-at Web-Component-->
+<!--~      * Create a user-profile-list-all-by-last-login-from Web-Component-->
+<!--~      * Create a user-profile-list-all-by-last-logout-from Web-Component-->
+<!--~      * Create a user-profile-list-all-by-last-login-to Web-Component-->
+<!--~      * Create a user-profile-list-all-by-last-logout-to Web-Component-->
+<!--~      * Create a user-profile-list-all-by-last-login-latitude Web-Component-->
+<!--~      * Create a user-profile-list-all-by-last-logout-latitude Web-Component-->
+<!--~      * Create a user-profile-list-all-by-last-login-longitude Web-Component-->
+<!--~      * Create a user-profile-list-all-by-last-logout-longitude Web-Component-->
+
+<!--* ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::  -->
+
+
+  
