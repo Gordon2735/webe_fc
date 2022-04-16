@@ -5,6 +5,7 @@ import home from './routes/home-route.js';
 import headers from './routes/headers-route.js';
 import about from './routes/about-route.js';
 import blog from './routes/blog-route.js';
+import todos from './routes/todos-route.js';
 import contacts from './routes/contacts-route.js';
 import app_build from './routes/app_build-route.js';
 import get_start from './routes/get_start-route.js';
@@ -54,6 +55,7 @@ router.use('/', mobile);
 router.use('/', desktop);
 router.use('/', accounts);
 router.use('/', headers);
+router.use('/', todos);
 router.use('/', TEST);
 router.use((req, res, next) => {
 	if (!res.locals.partials) res.locals.partials = {};

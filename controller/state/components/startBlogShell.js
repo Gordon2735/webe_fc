@@ -25,7 +25,6 @@ setAttributes(blogShell, {
 	class: 'blog-shell',
 	alt: 'Blog Shell',
 });
-
 export default class StartBlogShell extends Component {
 	constructor() {
 		super({

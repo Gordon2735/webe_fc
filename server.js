@@ -29,7 +29,7 @@ const handlebars = create({
 	extname: '.handlebars',
 	defaultView: 'default',
 	defaultLayout: 'main',
-	layouts: ['main', 'main-secondary', 'main-tertiary'],
+	layouts: ['main', 'main-secondary', 'main-tertiary', 'main-quaternary'],
 	layoutsDir: __dirname + '/views/layouts/',
 	partialsDir: __dirname + '/views/partials/',
 	helpersDir: __dirname + '/views/partials/',
@@ -107,6 +107,7 @@ router.use((req, res, next) => {
 	if (!res.locals.partials) res.locals.partials = {};
 	next();
 });
+// router.use('/todos', todos-route);
 
 app.listen(PORT, () => {
 	console.info(`Nodemon Server listening on localhost ${HOST}${PORT}`);

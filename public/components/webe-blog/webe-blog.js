@@ -5,7 +5,7 @@
 
 import { RenderBlogTemplate } from './render-blog-template.js';
 import { sharedStylesBlog } from './blog-sharedStyles.js';
-import { main } from './resources/blog-schemas/blog-schema.js';
+import { default as renderBlogTags, sectionBlog } from './blog-index.js';
 
 export class WebeBlog extends RenderBlogTemplate {
 	static get observedAttributes() {}
@@ -19,25 +19,23 @@ export class WebeBlog extends RenderBlogTemplate {
 
 		console.info(
 			'%c This Web Component has || * FIRED * || webe-blog.js is connected',
-			'background: #222222; color: hsl(59, 100%, 50%);'
+			'background: #222222; color: hsl(195, 98%, 50%);'
 		);
 
-		main();
-		// console.log(BlogPost);
-	}
+		const root = this.shadowRoot;
 
-	get template() {
-		return `
-        
-        <style>
-			${sharedStylesBlog.root}
-            ${sharedStylesBlog.blog}
-        </style>
-        
-        
-        `;
+		root.appendChild(sectionBlog);
+		renderBlogTags();
 	}
-	attributedChangedCallback(name, oldValue, newValue) {}
+	get template() {
+		return `         
+			<style>
+
+				${sharedStylesBlog.blog}				
+		
+			</style>
+		`;
+	}
 }
 
-customeElements.define('webe-blog', WebeBlog);
+customElements.define('webe-blog', WebeBlog);

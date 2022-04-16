@@ -21,9 +21,9 @@ export const setAttributes = async (element, attributes) => {
 	}
 };
 
-export const renderHeadScripts = async (scripts, renderNote) => {
-	for await (const script of scripts) {
-		head.appendChild(script);
+export const renderHeadScripts = (scripts, element, renderNote) => {
+	for (const script of scripts) {
+		element.appendChild(script);
 	}
 	return renderNote;
 };

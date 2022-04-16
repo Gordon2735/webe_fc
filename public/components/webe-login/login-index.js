@@ -148,6 +148,15 @@ setAttributes(anchorBlog, {
 });
 const anchorBlogText = (anchorBlog.innerHTML = `Blog`);
 
+export const anchorTodos = document.createElement('a');
+setAttributes(anchorTodos, {
+	id: 'todos',
+	class: 'anchor',
+	href: '/todos',
+	alt: 'Todos Link of Document',
+});
+const anchorTodosText = (anchorTodos.innerHTML = `Todos`);
+
 const divLogin = document.createElement('div');
 setAttributes(divLogin, {
 	class: 'login',
@@ -375,9 +384,16 @@ const innerVars = [
 	anchorAboutText,
 	anchorContactText,
 	anchorBlogText,
+	anchorTodosText,
 ];
 const navElements = [figure, divLogo, divMenu, divLogin];
-const liMenuElements = [anchorHome, anchorAbout, anchorContact, anchorBlog];
+const liMenuElements = [
+	anchorHome,
+	anchorAbout,
+	anchorContact,
+	anchorBlog,
+	anchorTodos,
+];
 const liLoginElements = [liLoginOne, liLoginTwo];
 const classAttribute = 'li-menu';
 const divFormOneElements = [divSignupClose, divSignupText, formOne];

@@ -56,7 +56,7 @@ sharedStyles.login = `
         .container header {
             display: grid;
             grid: "figure h1-logo nav-menu login-buttons";
-            grid-template-columns: 0.10fr 1.16fr 1fr 0.71fr;
+            grid-template-columns: 0.10fr 0.8fr 1.3fr 0.71fr;
             grid-gap: 0.2vw;
             padding: 0;
             position: absolute;
@@ -153,7 +153,8 @@ sharedStyles.login = `
 
         header .menu  {
             grid-area: nav-menu;
-            min-width: 35%;
+            width: 100%;
+            min-width: 55%;
             height: auto;
             padding: 1rem; 
             display: inline-block;
@@ -180,9 +181,9 @@ sharedStyles.login = `
             list-style: none;
             text-decoration: none;
             font-family: 'Work Sans', sans-serif;
-            font-size: 1rem;            
-            font-style: extra-bold;
-            font-weight: 700;
+            font-size: 0.8rem;            
+            font-style: normal;
+            font-weight: 400;
             color: hsl(195, 98%, 34%);
         }             
         
