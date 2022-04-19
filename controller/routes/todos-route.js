@@ -1,5 +1,5 @@
 import express from 'express';
-import Todos from '../../models/schemas/blog-schemas/blog-schema.js';
+import TodosModel from '../../models/schemas/blog-schemas/blog-schema.js';
 
 const router = express.Router();
 router.use(express.static('../../views'));
@@ -13,7 +13,9 @@ const todos = router
 	.get('/todos', async (req, res) => {
 		// Index Route (get - '/todos'), Returns all todos
 		res.json(
-			await Todos.find({}).catch(error => res.status(400).json(error))
+			await TodosModel.find({}).catch(error =>
+				res.status(400).json(error)
+			)
 		);
 	})
 	// .get('/home', (req, res) => {
@@ -22,7 +24,7 @@ const todos = router
 	.get('/:id', async (req, res) => {
 		// Show Route (get - '/todos'), Returns a single todo
 		res.json(
-			await Todos.findById(req.params.id).catch(error =>
+			await TodosModel.findById(req.params.id).catch(error =>
 				res.status(400).json(error)
 			)
 		);
@@ -30,7 +32,7 @@ const todos = router
 	.post('/:id', async (req, res) => {
 		// Create Route (post - '/todos'), Creates a new todo
 		res.json(
-			await Todos.create(req.body).catch(error =>
+			await TodosModel.create(req.body).catch(error =>
 				res.status(400).json(error)
 			)
 		);
@@ -38,7 +40,7 @@ const todos = router
 	.put('/:id', async (req, res) => {
 		// Update Route (update - '/todos'), Updates a particular todo
 		res.json(
-			await Todos.findByIdAndUpdate(req.params.id, req.body, {
+			await TodosModel.findByIdAndUpdate(req.params.id, req.body, {
 				new: true,
 			}).catch(error => res.status(400).json(error))
 		);
@@ -46,7 +48,7 @@ const todos = router
 	.delete('/:id', async (req, res) => {
 		// Delete Route (delete - '/todos'), Deletes a particular todo
 		res.json(
-			await Todos.findByIdAndRemove(req.params.id).catch(error =>
+			await TodosModel.findByIdAndRemove(req.params.id).catch(error =>
 				res.status(400).json(error)
 			)
 		);

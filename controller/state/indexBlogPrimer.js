@@ -1,6 +1,7 @@
 import store from '/state/store/indexState.js';
 import startBlogShell from '/state/components/startBlogShell.js';
 import { setAttributes } from '../components/webe-blog/blog-utility.js';
+// import TodosModel from '../../models/schemas/blog-schemas/blog-schema.js';
 
 const blogShellElement = document.querySelector('blog-shell');
 const blogElement = document.querySelector('webe-blog');

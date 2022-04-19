@@ -52,6 +52,7 @@ app.use(cors());
 app.use(morgan('dev')); //'tiny'  ?
 app.use(express.static('public'));
 app.use(favicon(path.join(__dirname, 'public/src/img', 'favicon.ico')));
+app.use(express.static('models/'));
 
 app.use((req, res, next) => {
 	res.status(404).send(`<h1 style="
@@ -66,17 +67,19 @@ app.use((req, res, next) => {
 	next();
 });
 app.use((req, res, next) => {
-	res.status(500).send(`<h1 style="
-	width: 100%;
-	height: 100%;
-	color: red;
-	text-align: center;
-	background-color: #222222;
-	"><br><br><br><br>
-	{500} SORRY, THERE WAS A SERVER ERROR!!! {500}
-	</h1></h1>`);
+	res.status(500);
 	next();
 });
+
+// .send(`<h1 style="
+// 	width: 100%;
+// 	height: 100%;
+// 	color: red;
+// 	text-align: center;
+// 	background-color: #222222;
+// 	"><br><br><br><br>
+// 	{500} SORRY, THERE WAS A SERVER ERROR!!! {500}
+// 	</h1></h1>`);
 
 app.get('/', (req, res) => {
 	res.sendFile('javascript-39396.png', {
@@ -103,11 +106,23 @@ app.get('/state', (req, res) => {
 	res.set('Content-Type', 'text/javascript');
 });
 
+app.get('/404', (req, res) => {
+	res.sendFile('404.handlebars', {
+		root: __dirname + '/views/',
+	});
+	res.set('Content-Type', 'text/html');
+});
+app.get('/500', (req, res) => {
+	res.sendFile('500.handlebars', {
+		root: __dirname + '/views/',
+	});
+	res.set('Content-Type', 'text/html');
+});
+
 router.use((req, res, next) => {
 	if (!res.locals.partials) res.locals.partials = {};
 	next();
 });
-// router.use('/todos', todos-route);
 
 app.listen(PORT, () => {
 	console.info(`Nodemon Server listening on localhost ${HOST}${PORT}`);

@@ -25,8 +25,8 @@ import mobile from './routes/mobile-route.js';
 import desktop from './routes/desktop-route.js';
 import accounts from './routes/accounts-route.js';
 import TEST from './routes/TEST-route.js';
-// import fourOfour from './routes/404-route.js';
-// import fiveOO from './routes/500-route.js';
+import fourOfour from './routes/404-route.js';
+import fiveOO from './routes/500-route.js';
 
 // const app = express();
 const router = express.Router();
@@ -57,13 +57,12 @@ router.use('/', accounts);
 router.use('/', headers);
 router.use('/', todos);
 router.use('/', TEST);
+router.use('/', fourOfour);
+router.use('/', fiveOO);
 router.use((req, res, next) => {
 	if (!res.locals.partials) res.locals.partials = {};
 	next();
 });
-
-// router.use('404', fourOfour);
-// router.use('500', fiveOO);
 
 //
 export default router;

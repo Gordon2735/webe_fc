@@ -9,6 +9,8 @@ import './webe-blog.js';
 import './blog-todos.js';
 import './blog-index.js';
 import './blog-utility.js';
+import './todos_index.js';
+import '../../../../schemas/blog-schemas/blog-schema.js';
 
 export class BlogShell extends RenderBlogTemplate {
 	constructor() {

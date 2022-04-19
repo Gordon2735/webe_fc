@@ -3,31 +3,42 @@
 
 'use strict';
 
+import { ObjectId } from 'mongodb';
 import { Schema, model } from '../../database/blog_database/blog.js';
 
-const TodoSchema = new Schema({
-	title: {
-		type: String,
-		required: true,
+const TodoSchema = new Schema(
+	{
+		todoId: {
+			type: ObjectId,
+			required: true,
+			unique: true,
+			auto: true,
+			index: true,
+		},
+		title: {
+			type: String,
+			required: true,
+		},
+		task: {
+			type: String,
+			required: true,
+		},
+		completed: {
+			type: Boolean,
+			default: false,
+		},
+		notes: {
+			type: String,
+			default: '',
+			reminder: String,
+		},
 	},
-	task: {
-		type: String,
-		required: true,
-	},
-	completed: {
-		type: Boolean,
-		default: false,
-	},
-	notes: {
-		type: String,
-		default: '',
-		reminder: String,
-	},
-});
+	{ versionKey: false, autoIndex: true }
+);
 
-const Todos = model('Todo', TodoSchema);
+const TodosModel = model('Todo', TodoSchema);
 
-export default { Todos };
+export default TodosModel;
 
 // // *schema definition* //
 // // possible recursive embedded-document schema
