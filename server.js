@@ -13,9 +13,6 @@ import { fileURLToPath } from 'url';
 import cors from 'cors';
 import router from './controller/router.js';
 import fs from 'fs';
-// import mongoose from 'mongoose';
-
-// export default mongoose;
 
 dotenv.config();
 const app = express();
@@ -55,31 +52,13 @@ app.use(favicon(path.join(__dirname, 'public/src/img', 'favicon.ico')));
 app.use(express.static('models/'));
 
 app.use((req, res, next) => {
-	res.status(404).send(`<h1 style="
-	width: 100%;
-	height: 100%;
-	color: red;
-	text-align: center;
-	background-color: #222222;
-	"><br><br><br><br>
-	{404} SORRY, THIS PAGE WASN'T FOUND!!! {404}
-	</h1>`);
+	res.status(404).send();
 	next();
 });
 app.use((req, res, next) => {
-	res.status(500);
+	res.status(500).send();
 	next();
 });
-
-// .send(`<h1 style="
-// 	width: 100%;
-// 	height: 100%;
-// 	color: red;
-// 	text-align: center;
-// 	background-color: #222222;
-// 	"><br><br><br><br>
-// 	{500} SORRY, THERE WAS A SERVER ERROR!!! {500}
-// 	</h1></h1>`);
 
 app.get('/', (req, res) => {
 	res.sendFile('javascript-39396.png', {

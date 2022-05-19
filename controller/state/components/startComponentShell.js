@@ -16,21 +16,21 @@ setAttributes(scriptComponentShell, {
 	src: '../components/webe-login/component-shell.js',
 	content: 'text/javascript',
 	crossorigin: 'anonymous',
-	alt: 'Script for Web-Component Shell',
+	alt: 'Script for Web-Component Shell'
 });
 
 const componentShell = document.createElement('component-shell');
 setAttributes(componentShell, {
 	id: 'component-shell',
 	class: 'component-shell',
-	alt: 'Component Shell',
+	alt: 'Component Shell'
 });
 
 export default class StartComponentShell extends Component {
 	constructor() {
 		super({
 			store,
-			element: document.querySelector('body'),
+			element: document.querySelector('body')
 		});
 	}
 	render() {

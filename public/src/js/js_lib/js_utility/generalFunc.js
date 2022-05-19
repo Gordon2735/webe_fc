@@ -38,7 +38,7 @@ export const listMaker = (list, element) => {
 };
 
 export const loopList = (list_li, attribute, element) => {
-	list_li.forEach((item_li, item_anchor) => {
+	list_li.forEach(item_li => {
 		const li = document.createElement('li');
 		li.append(item_li);
 		li.setAttribute('class', attribute);
@@ -59,9 +59,9 @@ export function loginsToggle() {
 	popup.classList.toggle('active');
 }
 
-function css(el, styles) {
-	for (var property in styles) el.style[property] = styles[property];
-}
-// example
-var el = document.querySelector('div');
-css(el, { background: 'green', display: 'none', 'border-radius': '5px' });
+// function css(el, styles) {
+// 	for (var property in styles) el.style[property] = styles[property];
+// }
+// // example
+// var el = document.querySelector('div');
+// css(el, { background: 'green', display: 'none', 'border-radius': '5px' });

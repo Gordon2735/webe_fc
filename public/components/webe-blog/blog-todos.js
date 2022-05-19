@@ -6,21 +6,8 @@
 import { RenderBlogTemplate } from './render-blog-template.js';
 import { sharedStylesBlog } from './blog-sharedStyles.js';
 import RenderDocumentElements, { rootElements } from './todos_index.js';
-import TodosModel from '../../../models/schemas/blog-schemas/blog-schema.js';
+// import TodosModel from '../../../models/schemas/blog-schemas/blog-schema.js';
 import { default as appendChildren } from './blog-utility.js';
-// import todosModel from '../../../controller/state/indexBlogPrimer.js';
-
-// const todosModel = new TodosModel({
-// 	title: 'Blog first instance',
-// 	task: 'Does this schema work and communicate with the databas?',
-// });
-// todosModel.save(function (error) {
-// 	if (error) {
-// 		console.error(error);
-// 	} else {
-// 		console.log('saved to database');
-// 	}
-// });
 
 export class BlogTodos extends RenderBlogTemplate {
 	constructor() {

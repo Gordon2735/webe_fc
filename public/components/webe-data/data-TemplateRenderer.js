@@ -1,12 +1,13 @@
 //hw :::::::: HooT Webelistics® :::::::: hw//
-//)  ::::::::  render-template  ::::::::  )//
+//)  :::::: data-TemplateRenderer ::::::  )//
 
-export class RenderTemplate extends HTMLElement {
+'use strict';
+
+export class DataTemplateRenderer extends HTMLElement {
 	connectedCallback() {
 		if (!this.noShadow) this.attachShadow({ mode: 'open' });
 		this.render();
 	}
-
 	render(template) {
 		if (this.noShadow) {
 			this.innerHTML = template || this.template;

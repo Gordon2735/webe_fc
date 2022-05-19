@@ -2,21 +2,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
 
 :root {
-	font-size: 16px;
-	font-family: 'Open Sans';
-	--text-primary: #b6b6b6;
-	--text-secondary: #ececec;
-	--bg-primary: #222222;
-	--bg-secondary: #141418;
-	--webe-header-primary: hsl(0, 0%, 13%);
+	--bg-primary-clr: hsl(0, 0%, 13%);
+	--bg-greyLight-clr: hsl(0, 4%, 89%);
+	--bg-greyDark-clr: hsl(0, 0%, 71%);
+	--bg-webeLightBlue-clr: hsl(195, 53%, 79%);
 	--webe-header-clr: hsl(32, 83%, 54%);
-	--webe-medium-clr: hsl(30, 29%, 97%);
-	--webe-shadow-clr: hsl(32, 55%, 81%);
-	--webe-header-trim: hsl(30, 4%, 11%);
 	--webe-HOOT-clr: hsl(32, 83%, 54%);
-	--webe-title-clr: hsl(0, 0%, 70%);
+	--webe-fontBlack-clr: hsl(0, 0%, 0%);
+	--webe-fontDark-clr: hsl(0, 0%, 13%);
+	--webe-fontDarkAdj-clr: rgba(33, 33, 33, 0.8);
+	--webe-fontWhite-clr: hsl(0, 100%, 100%);
+	--webe-fontLight-clr: hsl(0, 3%, 85%);
+	--webe-font-clr-freak: hsla(90, 100%, 50%, 0.9);
 	--webe-HOOT-fs: 'Chango', cursive;
 	--webe-title-fs: 'Days One', sans-serif;
+	--webe-poppins-fs: 'Poppins', sans-serif;
+	--webe-work-fs: 'Work Sans', sans-serif;
+	--webe-fontOrange-text-shadow: hsl(32, 83%, 54%) 2px 1px 2px;
+	--webe-fontDark-text-shadow: hsl(0, 0%, 13%) 2px 2px 3px;
 }
 
 * {
@@ -25,7 +28,7 @@
 }
 
 html {
-	background: var(--bg-primary);
+	background: var(--bg-primary-clr);
 }
 
 body {
